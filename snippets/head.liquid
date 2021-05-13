@@ -36,6 +36,9 @@
         <meta name="description" content="{{ page_description | escape }}">
     {%- endif -%}
 {%- endif -%}
+{% if handle contains 'noindex' %}
+    <meta name="robots" content="noindex">
+{% endif %}
 {% render 'head-get-social-meta-tags' %}
 <script>window.theme = {};window.page = { default: {} };</script>
 {% render 'layout-get-version' %}

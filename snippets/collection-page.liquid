@@ -9,12 +9,13 @@
     {% capture collection_head_html %}
         {% section 'collection-head' %}
     {% endcapture %}
-    <div class="container mt-10 mt-lg-{{ offset_collection_page_content_margin_top_d }}">
+    <div class="container-fluid mt-10 mt-lg-{{ offset_collection_page_content_margin_top_d }}">
         <div class="row mb-40 mb-lg-{{ offset_collection_page_pagination_margin_bottom_d }}">
             {%- if settings.collection_sidebar_position == 'dropdown' -%}
                 <div class="collections__sidebar d-none">
                     {% section 'collection-sidebar' %}
                 </div>
+                {% comment %} Blancsom Theme - Modified {% endcomment %}
             {%- elsif settings.collection_sidebar_position == 'top' -%}
                 {%- if content_for_header contains 'Shopify.designMode' -%}
                     {%- assign is_design_mode = true -%}
