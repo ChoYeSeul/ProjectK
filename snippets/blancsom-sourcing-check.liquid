@@ -1,0 +1,20 @@
+{%- comment -%} Blancsom Theme - Sourcing type check for shipping message to customer. It returns a string variable 'shipping_info' {%- endcomment -%}
+{%- assign ops_sourcing = product.metafields.ops_item_info.ops_sourcing -%}
+{% if ops_sourcing.supplier_code == '' and ops_sourcing.sourcing_type_code == ''  and ops_sourcing.storage_id == '' %}
+    {%- assign shipping_info = 'Brand Dropship' -%}
+{%- elsif ops_sourcing.supplier_code == '' and ops_sourcing.sourcing_type_code == ''  and ops_sourcing.storage_id == '' -%}
+    {%- assign shipping_info = 'From Italy' -%}
+{% endif %}
+
+{%- if shipping_info == 'From Italy' -%}
+    <div class="shipping-info">
+        <h6> <i class="mr-1">{% render 'icon-theme-142' %}</i> SHIPPING FROM ITALY</h6>
+        <p>This product will be directly shipped from Italy. It may take an average 7 days or more to receive the item. The international shipping cost will be charged.</p>
+    </div>
+{%- endif -%}
+{%- if shipping_info == 'Brand Dropship' -%}
+    <div class="shipping-info">
+        <h6> <i class="mr-1">{% render 'icon-theme-142' %}</i> FROM BRAND MANUFACTURER</h6>
+        <p>This product will be directly shipped from Brand manufacturer. It may take 10-15 business days to receive the item.</p>
+    </div>
+{%- endif -%}
