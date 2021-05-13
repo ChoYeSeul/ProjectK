@@ -790,10 +790,10 @@
           "1586284608625": {
             "type": "subscription",
             "settings": {
-              "title": "Newsletter subscription",
-              "paragraph": "Sign up for Shella updates to receive information about new arrivals, future events and specials.",
-              "placeholder": "Enter Your Email Address",
-              "button_text": "SUBSCRIBE!"
+              "title": "Newsletter",
+              "paragraph": "Sign up for Blancsom update to receive information about new arrivals, future events and specials.",
+              "placeholder": "EMAIL",
+              "button_text": "SUBSCRIBE"
             }
           },
           "1586284525260": {
