@@ -1,0 +1,20 @@
+{% comment %}
+{% endcomment %}
+{%- unless product.has_only_default_variant -%}
+    <div class="blancsom-collection-list-options">
+    {%- for option in product.options_with_values -%}
+        <div class="product-options__section d-flex flex-wrap" data-style="text" data-property="{% render 'product-get-options-strip-symbols' with value: option.name %}">
+            {%- for value in option.values -%}
+                {% unless disabled_value %}
+                    <div class="blancsom-option d-flex flex-center  disabled lazyload"
+                        data-js-option-value
+                        data-value="{% render 'product-get-options-strip-symbols' with value: value %}"
+                        data-bg="none"
+                        data-scale="2"
+                    >{{ value }}</div>
+                {% endunless %}
+            {%- endfor -%}
+        </div>
+    {%- endfor -%}
+    </div>
+{%- endunless -%}
