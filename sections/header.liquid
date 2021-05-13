@@ -101,7 +101,7 @@
     </style>
 {%- endif -%}
 <div data-section-id="{{ section.id }}" data-section-type="header"{% render 'layout-get-container-class' with container: header_container %}>
-    <header id="header" class="header header--type-{{ section.settings.type }} header--style-{{ section.settings.style }}{% if header_enable_transparent and template contains 'index' %} header--transparent position-absolute top-0 w-100{% else %} position-lg-relative{% endif %}{% if section.settings.sticky != 'disable' %} js-header-sticky header--sticky-type-{{ section.settings.desktop_sticky_type }}{% endif %}" data-js-sticky="{{ section.settings.sticky }}" data-js-desktop-sticky-sidebar="{% if need_sticky_sidebar %}true{% else %}false{% endif %}">
+    <header id="header" class="blancsom-theme header header--type-{{ section.settings.type }} header--style-{{ section.settings.style }}{% if header_enable_transparent and template contains 'index' %} header--transparent position-absolute top-0 w-100{% else %} position-lg-relative{% endif %}{% if section.settings.sticky != 'disable' %} js-header-sticky{% endif %}" data-js-sticky="{{ section.settings.sticky }}" data-js-desktop-sticky-sidebar="{% if need_sticky_sidebar %}true{% else %}false{% endif %}">
         {%- assign selected_blocks = section.blocks | where: 'type', 'tape' -%}
         {%- for block in selected_blocks -%}
             <div class="d-none js-header-tape" data-js-show-once="{{ header_tape_show_once }}" data-js-delay="{{ block.settings.delay }}" data-js-cookies-life="{{ header_tape_cookies_life }}">
