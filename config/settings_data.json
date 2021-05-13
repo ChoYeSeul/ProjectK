@@ -850,7 +850,7 @@
           "footer-0": {
             "type": "copyright",
             "settings": {
-              "page_content": "tt"
+              "page_content": ""
             }
           },
           "1586284627913": {
@@ -938,91 +938,89 @@
           "customization_class": ""
         }
       },
-      "1586280453180": {
+      "1604949624967ab534": {
         "type": "home-builder",
         "blocks": {
-          "1586280489479": {
+          "b0eae6b9-5077-4a85-8a41-2e2dfe6ab7fc": {
             "type": "promobox",
             "settings": {
-              "url": "shopify:\/\/collections\/womens",
-              "image": "shopify:\/\/shop_images\/02_411c8729-8b45-405b-8807-5323f22695cb.png",
-              "image_size": 900,
-              "image_mobile_size": 900,
+              "url": "https:\/\/blancsom.com\/collections\/vendors?q=MAISON%20KITSUNE",
+              "image": "shopify:\/\/shop_images\/0416_Marni_833x833_cced9e03-125e-421a-ae34-5783bf1b0bad.jpg",
+              "image_size": 1450,
+              "image_mobile_size": 550,
               "image_position_x": 50,
-              "color_image_mask": "",
+              "color_image_mask": "rgba(0,0,0,0)",
               "image_mask_opacity": 0.5,
-              "text_line_1": "WOMEN'S",
-              "text_line_2": "Text line #2",
-              "text_line_3": "Text line #3",
-              "style": "2",
-              "button_1": "Button #1 text",
-              "color_button_type_1": "default-transparent",
-              "button_2": "Button #2 text",
-              "color_button_type_2": "default-transparent",
-              "list_1": "list-for-promobox",
+              "text_line_1": "MAISON KITSUNE",
+              "text_line_2": "The Maison Kitsuné man and woman resonate with this perfect balance between comfort and simplicity, laid-back cool and au courant sophistication.",
+              "text_line_3": "New In",
+              "style": "1",
+              "button_1": "",
+              "color_button_type_1": "default",
+              "button_2": "",
+              "color_button_type_2": "default",
+              "list_1": "",
               "custom_html": "",
               "video_external_url": "",
               "video_mp4_url": "",
               "video_autoplay": true,
               "video_controls": false,
-              "type": "type-4",
+              "type": "type-2",
               "content_position": "center",
-              "content_align": "center",
-              "add_container": false,
+              "content_align": "left",
               "content_width": 100,
-              "text_width": 0,
-              "height": "auto",
+              "height": "80",
               "min_height": 0,
+              "img_position": 50,
               "size_of_column": "auto",
               "visible": "desktop_mobile",
               "parallax": "disable",
-              "animation_to": "center",
+              "animation_to": "none",
               "animation_from": "none",
               "animation_opacity": "none",
               "animation_text": "none",
-              "customization_class": ""
+              "customization_class": "main-banner"
             }
           },
-          "1586280492143": {
+          "3171a562-51dc-4b99-a20e-bdd5f1fe859f": {
             "type": "promobox",
             "settings": {
-              "url": "shopify:\/\/collections\/mens",
-              "image": "shopify:\/\/shop_images\/03_0e286a8e-d02b-49b4-9b65-9bf8265e7a48.png",
-              "image_size": 900,
-              "image_mobile_size": 900,
+              "url": "https:\/\/blancsom.com\/collections\/vendors?q=Paloma%20Wool",
+              "image": "shopify:\/\/shop_images\/175873194_543303623320164_1465804442532726734_n.jpg",
+              "image_size": 1450,
+              "image_mobile_size": 550,
               "image_position_x": 50,
-              "color_image_mask": "",
+              "color_image_mask": "rgba(0,0,0,0)",
               "image_mask_opacity": 0.5,
-              "text_line_1": "MEN'S",
-              "text_line_2": "Text line #2",
-              "text_line_3": "Text line #3",
-              "style": "2",
-              "button_1": "Button #1 text",
-              "color_button_type_1": "default-transparent",
-              "button_2": "Button #2 text",
-              "color_button_type_2": "default-transparent",
-              "list_1": "include-promo-box-list-mens",
+              "text_line_1": "PALOMA WOOL",
+              "text_line_2": "In its entirety and in its essence, a work of art. Clothes run in perfect parallel with the photography projects and the vibe of simple.",
+              "text_line_3": "New In",
+              "style": "1",
+              "button_1": "",
+              "color_button_type_1": "default",
+              "button_2": "",
+              "color_button_type_2": "default",
+              "list_1": "",
               "custom_html": "",
               "video_external_url": "",
               "video_mp4_url": "",
               "video_autoplay": true,
               "video_controls": false,
-              "type": "type-4",
+              "type": "type-2",
               "content_position": "center",
-              "content_align": "center",
-              "add_container": false,
+              "content_align": "left",
               "content_width": 100,
-              "text_width": 0,
-              "height": "auto",
+              "height": "80",
               "min_height": 0,
+              "img_position": 50,
               "size_of_column": "auto",
               "visible": "desktop_mobile",
               "parallax": "disable",
-              "animation_to": "center",
+              "animation_to": "none",
               "animation_from": "none",
               "animation_opacity": "none",
               "animation_text": "none",
-              "customization_class": ""
+              "customization_class": "main-banner"
             }
           },
           "1586280494368": {
@@ -1069,19 +1067,19 @@
           }
         },
         "block_order": [
-          "1586280489479",
-          "1586280492143",
+          "b0eae6b9-5077-4a85-8a41-2e2dfe6ab7fc",
+          "3171a562-51dc-4b99-a20e-bdd5f1fe859f",
           "1586280494368"
         ],
         "settings": {
           "title": "",
-          "container": "boxed",
-          "size_of_columns": "3",
-          "margins_for_columns": "preset_1",
+          "container": "fullwidth",
+          "size_of_columns": "2",
+          "margins_for_columns": "none",
           "align_of_columns": "top_center",
           "disable_column_paddings": false,
           "precedence": "",
-          "customization_class": ""
+          "customization_class": "main-banner-row"
         }
       },
       "1586280477165": {
@@ -1637,75 +1635,19 @@
           "1530696164711": {
             "type": "collections",
             "settings": {
-              "title": "COLLECTION",
+              "title": "Categories",
               "default_state": "open",
-              "show_border": true,
+              "show_border": false,
               "menu": "collection",
-              "collection_tags_select": "radio"
-            }
-          },
-          "1530696190431": {
-            "type": "filters",
-            "settings": {
-              "title": "COLOR",
-              "default_state": "open",
-              "show_border": true,
-              "type": "colors",
-              "items": "Red|Coral|Copper|Orange|Yellow|Green|Emerald|Olive|Khaki|Aqua|Black|Silver|Blue|Grey|White|Light blue|Purple|Lilac|Violet|Pink|Plum|SandyBrown|LightPink|LightGreen",
-              "show_all_from_collection": false,
-              "direction": "rows",
-              "max_column_size": 0,
-              "columns": "2",
-              "for_collections": ""
-            }
-          },
-          "1530696245149": {
-            "type": "filters",
-            "settings": {
-              "title": "SIZE",
-              "default_state": "open",
-              "show_border": true,
-              "type": "tags",
-              "items": "30|32|34|36|38|40|42|44|XXS|XS|S|M|L|XL|XXL|XXXL",
-              "show_all_from_collection": false,
-              "direction": "columns",
-              "max_column_size": 8,
-              "columns": "3",
-              "for_collections": "womens|mens"
-            }
-          },
-          "1573803477486": {
-            "type": "filters",
-            "settings": {
-              "title": "SIZE",
-              "default_state": "open",
-              "show_border": true,
-              "type": "tags",
-              "items": "Small|Waistbag|Backpack",
-              "show_all_from_collection": false,
-              "direction": "columns",
-              "max_column_size": 0,
-              "columns": "1",
-              "for_collections": "women-accessories"
-            }
-          },
-          "1530696365086": {
-            "type": "filter_by_price",
-            "settings": {
-              "title": "PRICE",
-              "default_state": "open",
-              "show_border": true,
-              "min_value": "0",
-              "max_value": "900",
-              "step": "10"
+              "collection_tags_select": "checkbox"
             }
           },
           "1530696372892": {
             "type": "filters",
             "settings": {
-              "title": "BRANDS",
+              "title": "Designers",
               "default_state": "open",
-              "show_border": true,
+              "show_border": false,
               "type": "vendors",
               "items": "",
               "show_all_from_collection": true,
@@ -1714,93 +1656,11 @@
               "columns": "1",
               "for_collections": ""
             }
-          },
-          "1539796529134": {
-            "type": "parameters",
-            "settings": {
-              "title": "PARAMETERS",
-              "default_state": "open",
-              "show_border": true,
-              "show_only_available": true,
-              "show_tag_filters_logic": true
-            }
-          },
-          "1539796544868": {
-            "type": "filter_by_title",
-            "settings": {
-              "title": "SEARCH",
-              "default_state": "open",
-              "show_border": true,
-              "placeholder": "Enter part of the title",
-              "show_button": false,
-              "button_text": "SEARCH"
-            }
-          },
-          "1530696458853": {
-            "type": "products",
-            "settings": {
-              "title": "FEATURED PRODUCTS",
-              "default_state": "fixed",
-              "show_border": true,
-              "collection": "featured",
-              "max_count": 3,
-              "product_type": "short"
-            }
-          },
-          "1586288838422": {
-            "type": "custom_html",
-            "settings": {
-              "title": "CUSTOM BLOCK",
-              "default_state": "fixed",
-              "show_border": false,
-              "page_content": ""
-            }
-          },
-          "1586289049193": {
-            "type": "promobox",
-            "settings": {
-              "title": "PROMOBOX",
-              "default_state": "without_title",
-              "show_border": false,
-              "url": "shopify:\/\/products\/copy-of-cotton-blend-field-jacket",
-              "image": "shopify:\/\/shop_images\/08_dbfb557e-a691-4822-9ece-255c7fa4a984.png",
-              "image_size": 900,
-              "color_image_mask": "",
-              "image_mask_opacity": 0.5,
-              "text_line_1": "NEW IN",
-              "text_line_2": "Spring\/Summer 2020 Collection",
-              "text_line_3": "Text line #3",
-              "style": "1",
-              "button_1": "Button #1 text",
-              "color_button_type_1": "default-transparent",
-              "button_2": "Button #2 text",
-              "color_button_type_2": "default-transparent",
-              "list_1": "",
-              "custom_html": "",
-              "video_external_url": "",
-              "video_mp4_url": "",
-              "video_autoplay": true,
-              "video_controls": false,
-              "type": "type-3",
-              "animation_to": "none",
-              "animation_from": "none",
-              "animation_opacity": "none"
-            }
-          }
-        },
-        "block_order": [
-          "1530696013571",
-          "1530696164711",
-          "1530696190431",
-          "1530696245149",
-          "1573803477486",
-          "1530696365086",
-          "1530696372892",
-          "1539796529134",
-          "1539796544868",
-          "1530696458853",
-          "1586288838422",
-          "1586289049193"
+          },                                          
+          "block_order": [
+            "1530696013571",
+            "1530696164711",
+            "1530696372892"
         ],
         "settings": {
           "hide_blocks_without_filters": false
@@ -1953,25 +1813,22 @@
       "collection-body": {
         "type": "collection-body",
         "settings": {
-          "sort_by_visibility": "desktop",
-          "info_visibility": "desktop",
-          "view_length_visibility": "desktop",
+          "show_sort_by": true,
+          "show_info": false,
+          "show_view_length": false,
           "enable_view_length_6": true,
           "enable_view_length_12": true,
           "enable_view_length_18": true,
           "enable_view_length_24": true,
-          "enable_view_length_48": false,
-          "default_view_length": "12",
-          "view_grid_visibility": "desktop_n_mobile",
+          "enable_view_length_48": true,
+          "default_view_length": "36",
+          "show_view_grid": false,
           "show_view_grid_1": true,
           "show_view_grid_2": true,
           "show_view_grid_3": true,
           "show_view_grid_4": true,
-          "show_view_grid_6": true,
           "show_view_grid_list": true,
-          "view_grid_list_design": "2",
-          "enable_grid_tooltip": true,
-          "default_view_grid_xl": "3",
+          "default_view_grid_xl": "4",
           "default_view_grid_lg": "3",
           "default_view_grid_md": "3",
           "default_view_grid_sm": "2",
@@ -1994,7 +1851,7 @@
         ],
         "settings": {
           "show_title": true,
-          "container": "boxed",
+          "container": "fullwidth",
           "size_of_columns": "4",
           "max_count": 6,
           "autoplay": true,
@@ -2010,15 +1867,15 @@
           "1586291669434": {
             "type": "tab_custom_html",
             "settings": {
-              "title": "ADDITIONAL",
-              "page_content": ""
+              "title": "Size Guide",
+              "page_content": "size-guide"
             }
           },
           "1586291704115": {
             "type": "tab_custom_html",
             "settings": {
-              "title": "CUSTOM TAB",
-              "page_content": ""
+              "title": "Delivery & Return",
+              "page_content": "delivery-return"
             }
           }
         },
@@ -2028,10 +1885,8 @@
         ],
         "settings": {
           "show_tabs": true,
-          "scrolling_to_opened_tab": true,
-          "tabs_type": "tabs",
           "show_tab_description": true,
-          "show_tab_reviews": true
+          "show_tab_reviews": false
         }
       },
       "carousel-related-products": {
@@ -2528,4 +2383,4 @@
       "1586567788223"
     ]
   }
-}
+}}
