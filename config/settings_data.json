@@ -809,9 +809,9 @@
           "1586284527889": {
             "type": "menu",
             "settings": {
-              "title": "",
+              "title": "Help",
               "show_title_on_desktop": true,
-              "menu": "information",
+              "menu": "help",
               "size": 0,
               "rows_limit": 0
             }
