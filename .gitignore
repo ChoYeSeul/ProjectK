@@ -1,0 +1,6 @@
+# Environment Files
+config.yml
+*.code-workspace
+BLNC_SHOPIFY.code-workspace
+.vscode/
+BLNC_SHOPIFY.code-workspace
