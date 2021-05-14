@@ -87,7 +87,7 @@
     "product_cursor": "",
     "product_show_custom_options": true,
     "product_enable_variants_section": true,
-    "product_hide_options_without_availability_variants": true,
+    "product_hide_options_without_availability_variants": false,
     "product_variant_auto_select": "enable",
     "product_auto_selected_options": "",
     "product_variant_change_on_hover": false,
