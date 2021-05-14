@@ -126,7 +126,7 @@
         {%- for block in selected_blocks -%}
             {%- capture info_line_html -%}
                 <div class="header__line-info header__line-info--style-{{ block.settings.style }} {% if block.settings.show_on_mobile %}d-flex{% else %}d-none d-lg-flex{% endif %} align-items-lg-center px-10 px-lg-0 pt-15 pb-10 py-lg-2">
-                    <div class="{% if section.settings.type == '4' %}w-100 px-10 px-lg-20{% else %}container{% endif %} d-flex flex-column flex-lg-row align-items-center">
+                    <div class="{% if section.settings.type == '4' %}w-100 px-10 px-lg-{{ header_menu_container_paddings_horizontal }}{% else %}container{% endif %} d-flex flex-column flex-lg-row align-items-center">
                         <div class="text-center text-lg-left">
                             {% include 'parse-page-html-content' with default_page: 'include-header-info-line' page_content: block.settings.page_content %}
                         </div>
