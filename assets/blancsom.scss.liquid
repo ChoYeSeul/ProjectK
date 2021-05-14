@@ -197,6 +197,7 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
     &,
     a {
       color: $color-theme-default !important;
+      text-transform: uppercase;
     }
   }
   .product-collection__price {
@@ -221,6 +222,7 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
   .product-collection__title {
     h4 {
       line-height: 1.2;
+      text-transform: uppercase;
     }
   }
   .collection-control__information {
@@ -283,8 +285,19 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
     display: none;
   }
   // Thumbnail Image Navigation
-  .product-images-navigation span {
-    background: none;
+  @media (min-width: $screen-lg-up) {
+    .product-images-navigation span {
+      background: none;
+      .icon {
+        fill: rgba($color-theme-default, 0.3);
+      }
+      &:hover {
+        background: none;
+        .icon {
+          fill: rgba($color-theme-default, 1);
+        }
+      }
+    }
   }
 
   // Header Style
