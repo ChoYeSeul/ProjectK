@@ -233,6 +233,7 @@
 {%- endif -%}
 {% capture fixed_attr %}{% if section.settings.enable_fixed %} data-js-footer-fixed{% endif %}{% endcapture %}
 <div data-section-id="{{ section.id }}" data-section-type="footer" data-postload="footer"{% render 'layout-get-container-class' with container: footer_container %}>
+    {% include 'breadcrumbs' %}
     {%- case section.settings.type -%}
     {%- when '1' -%}
         <footer id="footer" class="footer footer--style-{{ section.settings.style }}{% if template != 'index' %} {{ footer_other_page_margins }}{% endif %}{% if section.settings.enable_fixed %} pt-1{% endif %} text-center text-lg-left js-footer"{{ fixed_attr }}>
