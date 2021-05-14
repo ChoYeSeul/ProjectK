@@ -77,7 +77,7 @@
 {% capture free_shipping_html %}
     {%- if show_free_shipping and settings.cart_show_free_shipping -%}
         <div class="product-page-info__free-shipping mt-10 mb-15">
-            {% render 'free-shipping' with mobile_centered: true centered: centered %}
+            {% render 'blancsom-free-shipping' with mobile_centered: true centered: centered %}
         </div>
     {%- endif -%}
 {% endcapture %}
