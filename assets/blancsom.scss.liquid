@@ -465,6 +465,10 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
 .main-banner-row {
   padding-left: 30px;
   padding-right: 30px;
+  @media (max-width: $screen-sm-down) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .promobox {
     margin-bottom: 30px;
     .promobox__text-row {
@@ -491,6 +495,14 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
     .promobox__text-3 {
       font-family: $font-serif;
     }
+  }
+}
+// Cart
+.free-shipping {
+  color: $color-theme-default;
+  background: none;
+  .free-shipping__progress {
+    background: none;
   }
 }
 }
