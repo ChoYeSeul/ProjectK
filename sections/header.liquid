@@ -200,7 +200,7 @@
                             data-tippy-distance="6"
                         {%- endif -%}
                     >
-                    <span class="d-none d-md-inline">ACCOUNT</span>
+                    <span class="d-none d-md-inline">{% if customer %}ACCOUNT{% else %}LOGIN{% endif %}</span>
                     <span class="d-md-none"><i class="btn-account">{% render 'icon-theme-202' %}</i></span>
                     </a>
                 {%- endif -%}
