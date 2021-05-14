@@ -413,7 +413,7 @@
                        data-tippy-distance="6"
                     {%- endif -%}
                 >
-                {%- if section.settings.type == '1' -%}
+                {%- if section.settings.type == '1' or section.settings.type == '4' -%}
                     <span class="mr-lg-7">{{ 'layout.header.search' | t }}</span>
                 {%- endif -%}
                     <i>{% render 'icon-theme-168' %}</i>
