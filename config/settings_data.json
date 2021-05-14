@@ -1624,36 +1624,38 @@
       "collection-sidebar": {
         "type": "collection-sidebar",
         "blocks": {
-          "1530696013571": {
-            "type": "current_filters",
+          "1539796544868": {
+            "type": "filter_by_title",
             "settings": {
-              "title": "CURRENT FILTERS",
+              "title": "SEARCH",
               "default_state": "open",
-              "show_border": true
+              "show_border": true,
+              "placeholder": "Enter part of the title",
+              "button_text": "SEARCH"
             }
           },
           "1530696164711": {
             "type": "collections",
             "settings": {
-              "title": "Categories",
+              "title": "COLLECTION",
               "default_state": "open",
               "show_border": false,
               "menu": "collection",
-              "collection_tags_select": "checkbox"
+              "collection_tags_select": "radio"
             }
           },
           "1530696372892": {
             "type": "filters",
             "settings": {
-              "title": "Designers",
+              "title": "COLOR",
               "default_state": "open",
-              "show_border": false,
-              "type": "vendors",
-              "items": "",
-              "show_all_from_collection": true,
-              "direction": "columns",
+              "show_border": true,
+              "type": "colors",
+              "items": "Red|Coral|Copper|Orange|Yellow|Green|Emerald|Olive|Khaki|Aqua|Black|Silver|Blue|Grey|White|Light blue|Purple|Lilac|Violet|Pink|Plum|SandyBrown|LightPink|LightGreen",
+              "show_all_from_collection": false,
+              "direction": "rows",
               "max_column_size": 0,
-              "columns": "1",
+              "columns": "2",
               "for_collections": ""
             }
           },                                          

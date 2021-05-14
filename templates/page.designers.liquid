@@ -1,0 +1,71 @@
+{% include 'global-variables' %} 
+{% include 'breadcrumbs' %}
+
+<div class="container mb-60">
+    <h1 class="h3 mt-30 text-center">{{ page.title }}</h1>
+    <div class="rte">
+        {% include 'parse-for-icons' content: page.content %}
+    </div>
+    <div id="designersListNav"></div>
+    <div id="designersList"></div>
+</div>
+
+<script>
+    const atozArr = 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,123'.split(',');
+    const testlist = ["A.L.C.", "A.P.C.", "A.W.A.K.E. MODE", "ace&jig", "Acler", "Acne Studios", "Adam Lippes", "Adam Selman Sport", "Add Down", "Adeam", "adidas", "Banjanan", "Banner Day", "Bassike", "BaubleBar", "BAUM UND PFERDGARTEN", "Baxter of California", "BB Dakota", "Bea Bongiasca", "Deveaux", "James Perse", "Janessa Leone", "Jason Wu", "Devon Windsor", "Diane von Furstenberg", "Diemme", "Dion Lee", "Divine Heritage", "Elleme", "Ellery", "Else Lingerie", "Emerson Road", "En Saison", "endless rose", "For Love & Lemons", "Fornasetti", "Forte Forte", "FRAME", "Franco Ferrari", "Frank & Eileen", "Gemelli", "Generation Love", "Genusee", "Georgia Jay", "Gia Studios", "Giambattista Valli", "Gift Boutique", "Girlfriend Collective", "Giuseppe di Morabito", "Herschel Supply Co.", "Hofmann Copenhagen", "HOLZWEILER", "Honeydew Intimates", "House of Want", "Jennifer Zeuner Jewelry", "Jerome Dreyfuss", "Jocelyn", "Joe's Jeans", "Johanna Ortiz", "Joie", "Jonathan Adler", "Jonathan Simkhai", "Jonathan Simkhai STANDARD", "JoosTricot", "LES REVERIES", "Leset", "Leslie Amon", "Maaji", "macgraw", "Mackage", "Madeleine Thompson", "Madewell", "MADEWORN ROCK", "Magda Butrym", "Maison Irem", "Maison Kitsune", "Maison Lejaby", "Maison Louis Marie", "Maison Margiela", "Maison Monik", "Maiyo", "Malone Souliers", "Manning Cartell Australia", "Mansur Gavriel", "MANU Atelier", "Mar Y Sol", "Mara & Mine", "Mara Hoffman", "Marchesa Notte", "Marge Sherwood", "Mari Giudicelli", "Maria Black", "Maria Luca", "Maria Lucia Hohan", "Marion Parke", "Marissa Webb", "Markus Lupfer", "Marlo Laz", "Marni", "Nixon", "No. 21", "No.6", "Nobody Denim", "Nomad Noe", "Norma Kamali", "NuBra", "PJ Salvage", "Place Nationale", "Playa Lucila", "Plush", "Poolside Bags", "Poppy Lissiman", "Poupette St Barth", "PQ Swim", "Prabal Gurung", "Prada", "3.1 Phillip Lim", "360 SWEATER", "525", "7 For All Mankind", "9seed", "IORANE", "Ipanema", "Iphoria", "KENDALL + KYLIE", "Kenneth Jay Lane", "KENZO", "Khaite", "Kika Vargas", "Kiki de Montparnasse", "Kitsch", "Raquel Allegra", "Ratio et Motus", "Ray-Ban", "RE/DONE", "re:named", "Real Underwear", "Rebecca De Ravenel", "Rebecca Minkoff", "Rebecca Taylor", "Rebecca Vallance", "Skin Gym", "SKINNYSHIRT", "Slant Collections", "Sleeper", "Sleepy Jones", "Slip", "SLVRLAKE", "SMYTHE", "SOIA & KYO", "Soko", "Sol Sana", "Solace London", "Solid & Striped", "Soludos", "Sophia Webster", "Sophie Monet", "Soraya Hennessy", "Sorel", "Ulla Johnson", "Ultracor", "Unfortunate Portrait", "Veronica Beard Jean", "Versace", "Versace Jeans Couture", "Victor Glemaud", "Victoria Beckham", "Worthy Threads", "Wrangler", "Wwake", "x karla", "XIRENA", "Yeti Yoga", "Young Fabulous & Broke", "Yumi Kim", "Yummie", "Yuul Yie", "Yuzefi", "Zadig & Voltaire", "Zimmermann", "Zoe Chicco"]
+    const fromshopify = {{ shop.vendors | json }}
+    const designers = fromshopify.concat(testlist);
+    
+    
+    const sortAZ = (a, b)=> {
+        let A = a.toUpperCase();
+        let B = b.toUpperCase();
+        if (A < B) return -1;
+        if (A > B) return 1;
+        return 0;
+    }
+    const listObj = designers.reduce((list, name) => {
+        let key = name[0].toUpperCase();
+        key = atozArr.includes(key) ? key : '123'
+        if (list[key]) {
+            list[key].push(name);
+        } else {
+            list[key] = [name];
+        }
+        return list;
+    },{})
+    const designerSet = (key) => {
+        if (!listObj[key]) return;
+        listObj[key].sort(sortAZ);
+        const content = listObj[key].reduce((result, name) => result +`<li class="designer-name"><a href="/collections/vendors?q=${name}">${name}</a></li>`,'');
+        const HTML = `<ul class="designer-list list-unstyled">${content}</ul>`;
+        return HTML;
+    }
+    const HTML_Content = atozArr.reduce((content, key) => content + (designerSet(key)?`<div class="designer-index-card" id="card-${key}"><h5 class="index-letter">${key}</h5>${designerSet(key)}</div>`:''), '');
+    const designersList = document.querySelector('#designersList');
+    designersList.innerHTML = HTML_Content;
+    const showOne = (keyString) => {
+        console.log(keyString)
+        const selectedKey = keyString;
+        Object.keys(listObj).forEach(key => {
+            if(selectedKey===key) {
+                document.querySelector(`#card-${key}`).classList.remove('d-none');
+                document.querySelector(`#card-${key}`).classList.add('selected');
+            } else {
+                document.querySelector(`#card-${key}`).classList.remove('selected');
+                document.querySelector(`#card-${key}`).classList.add('d-none');
+            }
+        });
+    }
+    const showAll = () => {
+        Object.keys(listObj).forEach(key => {
+            document.querySelector(`#card-${key}`).classList.remove('d-none');
+            document.querySelector(`#card-${key}`).classList.remove('selected');
+        });
+    }
+    const HTML_nav = atozArr.reduce((content, key)=> content + `
+        <div class="designer-index-nav ${!listObj[key]?'disabled':''}" onclick="showOne('${key}')">${key}</div>
+    ` ,'<div class="designer-index-nav" onclick="showAll()">All</div>')
+    const designersListNav = document.querySelector('#designersListNav');
+    designersListNav.innerHTML = HTML_nav;
+</script>
