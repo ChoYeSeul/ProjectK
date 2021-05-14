@@ -12,7 +12,10 @@ $color-blancsom-base: #416362; // previous: #416341
 $color-background-lite: lighten($color-blancsom-base, 65); // previous: #f6f8f6
 $color-background-dark: darken($color-blancsom-base, 15); // previous: #233523
 $color-background-lite-darken: desaturate(darken($color-background-lite, 9), 6);
-$color-theme3-default: desaturate(lighten($color-blancsom-base, 25), 13); // previous: #858585
+$color-theme3-default: desaturate(
+  lighten($color-blancsom-base, 25),
+  13
+); // previous: #858585
 $color-sale: $color-theme-default;
 
 // Meida Query Break point
@@ -425,5 +428,35 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
    // Notification Bg
    .notification-cookies__bg {
     background-color: $color-background-dark;
+  }
+  // Main Banner
+  .main-banner-row {
+    padding-left: 30px;
+    padding-right: 30px;
+    .promobox {
+      margin-bottom: 30px;
+      .promobox__text-row {
+        .promobox__text-3 {
+          padding-right: 8px;
+          font-size: 0.9rem;
+        }
+      }
+      .promobox__text-1,
+      .promobox__text-2,
+      .promobox__text-3 {
+        line-height: 1;
+        color: $color-theme-default;
+        font-size: 1.2rem;
+      }
+      .promobox__text-1 {
+        text-transform: uppercase;
+      }
+      .promobox__text-2 {
+        font-family: $font-serif;
+      }
+      .promobox__text-3 {
+        font-family: $font-serif;
+      }
+    }
   }
 }
