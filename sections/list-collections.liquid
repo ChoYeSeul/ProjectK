@@ -35,7 +35,8 @@
                     {%- else -%}
                         {%- assign collection_obj = collections[collection.handle] -%}
                     {%- endif -%}
-                    {%- unless collection_obj.handle == 'frontpage' -%}
+                    {%- comment -%} Blancsom Theme - for hiding a collection from list, set the metafield key 'hidden' and value 'true' {%- endcomment -%}
+                    {%- unless collection.handle == 'frontpage' or collection.metafields.collection.hidden == 'true' -%}
                         {%- assign matches_block = null -%}
                         {%- for block in section.blocks -%}
                             {%- if block.settings.for_collection == collection_obj.handle -%}
