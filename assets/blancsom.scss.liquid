@@ -10,7 +10,44 @@ $color-theme3-default: #858585;
 $color-sale: $color-theme-default;
 $color-background-lite: #f6f8f6;
 $spacing: 0.12em;
+
+$screen-xs-down: 0;
+$screen-sm-down: 540px;
+$screen-md-down: 777px;
+$screen-lg-down: 1024px;
+$screen-xl-down: 1259px;
+
+$screen-xs-up: 0;
+$screen-sm-up: 541px;
+$screen-md-up: 778px;
+$screen-lg-up: 1025px;
+$screen-xl-up: 1260px;
+
 .blancsom-theme {
+  @media (min-width: $screen-lg-up) {
+    .container-fluid {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    // Product Page Layout
+    .col-12.col-lg-6 {
+      &.blancsom-image-side {
+        padding-right: 100px;
+      }
+      &.blancsom-info-side {
+        padding-top: 64px;
+        padding-right: 160px;
+        .js-sticky-sidebar {
+          .product-page__tabs {
+            .tabs__body {
+              margin-bottom: 96px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   // Breadcrumbs
   .breadcrumbs {
     li {
@@ -100,24 +137,6 @@ $spacing: 0.12em;
       color: #000000;
       &.description img {
         display: none; // Hide images in descirption
-      }
-    }
-  }
-  @media (min-width: 1025px) {
-    .col-12.col-lg-6 {
-      &.blancsom-image-side {
-        padding-right: 100px;
-      }
-      &.blancsom-info-side {
-        padding-top: 64px;
-        padding-right: 160px;
-        .js-sticky-sidebar {
-          .product-page__tabs {
-            .tabs__body {
-              margin-bottom: 96px;
-            }
-          }
-        }
       }
     }
   }
@@ -250,7 +269,7 @@ $spacing: 0.12em;
       font-family: $font-sans-logo;
     }
   }
-  @media (min-width: 1025px) {
+  @media (min-width: $screen-lg-up) {
     .header__content {
       .header__line-top {
         min-height: 80px;
@@ -263,13 +282,13 @@ $spacing: 0.12em;
   }
   // Designers List
   #designersList {
-    @media (min-width: 541px) {
+    @media (min-width: $screen-sm-up) {
       column-count: 2;
     }
-    @media (min-width: 777px) {
+    @media (min-width: $screen-md-up) {
       column-count: 3;
     }
-    @media (min-width: 1025px) {
+    @media (min-width: $screen-lg-up) {
       column-count: 4;
     }
     column-gap: 1em;
@@ -313,49 +332,50 @@ $spacing: 0.12em;
     }
   }
 }
+// Footer 
 .footer--style-blancsom {
   background-color: $color-background-lite;
   h5 {
     font-size: 0.8rem;
     letter-spacing: $spacing;
     color: $color-theme-default;
-  }
-  .footer__subscription {
-    p {
-      font-family: $font-serif;
-    }
-    input[type="email"] {
-      padding-left: 0.1rem;
-      &,
-      &:hover,
-      &:focus {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        background: none;
+    .footer__subscription {
+      p {
+        font-family: $font-serif;
       }
-      &::placeholder {
+      input[type="email"] {
+        padding-left: 0.1rem;
+        &,
+        &:hover,
+        &:focus {
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          background: none;
+        }
+        &::placeholder {
+          letter-spacing: $spacing;
+        }
+      }
+      input[type="submit"] {
+        width: 100%;
+        background-color: #dbe0dd;
         letter-spacing: $spacing;
+        color: rgba($color-theme-default,0.6);
+        border: none;
+        &:hover,
+        &:focus {
+          background-color: $color-theme-default;
+          color: $color-background-lite;
+        }
       }
     }
-    input[type="submit"] {
-      width: 100%;
-      background-color: #dbe0dd;
-      letter-spacing: $spacing;
-      color: rgba($color-theme-default,0.6);
-      border: none;
-      &:hover,
-      &:focus {
-        background-color: $color-theme-default;
-        color: $color-background-lite;
-      }
-    }
-  }
-  .footer__section {
-    .footer__section-content {
-      li {
-        a {
-          color: $color-theme3-default;
+    .footer__section {
+      .footer__section-content {
+        li {
+          a {
+            color: $color-theme3-default;
+          }
         }
       }
     }
