@@ -1,16 +1,21 @@
 // CSS Overrided by JSPH
+
+// Typography Setting
+$spacing: 0.12em;
+
 $font-sans: soleil, sans-serif;
 $font-sans-logo: bicyclette, sans-serif;
 $font-serif: adobe-garamond-pro, serif;
 
 $color-theme-default: #141414;
-$color-theme3-default: #858585;
-
-// $color-sale: #4527a0;
+$color-blancsom-base: #416362; // previous: #416341
+$color-background-lite: lighten($color-blancsom-base, 65); // previous: #f6f8f6
+$color-background-dark: darken($color-blancsom-base, 15); // previous: #233523
+$color-background-lite-darken: desaturate(darken($color-background-lite, 9), 6);
+$color-theme3-default: desaturate(lighten($color-blancsom-base, 25), 13); // previous: #858585
 $color-sale: $color-theme-default;
-$color-background-lite: #f6f8f6;
-$spacing: 0.12em;
 
+// Meida Query Break point
 $screen-xs-down: 0;
 $screen-sm-down: 540px;
 $screen-md-down: 777px;
@@ -23,7 +28,18 @@ $screen-md-up: 778px;
 $screen-lg-up: 1025px;
 $screen-xl-up: 1260px;
 
+// Logo size Setting
+$mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
+
 .blancsom-theme {
+   // General
+   p,
+   .paragraph {
+     color: $color-theme3-default;
+   }
+   .search-form {
+     background-color: $color-background-lite;
+   }
   @media (min-width: $screen-lg-up) {
     .container-fluid {
       padding-right: 30px;
@@ -50,9 +66,13 @@ $screen-xl-up: 1260px;
 
   // Breadcrumbs
   .breadcrumbs {
-    li {
-      text-transform: uppercase;
-      letter-spacing: $spacing;
+    ul {
+      margin-left: -2px;
+      margin-right: -2px;
+      li {
+        text-transform: uppercase;
+        letter-spacing: $spacing;
+      }
     }
   }
 
@@ -222,11 +242,6 @@ $screen-xl-up: 1260px;
       span {
         font-family: $font-serif;
         color: $color-theme-default;
-        // text-decoration: underline;
-        // text-transform: lowercase;
-        // &::first-letter {
-        //   text-transform: uppercase;
-        // }
       }
     }
   }
@@ -279,11 +294,18 @@ $screen-xl-up: 1260px;
         border-color: #fff;
       }
     }
-    .header__btn-cart {
-      margin-top: -5px;
-      i {
-        margin-top: 1px;
-      }
+  }
+  .header__logo.d-lg-none {
+    position: absolute;
+    left: calc(50% - #{$mobile-logo-width-half});
+    top: 18px;
+  }
+  .header__btn-account {
+    i.btn-account svg {
+      min-width: unset;
+      min-height: unset;
+      height: 18px;
+      margin-top: 5px;
     }
   }
   // Designers List
@@ -296,6 +318,9 @@ $screen-xl-up: 1260px;
     }
     @media (min-width: $screen-lg-up) {
       column-count: 4;
+    }
+    @media (max-width: $screen-sm-down) {
+      text-align: center;
     }
     column-gap: 1em;
     .designer-index-card {
@@ -336,6 +361,17 @@ $screen-xl-up: 1260px;
         cursor: not-allowed;
       }
     }
+    @media (max-width: $screen-sm-down) {
+      margin-left: 0;
+      .designer-index-nav {
+        padding: 0.3rem 0.5rem;
+      }
+    }
+  }
+  .page-title {
+    @media (max-width: $screen-sm-down) {
+      text-align: center;
+    }
   }
 }
 // Footer 
@@ -365,7 +401,7 @@ $screen-xl-up: 1260px;
       }
       input[type="submit"] {
         width: 100%;
-        background-color: #dbe0dd;
+        background-color: $color-background-lite-darken;
         letter-spacing: $spacing;
         color: rgba($color-theme-default,0.6);
         border: none;
@@ -385,5 +421,9 @@ $screen-xl-up: 1260px;
         }
       }
     }
+  }
+   // Notification Bg
+   .notification-cookies__bg {
+    background-color: $color-background-dark;
   }
 }

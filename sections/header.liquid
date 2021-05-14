@@ -191,7 +191,7 @@
                         {%- endif -%}
                     </div>
                 {%- else -%}
-                    <a href="/account" class="header__btn-account d-flex{% if section.settings.type == '5' %} d-lg-none{% endif %} align-items-center position-relative ml-25 ml-lg-15 js-popup-button"
+                    <a href="/account" class="header__btn-account d-lg-inline{% if section.settings.type == '5' %} d-lg-none{% endif %} align-items-center position-relative ml-25 ml-lg-15 js-popup-button text-underline-hover"
                         data-js-popup-button="account"
                         {%- if settings.tooltips_enable and header_enable_tooltips %}
                             data-js-tooltip
@@ -200,7 +200,8 @@
                             data-tippy-distance="6"
                         {%- endif -%}
                     >
-                        <i>{% render 'icon-theme-201' %}</i>
+                    <span class="d-none d-md-inline">ACCOUNT</span>
+                    <span class="d-md-none"><i class="btn-account">{% render 'icon-theme-202' %}</i></span>
                     </a>
                 {%- endif -%}
             {%- endif -%}
@@ -250,12 +251,9 @@
         {%- endcapture -%}
         {%- capture btn_cart_html -%}
             {%- if settings.cart_show_header_button -%}
-                <div class="ml-25 ml-lg-15">
-                    <a href="/cart" class="header__btn-cart position-relative d-flex align-items-center text-nowrap js-popup-button" data-js-popup-button="cart"{% if need_sticky_sidebar %} data-js-sticky-replace-element="cart"{% endif %}>
-                        {% capture cart_icon_name %}{{ settings.cart_icon | default: 'icon-theme-109' }}{% endcapture %}
-                        <i class="mr-lg-7">{% include cart_icon_name %}</i>
-                        <span class="d-none d-lg-inline mt-lg-4" data-js-cart-count-desktop="{{ cart.item_count }}">{{ 'layout.header.cart_count' | t: count: cart.item_count }}</span>
-                        <span class="header__counter d-lg-none" data-js-cart-count-mobile="{{ cart.item_count }}">{{ cart.item_count }}</span>
+            <div class="ml-10 ml-lg-15">
+                <a href="/cart" class="header__btn-cart position-relative js-popup-button text-underline-hover" data-js-popup-button="cart"{% if need_sticky_sidebar %} data-js-sticky-replace-element="cart"{% endif %}>
+                    <span class="mr-lg-7" data-js-cart-count-desktop="{{ cart.item_count }}">{{ 'layout.header.cart_count' | t: count: cart.item_count }}</span>
                     </a>
                 </div>
             {%- endif -%}
@@ -404,7 +402,7 @@
         {%- endcapture -%}
         {%- capture btn_search_html -%}
             {%- if settings.search_show and section.settings.type != '5' -%}
-                <a href="{{ routes.search_url }}" class="header__btn-search d-none d-lg-flex align-items-lg-center{% if section.settings.type == '1' %} ml-lg-auto{% else %} ml-25 ml-lg-15{% endif %} js-popup-button"
+                <a href="{{ routes.search_url }}" class="header__btn-search d-none d-lg-inline{% if section.settings.type == '1' %} ml-lg-auto{% else %} ml-25 ml-lg-15{% endif %} js-popup-button text-underline-hover"
                    data-js-popup-button="navigation"
                     {%- if settings.tooltips_enable and header_enable_tooltips and section.settings.type != '1' %}
                        data-js-tooltip
@@ -413,10 +411,7 @@
                        data-tippy-distance="6"
                     {%- endif -%}
                 >
-                {%- if section.settings.type == '1' or section.settings.type == '4' -%}
                     <span class="mr-lg-7">{{ 'layout.header.search' | t }}</span>
-                {%- endif -%}
-                    <i>{% render 'icon-theme-168' %}</i>
                 </a>
             {%- endif -%}
         {%- endcapture -%}
