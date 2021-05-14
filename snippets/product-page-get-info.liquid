@@ -338,9 +338,7 @@
                     {% include 'product-get-label-pre-order' %}
                 {%- endif -%}
                 {%- if show_label_out_stock -%}
-                {%- unless is_product_inquiry -%}
-                {% include 'product-get-label-out-stock' %}
-                {%- endunless -%}
+                    {% include 'product-get-label-out-stock' %}
                 {%- endif -%}
             </div>
         {%- endif -%}
@@ -749,12 +747,10 @@
                     {% include 'product-get-label-in-stock' %}
                 {%- endif -%}
                 {%- if show_label_pre_order -%}
-                    {% include 'product-get-label-pre-order' %}
+                {% include 'product-get-label-pre-order' %}
                 {%- endif -%}
                 {%- if show_label_out_stock -%}
-                {%- unless is_product_inquiry -%}
-                {% include 'product-get-label-out-stock' %}
-                {%- endunless -%}
+                    {% include 'product-get-label-out-stock' %}
                 {%- endif -%}
             </div>
         {%- endif -%}
