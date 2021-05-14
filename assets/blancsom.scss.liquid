@@ -6,6 +6,10 @@ $font-sans: soleil, sans-serif;
 $font-sans-logo: bicyclette, sans-serif;
 $font-serif: adobe-garamond-pro, serif;
 
+$color-theme-default: #141414;
+// $color-sale: #4527a0;
+$color-sale:$color-theme-default;
+
 // Color Setting
 $color-theme-default: #141414;
 $color-blancsom-base: #416362; // previous: #416341
@@ -281,7 +285,21 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
       }
     }
   }
-
+  .pagination {
+    .btn.no-product {
+      background: none;
+      border: none;
+      span {
+        font-family: $font-serif;
+        color: $color-theme-default;
+        // text-decoration: underline;
+        // text-transform: lowercase;
+        // &::first-letter {
+        //   text-transform: uppercase;
+        // }
+      }
+    }
+  }
   .collection-products {
     @media (min-width: 1920px) {
       .blancsom-xxl-col {

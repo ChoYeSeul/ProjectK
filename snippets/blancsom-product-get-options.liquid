@@ -1,0 +1,50 @@
+{%- unless product.has_only_default_variant -%}
+    {% if settings.product_hide_options_without_availability_variants %}
+        {% assign option1_array = '' | split: '' %}
+        {% assign option2_array = '' | split: '' %}
+        {% for variant in product.variants %}
+            {% if variant.available %}
+                {% unless option1_array contains variant.option1 %}
+                    {% assign new_option1 = variant.option1 | split: '!@#$%' %}
+                    {% assign option1_array = option1_array | concat: new_option1 %}
+                {% endunless %}
+                {% unless option2_array contains variant.option2 %}
+                    {% assign new_option2 = variant.option2 | split: '!@#$%' %}
+                    {% assign option2_array = option2_array | concat: new_option2 %}
+                {% endunless %}
+            {% endif %}
+        {% endfor %}
+        <div class="blancsom-collection-list-options">
+            {% if option1_array.size == 0 and option2_array.size == 0 %}
+                <div class="product-options__section">
+                    {% if is_product_inquiry %}Inquiry Required{% else %}Out of Stock{% endif %}
+                </div>
+            {% else %}
+                {% if option1_array.size > 0 %}
+                    <div class="product-options__section d-flex flex-wrap">
+                        {% for option in option1_array %}
+                            <div class="blancsom-option d-flex flex-center">{{ option }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {% if option2_array.size > 0 %}
+                    <div class="product-options__section d-flex flex-wrap">
+                        {% for option in option2_array %}
+                            <div class="blancsom-option d-flex flex-center">{{ option }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+    {% else %}
+        <div class="blancsom-collection-list-options">
+            {%- for option in product.options_with_values -%}
+                <div class="product-options__section d-flex flex-wrap" data-style="text" data-property="{% render 'product-get-options-strip-symbols' with value: option.name %}">
+                    {%- for value in option.values -%}
+                        <div class="blancsom-option d-flex flex-center">{{ value }}</div>
+                    {%- endfor -%}
+                </div>
+            {%- endfor -%}
+        </div>
+    {% endif %}
+{%- endunless -%}

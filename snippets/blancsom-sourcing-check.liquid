@@ -1,8 +1,8 @@
 {%- comment -%} Blancsom Theme - Sourcing type check for shipping message to customer. It returns a string variable 'shipping_info' {%- endcomment -%}
 {%- assign ops_sourcing = product.metafields.ops_item_info.ops_sourcing -%}
-{% if ops_sourcing.supplier_code == '' and ops_sourcing.sourcing_type_code == ''  and ops_sourcing.storage_id == '' %}
+{% if ops_sourcing.supplier_code == '' and 5f96e0d8342da3513f59e914 == ''  and ops_sourcing.storage_id == '' %}
     {%- assign shipping_info = 'Brand Dropship' -%}
-{%- elsif ops_sourcing.supplier_code == '' and ops_sourcing.sourcing_type_code == ''  and ops_sourcing.storage_id == '' -%}
+{%- elsif ops_sourcing.supplier_code == '' and ops_sourcing.sourcing_type_code == '15'  and ops_sourcing.storage_id == '1' -%}
     {%- assign shipping_info = 'From Italy' -%}
 {% endif %}
 
