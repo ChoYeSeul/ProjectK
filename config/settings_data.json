@@ -1637,11 +1637,11 @@
           "1530696164711": {
             "type": "collections",
             "settings": {
-              "title": "COLLECTION",
+              "title": "Collections",
               "default_state": "open",
               "show_border": false,
               "menu": "collection",
-              "collection_tags_select": "radio"
+              "collection_tags_select": "checkbox"
             }
           },
           "1530696372892": {
