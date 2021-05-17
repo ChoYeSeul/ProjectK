@@ -603,7 +603,7 @@
                 {%- endif -%}
                 {%- if show_vendor -%}
                     <div class="product-page-info__vendor{% if vendor == blank %} d-none-important{% endif %} mb-5">
-                        <p class="m-0" data-js-product-vendor><a href="/collections/vendors?q={{ vendor }}">{{ vendor }}</a></p>
+                        <p class="m-0" data-js-product-vendor>{{vendor | link_to_vendor}}</p>
                     </div>
                 {%- endif -%}
             </div>
