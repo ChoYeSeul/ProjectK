@@ -67,5 +67,5 @@
      {% if scale_perspective %}data-scale-perspective="{{ scale_perspective }}"{% endif %}
      {% if is_parallax %}data-parallax-image{% endif %}
      {% if attr %}{{ attr }}{% endif %}
-     alt="{{ alt | default: image.alt | escape }}">
+     alt="{{ alt | default: image.alt | escape }}" style="object-position: 50% {{ img_position }}%;">
 </div>

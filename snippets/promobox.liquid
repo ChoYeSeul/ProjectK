@@ -4,6 +4,7 @@
 {%- assign type = type | default: block.settings.type -%}
 {%- assign height = height | default: block.settings.height | default: 'auto' -%}
 {%- assign min_height = min_height | default: block.settings.min_height -%}
+{%- assign img_position = img_position | default: block.settings.img_position -%}
 {%- assign content_position = content_position | default: block.settings.content_position -%}
 {%- assign content_align = content_align | default: block.settings.content_align -%}
 {%- assign add_container = add_container | default: block.settings.add_container -%}
@@ -126,7 +127,7 @@
                 {%- if animation_from != 'none' or animation_to != 'none' -%}
                     {%- assign scale_perspective = 1.1 -%}
                 {%- endif -%}
-                {% render 'rimage' with image: image size: res_image_size format: image_format scale_perspective: scale_perspective responsive_height: responsive_height ultra_responsive_height: ultra_responsive_height min_height: min_height only_desktop: desktop_n_mobile_image height: height %}
+                {% render 'rimage' with image: image size: res_image_size format: image_format scale_perspective: scale_perspective responsive_height: responsive_height ultra_responsive_height: ultra_responsive_height min_height: min_height only_desktop: desktop_n_mobile_image img_position: img_position %}
                 {%- if image_mobile != blank -%}
                     {% render 'rimage' with image: image_mobile size: res_image_mobile_size format: image_format scale_perspective: scale_perspective responsive_height: responsive_height ultra_responsive_height: ultra_responsive_height min_height: min_height only_mobile: desktop_n_mobile_image height: height %}
                 {%- endif -%}
@@ -932,10 +933,17 @@
                             {{ pages[custom_html].content }}
                         {%- else -%}
                             {%- if text_line_1 != blank -%}
-                                <p class="promobox__text-1">{{ text_line_1 }}</p>
+                                {%- if text_line_3 != blank -%}
+                                <div class="promobox__text-row">
+                                    <div class="promobox__text-1">{{ text_line_1 }}</div>
+                                    <div class="promobox__text-3">{{ text_line_3 }}</div>
+                                </div>
+                                {%- else -%}
+                                {% if url != blank %}<a href="{{ url }}">{% endif %}<p class="promobox__text-1 h6{% if url != blank %} text-underline-hover{% endif %}">{{ text_line_1 }}</p>{% if url != blank %}</a>{% endif %}
+                                {%- endif -%}
                             {%- endif -%}
                             {%- if text_line_2 != blank -%}
-                                <p class="promobox__text-2 h2 h1-sm{% if text_line_1 != blank %} mt-15{% endif %}">{{ text_line_2 }}</p>
+                                {% if url != blank %}<a href="{{ url }}">{% endif %}<p class="promobox__text-2{% if text_line_1 != blank %} mt-20{% endif %}">{{ text_line_2 }}</p>{% if url != blank %}</a>{% endif %}
                             {%- endif -%}
                             {%- if text_line_3 != blank -%}
                                 <p class="promobox__text-3 h4{% if text_line_1 != blank or text_line_2 != blank %} mt-15 mt-sm-25{% endif %}">{{ text_line_3 }}</p>
@@ -1175,6 +1183,7 @@
                 </div>
             {%- endcapture -%}
             {%- assign underline_parent = true -%}
+            {%- assign text_next_image = true -%}
         {% when 'type-2-4' %}
             {%- capture content -%}
                 <div class="d-flex flex-column mt-20">
@@ -1385,7 +1394,7 @@
         {%- when 'center' %}{% assign content_align_class = 'text-center' %}
         {%- when 'right' %}{% assign content_align_class = 'text-right' %}
     {%- endcase -%}
-    <div class="promobox {{ type_n_style_n_class }} {{ content_align_class }}{% if underline_parent %} text-underline-parent{% endif %}">
+    <div class="promobox {{ type_n_style_n_class }} {{ content_align_class }}{% if underline_parent %} text-underline-parent{% endif %} {% if text_next_image %} text-next-image{% endif %}">
         <{{ link_begin_tag }} class="d-block">
             {{ res_bg }}
         </{{ link_end_tag }}>

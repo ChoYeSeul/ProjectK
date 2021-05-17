@@ -585,4 +585,51 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
     }
   }
 }
+// Shoes Size Chart
+h6.shoes-size-chart {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+table.shoes-size-chart {
+  font-family: $font-sans;
+  width: 100%;
+  font-size: 0.75rem;
+  tr {
+    td,
+    th {
+      min-width: 5em;
+      text-align: center;
+      padding: 4px 8px;
+      vertical-align: middle;
+    }
+    td {
+      border-bottom: 1px solid #dee2e6;
+    }
+    th {
+      background-color: #141414;
+      color: #fff;
+      border-bottom: 1px solid #141414;
+    }
+    &:hover {
+      td {
+        border-bottom: 1px solid #000;
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+}
+// Home Banner Styling
+.promobox.text-next-image {
+  .d-block {
+    width: 50%;
+    float: left;
+    margin-right: 16px;
+  }
+}
+}
+.logged-in-customer-information__avatar-wrapper {
+display: none;
 }
