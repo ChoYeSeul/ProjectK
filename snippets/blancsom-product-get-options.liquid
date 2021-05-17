@@ -41,3 +41,10 @@
             {%- for option in product.options_with_values -%}
                 <div class="product-options__section d-flex flex-wrap" data-style="text" data-property="{% render 'product-get-options-strip-symbols' with value: option.name %}">
                     {%- for value in option.values -%}
+                    <div class="blancsom-option d-flex flex-center">{{ value }}</div>
+                    {%- endfor -%}
+                </div>
+            {%- endfor -%}
+        </div>
+    {% endif %}
+{%- endunless -%}
