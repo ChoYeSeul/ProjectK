@@ -5,7 +5,7 @@
 {%- elsif ops_sourcing.supplier_code == '' and ops_sourcing.sourcing_type_code == '15'  and ops_sourcing.storage_id == '1' -%}
     {%- assign shipping_info = 'From Italy' -%}
 {% endif %}
-
+{%- assign shipping_info = 'Brand Dropship' -%}
 {%- if shipping_info == 'From Italy' -%}
     <div class="shipping-info">
         <h6> <i class="mr-1">{% render 'icon-theme-142' %}</i> SHIPPING FROM ITALY</h6>

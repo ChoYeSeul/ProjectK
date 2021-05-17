@@ -140,10 +140,26 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
     .btn-link {
       text-decoration: none;
     }
+  }
+  .product-page__tabs {
+    .tabs__content,
+    p {
+      font-family: $font-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: #000000;
+      &.description img {
+        display: none; // Hide images in descirption
+      }
+    }
+    #ProductTabDescription #ProductSizeChart {
+      display: none;
+    }
     .shipping-info {
-      $info-color: $color-sale;
-      border: 1px solid rgba($info-color, 0.3);
+      $info-color: $color-blancsom-base;
       padding: 0.5rem;
+      margin-bottom: 1rem;
+      background: $color-background-lite;
       h6 {
         display: flex;
         font-size: 0.75rem;
@@ -156,6 +172,7 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
         fill: $info-color;
       }
       p {
+        font-family: $font-sans;
         padding-left: 0.3rem;
         padding-right: 0.3rem;
         font-size: 0.7rem;
