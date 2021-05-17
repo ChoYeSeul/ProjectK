@@ -89,9 +89,7 @@
                                 {% include 'product-get-label-pre-order' %}
                             {%- endif -%}
                             {%- if show_label_out_stock -%}
-                                {%- unless is_product_inquiry -%}
                                 {% include 'product-get-label-out-stock' %}
-                                {%- endunless -%}
                             {%- endif -%}
                         </div>
                     {%- endif -%}
@@ -187,18 +185,11 @@
                     <p class="m-0">{{ description | strip_html | truncatewords: product_collection_description_truncatewords }}</p>
                 </div>
             {%- endif -%}
-                    {% comment %} Blancsom Theme - Modified {% endcomment %}
-            {%- if show_options and show_custom_options -%}
-                <div class="product-collection__options">
-                    {% include 'blancsom-product-get-options' %}
-                </div>
-            {%- endif -%}
             {%- if show_price -%}
                 <div class="product-collection__price mb-{% if product_collection_content_offsets == 1 %}10{% else %}20{% endif %}">
                     {% include 'product-get-price' %}
                 </div>
             {%- endif -%}
-            {% comment %} Blancsom Theme - Commented Out
             <div class="product-collection__control d-flex flex-column w-100">
                 {%- if show_options and show_custom_options -%}
                     <div class="product-collection__options">
@@ -256,7 +247,6 @@
                     </div>
                 {%- endif -%}
             </div>
-                {% endcomment %}
             {%- if show_reviews -%}
                 <div class="product-collection__reviews">
                     {%- if settings.reviews_type == 'default' -%}
@@ -280,7 +270,6 @@
                         {% include 'product-get-price' %}
                     </div>
                 {%- endif -%}
-                
                 {%- if show_reviews -%}
                     <div class="product-collection__list-v2-reviews">
                         {%- if settings.reviews_type == 'default' -%}

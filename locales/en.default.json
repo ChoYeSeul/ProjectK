@@ -220,7 +220,7 @@
       "shipping_calculator_success_text": "Rates start at",
       "shipping_calculator_do_not_ship_text": "We do not ship to this destination.",
       "free_shipping_html": "Spend {{ value }} to Free Shipping",
-      "free_shipping_complete": "You're qualified for Free Shipping"
+      "free_shipping_complete": "Free Shipping"
     },
     "label": {
       "product": "PRODUCT",
@@ -240,14 +240,14 @@
     "control": {
       "sort_label": "Sort",
       "sort_by": {
-        "manual": "Recommended",
+        "manual": "Featured",
         "best-selling": "Best Selling",
-        "price-ascending": "Price Low to High",
-        "price-descending": "Price High to Low",
-        "created-ascending": "Oldest",
-        "created-descending": "New in",
-        "title-ascending": "A to Z",
-        "title-descending": "Z to A"
+        "price-ascending": "Price Ascending",
+        "price-descending": "Price Descending",
+        "created-ascending": "Date Ascending",
+        "created-descending": "Date Descending",
+        "title-ascending": "Name Ascending",
+        "title-descending": "Name Descending"
       },
       "info": {
         "more_limit": "Showing {{ from }}–{{ to }} of {{ count }} results",
@@ -256,7 +256,7 @@
         "result_empty": "Empty result"
       },
       "view_length_label": "Show",
-      "button_sidebar": "Show Designers",
+      "button_sidebar": "SHOW FILTER",
       "button_sidebar_close": "CLOSE FILTER"
     },
     "sidebar": {
@@ -328,7 +328,7 @@
       "address2": "Address2",
       "city": "City",
       "country": "Country",
-      "province": "State",
+      "province": "Province",
       "zip": "Postal\/Zip Code",
       "phone": "Phone",
       "set_default": "Set as default address",
@@ -464,7 +464,7 @@
       "home": "Home"
     },
     "header": {
-      "cart_count": "BAG({{ count }})",
+      "cart_count": "Bag ({{ count }})",
       "register": "Register",
       "login": "Sign in",
       "sign_out": "Sign Out",
@@ -534,7 +534,7 @@
       "delivery_return": "DELIVERY & RETURN",
       "message": "MESSAGE",
       "add_to_cart": {
-        "title": "Add To Bag",
+        "title": "Add To Cart",
         "added": "Added",
         "sold_out": "Sold Out",
         "pre_order": "Pre-Order",

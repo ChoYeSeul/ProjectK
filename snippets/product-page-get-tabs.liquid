@@ -93,10 +93,7 @@
                         {%- endcase -%}
                         <div{% if active_tab %} class="active"{% endif %} data-js-tabs-tab>
                             <span data-js-tabs-btn-mobile>{{ block.settings.title }} <i>{% render 'icon-theme-188' %}</i></span>
-                            <div class="tabs__content rte overflow-hidden" data-js-tabs-content id="ProductTab{{custom_tab_index}}">
-                                {% if custom_tab_index == 2 %}
-                                    {% include 'blancsom-sourcing-check' %}
-                                {% endif %}
+                            <div class="tabs__content rte overflow-hidden" data-js-tabs-content{% if active_tab %} style="display: block;"{% assign active_tab = null %}{% endif %}>
                                 {% include 'parse-page-html-content' with default_page: custom_tab_default_page page_content: block.settings.page_content html: block.settings.content %}
                             </div>
                         </div>
@@ -330,7 +327,7 @@
                 {%- if show_tab_description and description_place == 'tabs' and description != blank -%}
                     <div{% if active_tab %} class="active"{% endif %} data-js-tabs-tab>
                         <span data-js-tabs-btn-mobile>{{ 'products.product.tabs.description' | t }} <i>{% render 'icon-theme-188' %}</i></span>
-                        <div class="tabs__content description rte overflow-hidden" data-js-tabs-content id="ProductTabDescription"{% if active_tab %} style="display: block;"{% assign active_tab = null %}{% endif %}>
+                        <div class="tabs__content rte overflow-hidden" data-js-tabs-content{% if active_tab %} style="display: block;"{% assign active_tab = null %}{% endif %}>
                             {% include 'parse-for-icons' content: description %}
                         </div>
                     </div>

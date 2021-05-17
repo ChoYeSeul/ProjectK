@@ -48,7 +48,7 @@
 {%- endfor -%}
 
 {% comment %}Sort by{% endcomment %}
-{%- assign sort_by_handles = 'manual|created-descending|price-ascending|price-descending' | split: '|' -%}
+{%- assign sort_by_handles = 'manual|best-selling|price-ascending|price-descending|created-ascending|created-descending|title-ascending|title-descending' | split: '|' -%}
 {%- assign sort_by = collection.sort_by -%}
 {%- unless sort_by_handles contains sort_by -%}
     {%- assign sort_by = collection.default_sort_by -%}
@@ -153,12 +153,10 @@
             {% include 'collection-body-promobox' %}
             {%- assign collection_products_count = 0 -%}
             {%- for product in collection_products -%}
-            
                 {%- assign show_product = true -%}
-                {%- comment -%} Blancsom Theme - Inquiry Item Check returns a variable 'is_product_inquiry' {%- endcomment -%}
-                {% include 'blancsom-inquiry-check' %}
-                {%- if only_available and product.available != true and is_product_inquiry != true -%}
-                {%- assign passed_the_filters = false -%}
+                {%- if only_available_enable == true and product.available != true -%}
+                    {%- assign show_product = false -%}
+                    {%- continue -%}
                 {%- endif -%}
                 {%- if show_product == true and filter_by_tags != blank -%}
                     {%- assign product_tags = product.tags | join: '___' | remove: '"' | split: '___' -%}
@@ -262,7 +260,7 @@
                 {%- if show_product == true -%}
                     {%- assign collection_products_count = collection_products_count | plus: 1 -%}
                     {%- if collection_products_count >= collection_products_from and collection_products_count <= collection_products_to -%}
-                        <div class="{{ grid_classes }} blancsom-xxl-col">
+                        <div class="{{ grid_classes }}">
                             {% include 'product-collection' product_margin_bottom: offset_collection_page_product_margin_bottom_d %}
                         </div>
                     {%- endif -%}
@@ -287,7 +285,7 @@
         {%- capture products_html -%}
             {% include 'collection-body-promobox' %}
             {%- for product in collection.products -%}
-                <div class="{{ grid_classes }} blancsom-xxl-col">
+                <div class="{{ grid_classes }}">
                     {% include 'product-collection' product_margin_bottom: offset_collection_page_product_margin_bottom_d %}
                 </div>
             {%- endfor -%}
@@ -314,7 +312,7 @@
                                     <div class="d-flex align-items-center" data-js-dropdown-button>
                                         <label for="SortBy" class="mb-0 mr-5">{{ 'collections.control.sort_label' | t }}:</label>
                                         <select name="sort_by" class="p-0 pr-10 pr-lg-25 mb-0 border-0 cursor-pointer" id="SortBy">
-                                            {% capture sort_by_titles %}{{ 'collections.control.sort_by.manual' | t }}|{{ 'collections.control.sort_by.created-descending' | t }}|{{ 'collections.control.sort_by.price-ascending' | t }}|{{ 'collections.control.sort_by.price-descending' | t }}{% endcapture %}
+                                            {% capture sort_by_titles %}{{ 'collections.control.sort_by.manual' | t }}|{{ 'collections.control.sort_by.best-selling' | t }}|{{ 'collections.control.sort_by.price-ascending' | t }}|{{ 'collections.control.sort_by.price-descending' | t }}|{{ 'collections.control.sort_by.created-ascending' | t }}|{{ 'collections.control.sort_by.created-descending' | t }}|{{ 'collections.control.sort_by.title-ascending' | t }}|{{ 'collections.control.sort_by.title-descending' | t }}{% endcapture %}
                                             {%- assign sort_by_titles = sort_by_titles | split: '|' -%}
                                             {%- assign dropdown_options = null -%}
                                             {%- for handle in sort_by_handles -%}
@@ -352,20 +350,20 @@
                         {%- if settings.collection_show_sidebar == 'desktop_and_mobile' -%}
                             {%- assign mobile_need_button = true -%}
                         {%- endif -%}
-                        {% capture control_grid %}col{% if mobile_need_button %}-8{% else %}-0{% endif %} col-lg{% if desktop_need_button %}-4{% endif %}{% if mobile_need_button != true %} d-none{% else %} d-flex{% endif %}|col-lg{% if desktop_need_button %}-4{% endif %}|col{% if mobile_need_button %}-4{% else %}-12{% endif %} col-lg{% if desktop_need_button %}-4{% endif %}{% endcapture %}
+                        {% capture control_grid %}col{% if mobile_need_button %}-8{% else %}-0{% endif %} col-lg{% if desktop_need_button %}-4{% endif %}{% if mobile_need_button != true %} d-none{% else %} d-flex{% endif %}|col-lg{% if desktop_need_button %}-3{% endif %}|col{% if mobile_need_button %}-4{% else %}-12{% endif %} col-lg{% if desktop_need_button %}-5{% endif %}{% endcapture %}
                         {%- assign control_grid = control_grid | split: '|' -%}
                         <div class="{{ control_grid[0] }} d-lg-flex align-items-center">
                             {%- if settings.collection_show_sidebar != 'hide' -%}
                                 <div class="{% if mobile_need_button == true %}d-flex{% else %}d-none{% endif %}{% if desktop_need_button == true and settings.collection_sidebar_position != 'top' %} d-lg-flex{% else %} d-lg-none{% endif %} mr-30">
                                     <div class="collection-control__button-sidebar d-flex align-items-center cursor-pointer js-popup-button" data-js-popup-button="sidebar">
-                                        <i class="mr-5">{% render 'icon-theme-192' %}</i>
+                                        <i class="mr-5">{% render 'icon-theme-084' %}</i>
                                         {{ 'collections.control.button_sidebar' | t }}
                                     </div>
                                 </div>
                                 {%- if settings.collection_sidebar_position == 'top' -%}
                                     <div class="d-none d-lg-flex mr-30">
                                         <div class="collection-control__button-sidebar collection-control__button-sidebar--status d-flex align-items-center cursor-pointer js-button-block-visibility" data-block-link="filters">
-                                            <i class="mr-5">{% render 'icon-theme-192' %}</i>
+                                            <i class="mr-5">{% render 'icon-theme-084' %}</i>
                                             <span>{{ 'collections.control.button_sidebar' | t }}</span>
                                             <span>{{ 'collections.control.button_sidebar_close' | t }}</span>
                                         </div>
@@ -672,7 +670,7 @@
             "type": "select",
             "id": "default_view_length",
             "label": "Default",
-            "default": "24",
+            "default": "12",
             "options": [
                 {
                     "value": "6",

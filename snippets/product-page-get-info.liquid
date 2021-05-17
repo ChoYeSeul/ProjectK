@@ -77,7 +77,7 @@
 {% capture free_shipping_html %}
     {%- if show_free_shipping and settings.cart_show_free_shipping -%}
         <div class="product-page-info__free-shipping mt-10 mb-15">
-            {% render 'blancsom-free-shipping' with mobile_centered: true centered: centered %}
+            {% render 'free-shipping' with mobile_centered: true centered: centered %}
         </div>
     {%- endif -%}
 {% endcapture %}
@@ -178,7 +178,7 @@
                 {%- endif -%}
                 {%- if show_vendor -%}
                     <div class="product-page-info__vendor{% if vendor == blank %} d-none-important{% endif %} mb-5">
-                        <p class="m-0" data-js-product-vendor><span>{{ vendor }}</span></p>
+                        <p class="m-0" data-js-product-vendor>{{ 'products.product.vendor' | t }}: <span>{{ vendor }}</span></p>
                     </div>
                 {%- endif -%}
             </div>
@@ -190,15 +190,12 @@
                 </div>
                 {%- if show_sale_details -%}
                     <p class="product-page-info__price-sale-details mt-5 mt-lg-10 text-center text-lg-left{% unless compare_at_price > price %} d-none-important{% endunless %}"
-                        data-js-product-price-sale-details>
+                       data-js-product-price-sale-details>
                         {%- if compare_at_price > price -%}
                             {%- assign price_save = compare_at_price | minus: price -%}
                             {%- assign price_save_money = price_save | money -%}
                             {%- assign price_save_procent = price | times: 100 | divided_by: compare_at_price | minus: 100 | times: -1 -%}
                             {{ 'products.product.price_sale_details_html' | t: price: price_save_money, procent: price_save_procent }}
-                            {% unless settings.product_show_compare_at_price %}
-                            / List Price {{ compare_at_price | money  }}
-                            {% endunless %}
                         {%- endif -%}
                     </p>
                 {%- endif -%}
@@ -228,28 +225,11 @@
             <div class="product-page-info__border border-top border--dashed my-25"></div>
         {%- endif -%}
         <div>
-            {%- if is_product_inquiry -%}
-                {% include 'blancsom-product-page-inquiry-btn' %}
-            {%- else -%}
-                {% form "product", product, id: null, class: "d-flex flex-column w-100 m-0", data-js-product-form: '' %}
-                    <input type="hidden" name="variant_id" value="{{ current_variant.id }}" data-js-product-variant-input>
-                    {%- if show_options and show_custom_options -%}
-                        {%- unless product.has_only_default_variant -%}
-                            <div class="product-page-info__options mb-15">
-                                {%- unless is_quick_view -%}
-                                {%- assign quantity_connect = 'footbar' -%}
-                                {%- endunless -%}
-                                {% render 'product-get-quantity' with quantity_show_title: true %}
-                            </div>
-                        {%- endunless -%}
-                    {%- endif -%}
-                    {%- if show_button_add_to_cart or show_options -%}
-                        <div class="product-page-info__variants mb-15{% if show_options == false or show_custom_options %} d-none{% endif %}">
-                            {% render 'product-get-variants' with product: product current_variant: current_variant show_options: show_options show_custom_options: show_custom_options %}
-                        </div>
-                    {%- endif -%}
-                    {%- if show_quantity -%}
-                        <div class="product-page-info__field product-page-info__quantity mb-20">
+            {% form "product", product, id: null, class: "d-flex flex-column w-100 m-0", data-js-product-form: '' %}
+                <input type="hidden" name="variant_id" value="{{ current_variant.id }}" data-js-product-variant-input>
+                {%- if show_options and show_custom_options -%}
+                    {%- unless product.has_only_default_variant -%}
+                        <div class="product-page-info__options mb-15">
                             {%- unless is_quick_view -%}
                                 {%- assign trigger_id = 'footbar' -%}
                             {%- endunless -%}
@@ -388,7 +368,7 @@
                 {%- endif -%}
                 {%- if show_vendor -%}
                     <div class="product-page-info__vendor{% if vendor == blank %} d-none-important{% endif %} mb-5">
-                        <p class="m-0" data-js-product-vendor><span>{{ vendor }}</span></p>
+                        <p class="m-0" data-js-product-vendor>{{ 'products.product.vendor' | t }}: <span>{{ vendor }}</span></p>
                     </div>
                 {%- endif -%}
             </div>
@@ -400,15 +380,12 @@
                 </div>
                 {%- if show_sale_details -%}
                     <p class="product-page-info__price-sale-details mt-5 mt-lg-10 text-center text-lg-left{% unless compare_at_price > price %} d-none-important{% endunless %}"
-                        data-js-product-price-sale-details>
+                       data-js-product-price-sale-details>
                         {%- if compare_at_price > price -%}
                             {%- assign price_save = compare_at_price | minus: price -%}
                             {%- assign price_save_money = price_save | money -%}
                             {%- assign price_save_procent = price | times: 100 | divided_by: compare_at_price | minus: 100 | times: -1 -%}
                             {{ 'products.product.price_sale_details_html' | t: price: price_save_money, procent: price_save_procent }}
-                            {% unless settings.product_show_compare_at_price %}
-                            / List Price {{ compare_at_price | money  }}
-                            {% endunless %}
                         {%- endif -%}
                     </p>
                 {%- endif -%}
@@ -438,28 +415,11 @@
             <div class="product-page-info__border border-top border--dashed my-25"></div>
         {%- endif -%}
         <div>
-            {%- if is_product_inquiry -%}
-                {% include 'blancsom-product-page-inquiry-btn' %}
-            {%- else -%}
-                {% form "product", product, id: null, class: "d-flex flex-column w-100 m-0", data-js-product-form: '' %}
-                    <input type="hidden" name="variant_id" value="{{ current_variant.id }}" data-js-product-variant-input>
-                    {%- if show_options and show_custom_options -%}
-                        {%- unless product.has_only_default_variant -%}
-                            <div class="product-page-info__options mb-15">
-                                {%- unless is_quick_view -%}
-                                {%- assign quantity_connect = 'footbar' -%}
-                                {%- endunless -%}
-                                {% render 'product-get-quantity' with quantity_show_title: true %}
-                            </div>
-                        {%- endunless -%}
-                    {%- endif -%}
-                    {%- if show_button_add_to_cart or show_options -%}
-                        <div class="product-page-info__variants mb-15{% if show_options == false or show_custom_options %} d-none{% endif %}">
-                            {% render 'product-get-variants' with product: product current_variant: current_variant show_options: show_options show_custom_options: show_custom_options %}
-                        </div>
-                    {%- endif -%}
-                    {%- if show_quantity -%}
-                        <div class="product-page-info__field product-page-info__quantity mb-20">
+            {% form "product", product, id: null, class: "d-flex flex-column w-100 m-0", data-js-product-form: '' %}
+                <input type="hidden" name="variant_id" value="{{ current_variant.id }}" data-js-product-variant-input>
+                {%- if show_options and show_custom_options -%}
+                    {%- unless product.has_only_default_variant -%}
+                        <div class="product-page-info__options mb-15">
                             {%- unless is_quick_view -%}
                                 {%- assign trigger_id = 'footbar' -%}
                             {%- endunless -%}
@@ -529,9 +489,6 @@
     </div>
 {%- when '3' -%}
     <!-- template_layout #3 -->
-    {% comment %} Blancsom Theme - Modified / Using Layout 3 {% endcomment %}
-    {%- comment -%} Blancsom Theme - Inquiry Item Check returns a variable 'is_product_inquiry' {%- endcomment -%}
-    {% include 'blancsom-inquiry-check' %}
     <div class="product-page-info">
         {%- if show_label_in_stoc or show_label_pre_order or show_label_out_stock or show_label_sale or show_label_new or show_label_hot -%}
             <div class="product-page-info__labels d-flex justify-content-center justify-content-lg-start">
@@ -549,204 +506,6 @@
                 {%- endif -%}
                 {%- if show_label_pre_order -%}
                     {% include 'product-get-label-pre-order' %}
-                {%- endif -%}
-                {%- if show_label_out_stock -%}
-                {%- unless is_product_inquiry -%}
-                {% include 'product-get-label-out-stock' %}
-                {%- endunless -%}
-                {%- endif -%}
-            </div>
-        {%- endif -%}
-        {%- if show_collections and product.collections.size > 0 -%}
-            <div class="product-page-info__collections mb-3 text-center text-lg-left">
-                {% render 'product-get-collections' with product: product %}
-            </div>
-        {%- endif -%}
-        <div class="product-page-info__title mb-15 text-center text-lg-left">
-            {%- if is_quick_view -%}
-                <a href="{{ url }}">{{ title }}</a>
-            {%- else -%}
-                <h1 class="m-0">{{ title }}</h1>
-            {%- endif -%}
-        </div>
-        {%- if show_reviews -%}
-            <div class="product-page-info__reviews text-center text-lg-left">
-                {{ reviews_html }}
-            </div>
-        {%- endif -%}
-        {%- if show_sku or show_barcode or show_availability or show_type or show_vendor -%}
-            <div class="product-page-info__details mb-25 text-center text-lg-left">
-                {%- if show_sku -%}
-                    <div class="product-page-info__sku{% if sku == blank %} d-none-important{% endif %} mb-5">
-                        <p class="m-0" data-js-product-sku>{{ 'products.product.sku' | t }}: <span>{{ sku }}</span></p>
-                    </div>
-                {%- endif -%}
-                {%- if show_barcode -%}
-                    <div class="product-page-info__barcode{% if barcode == blank %} d-none-important{% endif %} mb-5">
-                        <p class="m-0" data-js-product-barcode>{{ 'products.product.barcode' | t }}: <span>{{ barcode }}</span></p>
-                    </div>
-                {%- endif -%}
-                {%- if show_availability -%}
-                    <div class="product-page-info__availability mb-5">
-                        {%- if quantity == 1 -%}
-                            {%- capture item -%}{{ 'layout.cart.items_count.one' | t }}{%- endcapture -%}
-                        {%- else -%}
-                            {%- capture item -%}{{ 'layout.cart.items_count.other' | t }}{%- endcapture -%}
-                        {%- endif -%}
-                        <p class="m-0" data-js-product-availability data-availability="{% if available %}true{% else %}false{% endif %}">{{ 'products.product.availability' | t }}: <span>{% if available %}{% if quantity > 0 %}{{ 'products.product.availability_value_in_stock' | t: count: quantity, item: item }}{% else %}{{ 'products.product.availability_value_in_stock_without_counter' | t }}{% endif %}{% else %}{{ 'products.product.availability_value_out_stock' | t }}{% endif %}</span></p>
-                    </div>
-                {%- endif -%}
-                {%- if show_type -%}
-                    <div class="product-page-info__type{% if type == blank %} d-none-important{% endif %} mb-5">
-                        <p class="m-0" data-js-product-type>{{ 'products.product.type' | t }}: <span>{{ type }}</span></p>
-                    </div>
-                {%- endif -%}
-                {%- if show_vendor -%}
-                    <div class="product-page-info__vendor{% if vendor == blank %} d-none-important{% endif %} mb-5">
-                        <p class="m-0" data-js-product-vendor>{{vendor | link_to_vendor}}</p>
-                    </div>
-                {%- endif -%}
-            </div>
-        {%- endif -%}
-        {%- if show_price -%}
-            <div class="mb-25">
-                <div class="product-page-info__price text-center text-lg-left">
-                    {% include 'product-get-price' %}
-                </div>
-                {% include 'blancsom-promocode-display' %}
-                {%- if show_sale_details -%}
-                    <p class="product-page-info__price-sale-details mt-5 mt-lg-10 text-center text-lg-left{% unless compare_at_price > price %} d-none-important{% endunless %}"
-                         data-js-product-price-sale-details>
-                        {%- if compare_at_price > price -%}
-                            {%- assign price_save = compare_at_price | minus: price -%}
-                            {%- assign price_save_money = price_save | money -%}
-                            {%- assign price_save_procent = price | times: 100 | divided_by: compare_at_price | minus: 100 | times: -1 -%}
-                            {{ 'products.product.price_sale_details_html' | t: price: price_save_money, procent: price_save_procent }}
-                            {% unless settings.product_show_compare_at_price %}
-                            / List Price {{ compare_at_price | money  }}
-                            {% endunless %}
-                        {%- endif -%}
-                    </p>
-                {%- endif -%}
-                {%- if show_taxes -%}
-                    {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-                        <div class="product-page-info__policies mt-10 text-center text-lg-left">
-                            {%- if shop.taxes_included -%}
-                                {{ 'products.product.include_taxes' | t }}
-                            {% endif %}
-                            {% if shop.shipping_policy.body != blank %}
-                                {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                            {%- endif -%}
-                        </div>
-                    {%- endif -%}
-                {%- endif -%}
-                {%- if settings.app_klarna_enable -%}
-                    <div class="klarna-message-info"></div>
-                {%- endif -%}
-            </div>
-        {%- endif -%}
-        {{ description_html }}
-        {{ countdown_html }}
-        {{ stock_countdown_html }}
-        {{ text_countdown_html }}
-        {{ visitors_html }}
-        {%- if product_page_show_border -%}
-            <div class="product-page-info__border border-top border--dashed my-25"></div>
-        {%- endif -%}
-        <div>
-            {%- if is_product_inquiry -%}
-                {% include 'blancsom-product-page-inquiry-btn' %}
-            {%- else -%}
-                {% form "product", product, id: null, class: "d-flex flex-column w-100 m-0", data-js-product-form: '' %}
-                    <input type="hidden" name="variant_id" value="{{ current_variant.id }}" data-js-product-variant-input>
-                    {%- if show_options and show_custom_options -%}
-                        {%- unless product.has_only_default_variant -%}
-                            <div class="product-page-info__options mb-15">
-                                {%- unless is_quick_view -%}
-                                {%- assign quantity_connect = 'footbar' -%}
-                                {%- endunless -%}
-                                {% render 'product-get-quantity' with quantity_show_title: true %}
-                            </div>
-                        {%- endunless -%}
-                    {%- endif -%}
-                    {%- if show_button_add_to_cart or show_options -%}
-                        <div class="product-page-info__variants mb-15{% if show_options == false or show_custom_options %} d-none{% endif %}">
-                            {% render 'product-get-variants' with product: product current_variant: current_variant show_options: show_options show_custom_options: show_custom_options %}
-                        </div>
-                    {%- endif -%}
-                    {%- if show_quantity -%}
-                        <div class="product-page-info__field product-page-info__quantity mb-20">
-                            {%- unless is_quick_view -%}
-                                {%- assign trigger_id = 'footbar' -%}
-                            {%- endunless -%}
-                            {% render 'product-get-quantity' with quantity_show_title: true %}
-                        </div>
-                    {%- endunless -%}
-                {%- endif -%}
-                {%- if show_notes -%}
-                        <div class="product-page-info__field product-page-info__notes mb-20">
-                            <label>{{ 'products.product.notes_label' | t }}</label>
-                            <textarea name="" placeholder="{{ 'products.product.notes_placeholder' | t }}" class="mb-0"></textarea>
-                        </div>
-                    {%- endif -%}
-                    {% include 'product-page-get-buttons' %}
-                    {{ free_shipping_html }}
-                    {{ payments_html }}
-                    {%- if show_addthis -%}
-                        {% capture addthis_html %}{% render 'addthis' %}{% endcapture %}
-                        {%- if addthis_html.size > 0 -%}
-                            <div class="product-page-info__share mb-20">
-                                <label>{{ 'products.product.share' | t }}</label>
-                                {{ addthis_html }}
-                            </div>
-                            {%- endif -%}
-                            {%- endif -%}
-                            {%- if show_social_share_buttons -%}
-                                <div class="product-page-info__share product-page-info__field mt-20 mb-10">
-                                    <label class="mb-6">{{ 'products.product.share' | t }}</label>
-                                    {% render 'social-share' share_type: social_share_buttons_type share_title: title share_permalink: url share_image: product.featured_media %}
-                                </div>
-                            {%- endif -%}
-                            {%- if full_details -%}
-                                <div class="product-page-info__full-details d-flex justify-content-center justify-content-lg-start mt-15">
-                                    <a href="{{ url }}" class="btn-link h6">{{ 'products.product.button_full_details' | t }}</a>
-                                </div>
-                            {%- endif -%}
-                        {% endform %}
-                    {%- endif -%}
-                    {% comment %} Blancsom Theme - Repositioned 'Size Guide' & 'Delivery & Return' Button 
-                    {%- if show_size_guide or show_delivery_return -%}
-                        <div class="product-page-info__details-buttons mb-30 mb-lg-15 d-flex flex-wrap justify-content-center justify-content-lg-start">
-                            {%- if show_size_guide and product.metafields.sizeguide.html != 'hide' -%}
-                                <div class="btn-link h6 mb-10 px-15 px-lg-10 js-popup-button" data-js-popup-button="size-guide">{{ 'products.product.size_guide' | t }}</div>
-                            {%- endif -%}
-                            {%- if show_delivery_return -%}
-                                <div class="btn-link h6 mb-10 px-15 px-lg-10 js-popup-button" data-js-popup-button="delivery-return">{{ 'products.product.delivery_return' | t }}</div>
-                            {%- endif -%}
-                        </div>
-                    {%- endif -%} {% endcomment %}
-                    {% include 'blancsom-sourcing-check' %}
-                </div>
-            </div>
-        {%- when '4' -%}
-    <!-- template_layout #4 -->
-    <div class="product-page-info">
-        {%- if show_label_in_stock or show_label_pre_order or show_label_out_stock or show_label_sale or show_label_new or show_label_hot -%}
-            <div class="product-page-info__labels d-flex justify-content-center justify-content-lg-start">
-                {%- if show_label_hot -%}
-                    {% include 'product-get-label-hot' %}
-                {%- endif -%}
-                {%- if show_label_new -%}
-                    {% include 'product-get-label-new' %}
-                {%- endif -%}
-                {%- if show_label_sale -%}
-                    {% include 'product-get-label-sale' %}
-                {%- endif -%}
-                {%- if show_label_in_stock -%}
-                    {% include 'product-get-label-in-stock' %}
-                {%- endif -%}
-                {%- if show_label_pre_order -%}
-                {% include 'product-get-label-pre-order' %}
                 {%- endif -%}
                 {%- if show_label_out_stock -%}
                     {% include 'product-get-label-out-stock' %}
@@ -799,7 +558,7 @@
                 {%- endif -%}
                 {%- if show_vendor -%}
                     <div class="product-page-info__vendor{% if vendor == blank %} d-none-important{% endif %} mb-5">
-                        <p class="m-0" data-js-product-vendor><span>{{ vendor }}</span></p>
+                        <p class="m-0" data-js-product-vendor>{{ 'products.product.vendor' | t }}: <span>{{ vendor }}</span></p>
                     </div>
                 {%- endif -%}
             </div>
@@ -811,15 +570,12 @@
                 </div>
                 {%- if show_sale_details -%}
                     <p class="product-page-info__price-sale-details mt-5 mt-lg-10 text-center text-lg-left{% unless compare_at_price > price %} d-none-important{% endunless %}"
-                        data-js-product-price-sale-details>
+                       data-js-product-price-sale-details>
                         {%- if compare_at_price > price -%}
                             {%- assign price_save = compare_at_price | minus: price -%}
                             {%- assign price_save_money = price_save | money -%}
                             {%- assign price_save_procent = price | times: 100 | divided_by: compare_at_price | minus: 100 | times: -1 -%}
                             {{ 'products.product.price_sale_details_html' | t: price: price_save_money, procent: price_save_procent }}
-                            {% unless settings.product_show_compare_at_price %}
-                            / List Price {{ compare_at_price | money  }}
-                            {% endunless %}
                         {%- endif -%}
                     </p>
                 {%- endif -%}
@@ -849,18 +605,15 @@
             <div class="product-page-info__border border-top border--dashed my-25"></div>
         {%- endif -%}
         <div>
-            {%- if is_product_inquiry -%}
-            {% include 'blancsom-product-page-inquiry-btn' %}
-        {%- else -%}
             {% form "product", product, id: null, class: "d-flex flex-column w-100 m-0", data-js-product-form: '' %}
                 <input type="hidden" name="variant_id" value="{{ current_variant.id }}" data-js-product-variant-input>
                 {%- if show_options and show_custom_options -%}
                     {%- unless product.has_only_default_variant -%}
                         <div class="product-page-info__options mb-15">
                             {%- unless is_quick_view -%}
-                            {%- assign quantity_connect = 'footbar' -%}
+                                {%- assign trigger_id = 'footbar' -%}
                             {%- endunless -%}
-                            {% render 'product-get-quantity' with quantity_show_title: true %}
+                            {% include 'product-get-options' with options_type: 2 options_show_title: true change_history: change_history %}
                         </div>
                     {%- endunless -%}
                 {%- endif -%}
@@ -869,13 +622,189 @@
                         {% render 'product-get-variants' with product: product current_variant: current_variant show_options: show_options show_custom_options: show_custom_options %}
                     </div>
                 {%- endif -%}
-                {%- if show_quantity -%}
-                    <div class="product-page-info__field product-page-info__quantity mb-20">
-                            {%- unless is_quick_view -%}
-                            {%- assign trigger_id = 'footbar' -%}
-                            {%- endunless -%}
-                            {% include 'product-get-options' with options_type: 2 options_show_title: true change_history: change_history %}
+                {%- if show_size_guide or show_delivery_return or show_message -%}
+                    <div class="product-page-info__details-buttons mb-30 mb-lg-15">
+                        <div class="row justify-content-center justify-content-lg-start">
+                            {%- if show_size_guide -%}
+                                <div class="col-auto">
+                                    <div class="btn-link h6 d-flex align-items-center mb-10 js-popup-button" data-js-popup-button="size-guide">{% if product_popup_buttons_show_icon %}<i class="mr-8">{% include 'icon-theme-091' %}</i> {% endif %}{{ 'products.product.size_guide' | t }}</div>
+                                </div>
+                            {%- endif -%}
+                            {%- if show_delivery_return -%}
+                                <div class="col-auto">
+                                    <div class="btn-link h6 d-flex align-items-center mb-10 js-popup-button" data-js-popup-button="delivery-return">{% if product_popup_buttons_show_icon %}<i class="mr-7">{% include 'icon-theme-135' %}</i> {% endif %}{{ 'products.product.delivery_return' | t }}</div>
+                                </div>
+                            {%- endif -%}
+                            {%- if show_message -%}
+                                <div class="col-auto">
+                                    <div class="btn-link h6 d-flex align-items-center mb-10 js-popup-button" data-js-popup-button="message">{% if product_popup_buttons_show_icon %}<i class="mr-6">{% include 'icon-theme-133' %}</i> {% endif %}{{ 'products.product.message' | t }}</div>
+                                </div>
+                            {%- endif -%}
                         </div>
+                    </div>
+                {%- endif -%}
+                {%- if show_quantity and settings.product_info_button_layout != '3' -%}
+                    <div class="product-page-info__field product-page-info__quantity mb-20">
+                        {%- unless is_quick_view -%}
+                            {%- assign quantity_connect = 'footbar' -%}
+                        {%- endunless -%}
+                        {% render 'product-get-quantity' with quantity_show_title: true quantity_connect: quantity_connect %}
+                    </div>
+                {%- endif -%}
+                {%- if show_notes -%}
+                    <div class="product-page-info__field product-page-info__notes mb-20">
+                        <label>{{ 'products.product.notes_label' | t }}</label>
+                        <textarea name="" placeholder="{{ 'products.product.notes_placeholder' | t }}" class="mb-0"></textarea>
+                    </div>
+                {%- endif -%}
+                {% include 'product-page-get-buttons' %}
+                {%- if settings.app_klarna_enable -%}
+                    <div class="klarna-message-info2"></div>
+                {%- endif -%}
+                {{ free_shipping_html }}
+                {{ payments_html }}
+                {%- if show_social_share_buttons -%}
+                    <div class="product-page-info__share product-page-info__field mt-20 mb-10">
+                        <label class="mb-6">{{ 'products.product.share' | t }}</label>
+                        {% render 'social-share' share_type: social_share_buttons_type share_title: title share_permalink: url share_image: product.featured_media %}
+                    </div>
+                {%- endif -%}
+                {%- if full_details -%}
+                    <div class="product-page-info__full-details d-flex justify-content-center justify-content-lg-start mt-15">
+                        <a href="{{ url }}" class="btn-link h6">{{ 'products.product.button_full_details' | t }}</a>
+                    </div>
+                {%- endif -%}
+            {% endform %}
+        </div>
+    </div>
+{%- when '4' -%}
+    <!-- template_layout #4 -->
+    <div class="product-page-info">
+        {%- if show_label_in_stock or show_label_pre_order or show_label_out_stock or show_label_sale or show_label_new or show_label_hot -%}
+            <div class="product-page-info__labels d-flex justify-content-center justify-content-lg-start">
+                {%- if show_label_hot -%}
+                    {% include 'product-get-label-hot' %}
+                {%- endif -%}
+                {%- if show_label_new -%}
+                    {% include 'product-get-label-new' %}
+                {%- endif -%}
+                {%- if show_label_sale -%}
+                    {% include 'product-get-label-sale' %}
+                {%- endif -%}
+                {%- if show_label_in_stock -%}
+                    {% include 'product-get-label-in-stock' %}
+                {%- endif -%}
+                {%- if show_label_pre_order -%}
+                    {% include 'product-get-label-pre-order' %}
+                {%- endif -%}
+                {%- if show_label_out_stock -%}
+                    {% include 'product-get-label-out-stock' %}
+                {%- endif -%}
+            </div>
+        {%- endif -%}
+        {%- if show_collections and product.collections.size > 0 -%}
+            <div class="product-page-info__collections mb-3 text-center text-lg-left">
+                {% render 'product-get-collections' with product: product %}
+            </div>
+        {%- endif -%}
+        <div class="product-page-info__title mb-15 text-center text-lg-left">
+            {%- if is_quick_view -%}
+                <a href="{{ url }}">{{ title }}</a>
+            {%- else -%}
+                <h1 class="m-0">{{ title }}</h1>
+            {%- endif -%}
+        </div>
+        {%- if show_reviews -%}
+            <div class="product-page-info__reviews text-center text-lg-left">
+                {{ reviews_html }}
+            </div>
+        {%- endif -%}
+        {%- if show_sku or show_barcode or show_availability or show_type or show_vendor -%}
+            <div class="product-page-info__details mb-25 text-center text-lg-left">
+                {%- if show_sku -%}
+                    <div class="product-page-info__sku{% if sku == blank %} d-none-important{% endif %} mb-5">
+                        <p class="m-0" data-js-product-sku>{{ 'products.product.sku' | t }}: <span>{{ sku }}</span></p>
+                    </div>
+                {%- endif -%}
+                {%- if show_barcode -%}
+                    <div class="product-page-info__barcode{% if barcode == blank %} d-none-important{% endif %} mb-5">
+                        <p class="m-0" data-js-product-barcode>{{ 'products.product.barcode' | t }}: <span>{{ barcode }}</span></p>
+                    </div>
+                {%- endif -%}
+                {%- if show_availability -%}
+                    <div class="product-page-info__availability mb-5">
+                        {%- if quantity == 1 -%}
+                            {%- capture item -%}{{ 'layout.cart.items_count.one' | t }}{%- endcapture -%}
+                        {%- else -%}
+                            {%- capture item -%}{{ 'layout.cart.items_count.other' | t }}{%- endcapture -%}
+                        {%- endif -%}
+                        <p class="m-0" data-js-product-availability data-availability="{% if available %}true{% else %}false{% endif %}">{{ 'products.product.availability' | t }}: <span>{% if available %}{% if quantity > 0 %}{{ 'products.product.availability_value_in_stock' | t: count: quantity, item: item }}{% else %}{{ 'products.product.availability_value_in_stock_without_counter' | t }}{% endif %}{% else %}{{ 'products.product.availability_value_out_stock' | t }}{% endif %}</span></p>
+                    </div>
+                {%- endif -%}
+                {%- if show_type -%}
+                    <div class="product-page-info__type{% if type == blank %} d-none-important{% endif %} mb-5">
+                        <p class="m-0" data-js-product-type>{{ 'products.product.type' | t }}: <span>{{ type }}</span></p>
+                    </div>
+                {%- endif -%}
+                {%- if show_vendor -%}
+                    <div class="product-page-info__vendor{% if vendor == blank %} d-none-important{% endif %} mb-5">
+                        <p class="m-0" data-js-product-vendor>{{ 'products.product.vendor' | t }}: <span>{{ vendor }}</span></p>
+                    </div>
+                {%- endif -%}
+            </div>
+        {%- endif -%}
+        {%- if show_price -%}
+            <div class="mb-25">
+                <div class="product-page-info__price text-center text-lg-left">
+                    {% include 'product-get-price' %}
+                </div>
+                {%- if show_sale_details -%}
+                    <p class="product-page-info__price-sale-details mt-5 mt-lg-10 text-center text-lg-left{% unless compare_at_price > price %} d-none-important{% endunless %}"
+                       data-js-product-price-sale-details>
+                        {%- if compare_at_price > price -%}
+                            {%- assign price_save = compare_at_price | minus: price -%}
+                            {%- assign price_save_money = price_save | money -%}
+                            {%- assign price_save_procent = price | times: 100 | divided_by: compare_at_price | minus: 100 | times: -1 -%}
+                            {{ 'products.product.price_sale_details_html' | t: price: price_save_money, procent: price_save_procent }}
+                        {%- endif -%}
+                    </p>
+                {%- endif -%}
+                {%- if show_taxes -%}
+                    {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+                        <div class="product-page-info__policies mt-10 text-center text-lg-left">
+                            {%- if shop.taxes_included -%}
+                                {{ 'products.product.include_taxes' | t }}
+                            {% endif %}
+                            {% if shop.shipping_policy.body != blank %}
+                                {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                            {%- endif -%}
+                        </div>
+                    {%- endif -%}
+                {%- endif -%}
+                {%- if settings.app_klarna_enable -%}
+                    <div class="klarna-message-info"></div>
+                {%- endif -%}
+            </div>
+        {%- endif -%}
+        {{ description_html }}
+        {{ countdown_html }}
+        {{ stock_countdown_html }}
+        {{ text_countdown_html }}
+        {{ visitors_html }}
+        {%- if product_page_show_border -%}
+            <div class="product-page-info__border border-top border--dashed my-25"></div>
+        {%- endif -%}
+        <div>
+            {% form "product", product, id: null, class: "d-flex flex-column w-100 m-0", data-js-product-form: '' %}
+                <input type="hidden" name="variant_id" value="{{ current_variant.id }}" data-js-product-variant-input>
+                {%- if show_options and show_custom_options -%}
+                    {%- unless product.has_only_default_variant -%}
+                    <div class="product-page-info__options mb-15">
+                        {%- unless is_quick_view -%}
+                        {%- assign trigger_id = 'footbar' -%}
+                        {%- endunless -%}
+                        {% include 'product-get-options' with options_type: 2 options_show_title: true change_history: change_history %}
+                    </div>
                     {%- endunless -%}
                 {%- endif -%}
                 {%- if show_button_add_to_cart or show_options -%}
@@ -1009,7 +938,7 @@
                 {%- endif -%}
                 {%- if show_vendor -%}
                     <div class="product-page-info__vendor{% if vendor == blank %} d-none-important{% endif %} mb-5">
-                        <p class="m-0" data-js-product-vendor>{{vendor | link_to_vendor}}</p>
+                        <p class="m-0" data-js-product-vendor>{{ 'products.product.vendor' | t }}: <span>{{ vendor }}</span></p>
                     </div>
                 {%- endif -%}
             </div>
@@ -1026,9 +955,6 @@
                             {%- assign price_save_money = price_save | money -%}
                             {%- assign price_save_procent = price | times: 100 | divided_by: compare_at_price | minus: 100 | times: -1 -%}
                             {{ 'products.product.price_sale_details_html' | t: price: price_save_money, procent: price_save_procent }}
-                            {% unless settings.product_show_compare_at_price %}
-                            / List Price {{ compare_at_price | money  }}
-                            {% endunless %}
                         {%- endif -%}
                     </p>
                 {%- endif -%}
@@ -1058,32 +984,15 @@
             <div class="product-page-info__border border-top border--dashed my-25"></div>
         {%- endif -%}
         <div>
-            {%- if is_product_inquiry -%}
-                {% include 'blancsom-product-page-inquiry-btn' %}
-            {%- else -%}
-                {% form "product", product, id: null, class: "d-flex flex-column w-100 m-0", data-js-product-form: '' %}
-                    <input type="hidden" name="variant_id" value="{{ current_variant.id }}" data-js-product-variant-input>
-                    {%- if show_options and show_custom_options -%}
-                        {%- unless product.has_only_default_variant -%}
-                            <div class="product-page-info__options mb-15">
-                                {%- unless is_quick_view -%}
-                                    {%- assign trigger_id = 'footbar' -%}
-                                {%- endunless -%}
-                                {% include 'product-get-options' with options_type: 2 options_show_title: false change_history: change_history %}
-                            </div>
-                        {%- endunless -%}
-                    {%- endif -%}
-                    {%- if show_button_add_to_cart or show_options -%}
-                        <div class="product-page-info__variants mb-15{% if show_options == false or show_custom_options %} d-none{% endif %}">
-                            {% render 'product-get-variants' with product: product current_variant: current_variant show_options: show_options show_custom_options: show_custom_options %}
-                        </div>
-                    {%- endif -%}
-                    {%- if show_quantity -%}
-                        <div class="product-page-info__field product-page-info__quantity mb-20">
+            {% form "product", product, id: null, class: "d-flex flex-column w-100 m-0", data-js-product-form: '' %}
+                <input type="hidden" name="variant_id" value="{{ current_variant.id }}" data-js-product-variant-input>
+                {%- if show_options and show_custom_options -%}
+                    {%- unless product.has_only_default_variant -%}
+                        <div class="product-page-info__options mb-15">
                             {%- unless is_quick_view -%}
-                                {%- assign quantity_connect = 'footbar' -%}
+                                {%- assign trigger_id = 'footbar' -%}
                             {%- endunless -%}
-                            {% render 'product-get-quantity' with quantity_show_title: true %}
+                            {% include 'product-get-options' with options_type: 2 centered: true options_show_title: true change_history: change_history %}
                         </div>
                     {%- endunless -%}
                 {%- endif -%}

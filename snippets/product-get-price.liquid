@@ -1,5 +1,5 @@
 <!-- snippets/product-get-price.liquid -->
-{%- if compare_at_price > price and settings.product_show_compare_at_price -%}
+{%- if compare_at_price > price -%}
     <span class="price price--sale" data-js-product-price><span>{{ compare_at_price | money }}</span>{% if settings.price_show_sale_separator %}{{ 'products.product.price_sale_separator' | t }}{% endif %}<span>{{ price | money }}</span></span>
 {%- else -%}
     <span class="price" data-js-product-price><span>{{ price | money }}</span></span>
