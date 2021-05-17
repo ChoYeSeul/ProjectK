@@ -256,12 +256,30 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
     }
   }
   .pagination {
-    .btn.no-product {
+    .no-product {
       background: none;
       border: none;
       span {
         font-family: $font-serif;
         color: $color-theme-default;
+      }
+    }
+    .pagination__page {
+      &.current {
+        color: $color-theme-default;
+        border-bottom: 1px solid $color-theme-default;
+      }
+      border-bottom: 1px solid rgba(0, 0, 0, 0);
+    }
+    a.text-underline-hover {
+      padding-left: 4px;
+      padding-right: 4px;
+      text-transform: uppercase;
+      text-decoration: none !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0);
+      &:hover {
+        border-bottom: 1px solid $color-theme-default;
+        text-decoration: none !important;
       }
     }
   }

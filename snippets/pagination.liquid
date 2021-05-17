@@ -29,7 +29,7 @@
     <div class="d-flex align-items-center{% if pagination_type == 'centered_classic' %} justify-content-center{% endif %} {{ pagination_margin }}">
       {%- if paginate.previous.is_link -%}
         <span class="pagination__prev px-7">
-          <a href="{{ paginate.previous.url | remove: '-ajax' | remove: 'ajax' }}" class="btn">{{ 'layout.paginate.previous' | t }}</a>
+          <a href="{{ paginate.previous.url | remove: '-ajax' | remove: 'ajax' }}" class="text-underline-hover">{{ 'layout.paginate.previous' | t }}</a>
         </span>
       {%- endif -%}
       {%- for part in paginate.parts -%}
@@ -45,7 +45,7 @@
       {%- endfor -%}
       {%- if paginate.next.is_link -%}
         <span class="pagination__next px-7">
-          <a href="{{ paginate.next.url | remove: '-ajax' | remove: 'ajax' }}" class="btn">{{ 'layout.paginate.next' | t }}</a>
+          <a href="{{ paginate.next.url | remove: '-ajax' | remove: 'ajax' }}" class="text-underline-hover">{{ 'layout.paginate.next' | t }}</a>
         </span>
       {%- endif -%}
     </div>

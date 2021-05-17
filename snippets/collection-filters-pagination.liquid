@@ -19,11 +19,11 @@
         <div class="d-flex justify-content-center mt-35">
             {%- if paginate_current_page < paginate_pages -%}
                 {%- assign value = paginate_current_page | plus: 1 -%}
-                <a href="{{ paginate_url }}pg_:{{ value }}{{ paginate_sort_by_url }}{{ paginate_view_url }}" data-value="{{ value }}" class="btn">
+                <a href="{{ paginate_url }}pg_:{{ value }}{{ paginate_sort_by_url }}{{ paginate_view_url }}" data-value="{{ value }}" class="text-underline-hover">
                     <span>{{ 'layout.paginate.load_more' | t }}</span>
                 </a>
             {%- else -%}
-                <div class="btn no-product" disabled="disabled">
+                <div class="text-underline-hover no-product" disabled="disabled">
                     <span>{{ 'layout.paginate.no_more_products' | t }}</span>
                 </div>
             {%- endif -%}
@@ -32,11 +32,11 @@
         <div class="d-flex justify-content-center mt-35 pointer-events-none">
             {%- if paginate_current_page < paginate_pages -%}
                 {%- assign value = paginate_current_page | plus: 1 -%}
-                <a href="{{ paginate_url }}pg_:{{ value }}{{ paginate_sort_by_url }}{{ paginate_view_url }}" data-value="{{ value }}" class="btn">
+                <a href="{{ paginate_url }}pg_:{{ value }}{{ paginate_sort_by_url }}{{ paginate_view_url }}" data-value="{{ value }}" class="text-underline-hover">
                     <span>{{ 'layout.paginate.infinite_scroll' | t }}</span>
                 </a>
             {%- else -%}
-                <div class="btn no-product" disabled="disabled">
+                <div class="text-underline-hover no-product" disabled="disabled">
                     <span>{{ 'layout.paginate.no_more_products' | t }}</span>
                 </div>
             {%- endif -%}
@@ -44,9 +44,9 @@
     {%- elsif pagination_type == 'classic' or pagination_type == 'centered_classic' -%}
         <div class="d-flex align-items-center{% if pagination_type == 'centered_classic' %} justify-content-center{% endif %} mt-35">
             {%- if paginate_current_page > 1 -%}
-                <span class="pagination__prev px-7">
+                <span class="pagination__prev px-4 mx-4">
                     {%- assign value = paginate_current_page | minus: 1 -%}
-                    <a href="{{ paginate_url }}pg_:{{ value }}{{ paginate_sort_by_url }}{{ paginate_view_url }}" data-value="{{ value }}" class="btn">{{ 'layout.paginate.previous' | t }}</a>
+                    <a href="{{ paginate_url }}pg_:{{ value }}{{ paginate_sort_by_url }}{{ paginate_view_url }}" data-value="{{ value }}" class="text-underline-hover">{{ 'layout.paginate.previous' | t }}</a>
                   </span>
             {%- endif -%}
             {%- assign delimiter_from = paginate_current_page | minus: 3 -%}
@@ -63,13 +63,13 @@
                 {%- if forloop.index > 1 and forloop.index < paginate_pages -%}
                     {% if forloop.index < limit_from or forloop.index > limit_to %}
                         {%- if forloop.index == delimiter_from or forloop.index == delimiter_to -%}
-                            <span class="pagination__page px-7">...</span>
+                            <span class="pagination__page px-4 mx-4">...</span>
                         {%- endif -%}
                         {%- continue -%}
                     {%- endif -%}
                 {%- endif -%}
                 {%- if page != paginate_current_page -%}
-                    <span class="pagination__page px-7">
+                    <span class="pagination__page px-4 mx-4">
                       <a href="{{ paginate_url }}{% if page != 1 %}pg_:{{ page }}{{ paginate_sort_by_url }}{{ paginate_view_url }}{% endif %}" data-value="{{ page }}">{{ page }}</a>
                     </span>
                 {%- else -%}
@@ -79,9 +79,9 @@
                 {%- endif -%}
             {%- endfor -%}
             {%- if paginate_current_page < paginate_pages -%}
-                <span class="pagination__next px-7">
+                <span class="pagination__next px-4 mx-4">
                     {%- assign value = paginate_current_page | plus: 1 -%}
-                    <a href="{{ paginate_url }}pg_:{{ value }}{{ paginate_sort_by_url }}{{ paginate_view_url }}" data-value="{{ value }}" class="btn">{{ 'layout.paginate.next' | t }}</a>
+                    <a href="{{ paginate_url }}pg_:{{ value }}{{ paginate_sort_by_url }}{{ paginate_view_url }}" data-value="{{ value }}" class="text-underline-hover">{{ 'layout.paginate.next' | t }}</a>
                   </span>
             {%- endif -%}
         </div>
