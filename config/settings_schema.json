@@ -1416,6 +1416,13 @@
         "default": false
       },
       {
+        "type": "checkbox",
+        "id": "product_show_compare_at_price",
+        "label": "Show 'Compare At Price'",
+        "info": "Show Original Price and Sale Price Both",
+        "default": true
+      },
+      {
         "type": "image_picker",
         "id": "product_cursor",
         "label": "Cursor image",
@@ -3905,6 +3912,137 @@
   {
     "name": "Notifications",
     "settings": [
+      {
+        "type": "header",
+        "content": "Promotion Code Display Setup"
+      },
+      {
+        "type": "checkbox",
+        "id": "promocode_display_enable",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "collection",
+        "id": "promocode_display_collection",
+        "label": "Promotion Collection"
+      },
+      {
+        "type": "text",
+        "id": "promocode_display_text",
+        "label": "Text to Display",
+        "info": "This will be displayed on the product which contains the promotion collection"
+      },
+      {
+        "type": "header",
+        "content": "Shipping Notice from Overseas"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_cbt_supplier",
+        "label": "Supplier Code",
+        "info": "eg. 5fb28e878e0ba04f2c5b6192"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_cbt_sourcing_type",
+        "label": "Sourcing Type Code",
+        "info": "eg. 39"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_cbt_storage",
+        "label": "Storage ID",
+        "info": "eg. 1"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_cbt_title",
+        "label": "Title to Display",
+        "default": "SHIPPING FROM ITALY"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_cbt_text",
+        "label": "Text to Display",
+        "default": "This product will be directly shipped from Italy. It may take an average 7 days or more to receive the item. The international shipping cost will be charged."
+      },
+      {
+        "type": "header",
+        "content": "Shipping Notice from Manufacturer"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_brand_supplier",
+        "label": "Supplier Code",
+        "info": "eg. 5fb28e878e0ba04f2c5b6192"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_brand_sourcing_type",
+        "label": "Sourcing Type Code",
+        "info": "eg. 39"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_brand_storage",
+        "label": "Storage ID",
+        "info": "eg. 1"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_brand_title",
+        "label": "Title to Display",
+        "default": "FROM BRAND MANUFACTURER"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_brand_text",
+        "label": "Text to Display",
+        "default": "This product will be directly shipped from Brand manufacturer. It may take 10-15 business days to receive the item."
+      },
+      {
+        "type":"checkbox",
+        "id":"use_sourcing_check_add1",
+        "label":"Use Additional 1",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "sourcing_brand_supplier_add1",
+        "label": "Supplier Code(Additional 1)"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_brand_sourcing_type_add1",
+        "label": "Sourcing Type Code(Additional 1)"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_brand_storage_add1",
+        "label": "Storage ID(Additional 1)"
+      },
+      {
+        "type":"checkbox",
+        "id":"use_sourcing_check_add2",
+        "label":"Use Additional 2",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "sourcing_brand_supplier_add2",
+        "label": "Supplier Code(Additional 2)"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_brand_sourcing_type_add2",
+        "label": "Sourcing Type Code(Additional 2)"
+      },
+      {
+        "type": "text",
+        "id": "sourcing_brand_storage_add2",
+        "label": "Storage ID(Additional 2)"
+      },
       {
         "type": "header",
         "content": "Cookie notification"

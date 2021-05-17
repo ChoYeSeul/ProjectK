@@ -175,7 +175,7 @@
                         <div class="product-options__section d-flex flex-wrap" data-style="text" data-property="{% render 'product-get-options-strip-symbols' with value: option.name %}"{% if disable_auto_select %} data-disable-auto-select{% endif %}>
                             {%- for value in option.values -%}
                                 {% include 'product-get-options-res-status' with option_index0: option_index0 %}
-                                <div class="product-options__value product-options__value--text d-flex flex-center border cursor-pointer{% if disabled_value %} disabled{% endif %}{% if active_value %} active{% endif %}"
+                                <div class="product-options__value product-options__value--text d-flex flex-center border-bottom cursor-pointer{% if disabled_value %} disabled{% endif %}{% if active_value %} active{% endif %} lazyload"
                                      data-js-option-value
                                      data-value="{% render 'product-get-options-strip-symbols' with value: value %}"
                                      {{ trigger_attr }}

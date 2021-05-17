@@ -101,7 +101,7 @@
     </style>
 {%- endif -%}
 <div data-section-id="{{ section.id }}" data-section-type="header"{% render 'layout-get-container-class' with container: header_container %}>
-    <header id="header" class="header header--type-{{ section.settings.type }} header--style-{{ section.settings.style }}{% if header_enable_transparent and template contains 'index' %} header--transparent position-absolute top-0 w-100{% else %} position-lg-relative{% endif %}{% if section.settings.sticky != 'disable' %} js-header-sticky header--sticky-type-{{ section.settings.desktop_sticky_type }}{% endif %}" data-js-sticky="{{ section.settings.sticky }}" data-js-desktop-sticky-sidebar="{% if need_sticky_sidebar %}true{% else %}false{% endif %}">
+    <header id="header" class="blancsom-theme header header--type-{{ section.settings.type }} header--style-{{ section.settings.style }}{% if header_enable_transparent and template contains 'index' %} header--transparent position-absolute top-0 w-100{% else %} position-lg-relative{% endif %}{% if section.settings.sticky != 'disable' %} js-header-sticky{% endif %}" data-js-sticky="{{ section.settings.sticky }}" data-js-desktop-sticky-sidebar="{% if need_sticky_sidebar %}true{% else %}false{% endif %}">
         {%- assign selected_blocks = section.blocks | where: 'type', 'tape' -%}
         {%- for block in selected_blocks -%}
             <div class="d-none js-header-tape" data-js-show-once="{{ header_tape_show_once }}" data-js-delay="{{ block.settings.delay }}" data-js-cookies-life="{{ header_tape_cookies_life }}">
@@ -126,7 +126,7 @@
         {%- for block in selected_blocks -%}
             {%- capture info_line_html -%}
                 <div class="header__line-info header__line-info--style-{{ block.settings.style }} {% if block.settings.show_on_mobile %}d-flex{% else %}d-none d-lg-flex{% endif %} align-items-lg-center px-10 px-lg-0 pt-15 pb-10 py-lg-2">
-                    <div class="{% if section.settings.type == '4' %}w-100 px-10 px-lg-20{% else %}container{% endif %} d-flex flex-column flex-lg-row align-items-center">
+                    <div class="{% if section.settings.type == '4' %}w-100 px-10 px-lg-{{ header_menu_container_paddings_horizontal }}{% else %}container{% endif %} d-flex flex-column flex-lg-row align-items-center">
                         <div class="text-center text-lg-left">
                             {% include 'parse-page-html-content' with default_page: 'include-header-info-line' page_content: block.settings.page_content %}
                         </div>
@@ -191,7 +191,7 @@
                         {%- endif -%}
                     </div>
                 {%- else -%}
-                    <a href="/account" class="header__btn-account d-flex{% if section.settings.type == '5' %} d-lg-none{% endif %} align-items-center position-relative ml-25 ml-lg-15 js-popup-button"
+                <a href="/account" class="header__btn-account d-lg-inline{% if section.settings.type == '5' %} d-lg-none{% endif %} align-items-center position-relative ml-25 ml-lg-15 js-popup-button text-underline-hover"
                         data-js-popup-button="account"
                         {%- if settings.tooltips_enable and header_enable_tooltips %}
                             data-js-tooltip
@@ -200,7 +200,8 @@
                             data-tippy-distance="6"
                         {%- endif -%}
                     >
-                        <i>{% render 'icon-theme-201' %}</i>
+                    <span class="d-none d-md-inline">{% if customer %}ACCOUNT{% else %}LOGIN{% endif %}</span>
+                    <span class="d-md-none"><i class="btn-account">{% render 'icon-theme-202' %}</i></span>
                     </a>
                 {%- endif -%}
             {%- endif -%}
@@ -250,12 +251,9 @@
         {%- endcapture -%}
         {%- capture btn_cart_html -%}
             {%- if settings.cart_show_header_button -%}
-                <div class="ml-25 ml-lg-15">
-                    <a href="/cart" class="header__btn-cart position-relative d-flex align-items-center text-nowrap js-popup-button" data-js-popup-button="cart"{% if need_sticky_sidebar %} data-js-sticky-replace-element="cart"{% endif %}>
-                        {% capture cart_icon_name %}{{ settings.cart_icon | default: 'icon-theme-109' }}{% endcapture %}
-                        <i class="mr-lg-7">{% include cart_icon_name %}</i>
-                        <span class="d-none d-lg-inline mt-lg-4" data-js-cart-count-desktop="{{ cart.item_count }}">{{ 'layout.header.cart_count' | t: count: cart.item_count }}</span>
-                        <span class="header__counter d-lg-none" data-js-cart-count-mobile="{{ cart.item_count }}">{{ cart.item_count }}</span>
+            <div class="ml-10 ml-lg-15">
+                <a href="/cart" class="header__btn-cart position-relative js-popup-button text-underline-hover" data-js-popup-button="cart"{% if need_sticky_sidebar %} data-js-sticky-replace-element="cart"{% endif %}>
+                    <span class="mr-lg-7" data-js-cart-count-desktop="{{ cart.item_count }}">{{ 'layout.header.cart_count' | t: count: cart.item_count }}</span>
                     </a>
                 </div>
             {%- endif -%}
@@ -404,7 +402,7 @@
         {%- endcapture -%}
         {%- capture btn_search_html -%}
             {%- if settings.search_show and section.settings.type != '5' -%}
-                <a href="{{ routes.search_url }}" class="header__btn-search d-none d-lg-flex align-items-lg-center{% if section.settings.type == '1' %} ml-lg-auto{% else %} ml-25 ml-lg-15{% endif %} js-popup-button"
+            <a href="{{ routes.search_url }}" class="header__btn-search d-none d-lg-inline{% if section.settings.type == '1' %} ml-lg-auto{% else %} ml-25 ml-lg-15{% endif %} js-popup-button text-underline-hover"
                    data-js-popup-button="navigation"
                     {%- if settings.tooltips_enable and header_enable_tooltips and section.settings.type != '1' %}
                        data-js-tooltip
@@ -413,10 +411,7 @@
                        data-tippy-distance="6"
                     {%- endif -%}
                 >
-                {%- if section.settings.type == '1' -%}
                     <span class="mr-lg-7">{{ 'layout.header.search' | t }}</span>
-                {%- endif -%}
-                    <i>{% render 'icon-theme-168' %}</i>
                 </a>
             {%- endif -%}
         {%- endcapture -%}
@@ -542,7 +537,7 @@
                     </div>
                 </div>
             </div>
-        {%- when '4' -%}
+        {%- when '4' -%}{%- comment -%}Blancsom Theme - Use Type #4 Style #1 {%- endcomment -%}
             <div class="header__content" data-js-mobile-sticky>
                 {{ info_line_html }}
                 <div class="header__line-top header__line--colorize-2 position-relative d-flex px-10 px-lg-0 py-lg-6" data-js-desktop-sticky>
@@ -752,28 +747,12 @@
             "type": "select",
             "id": "type",
             "label": "Header type",
-            "default": "1",
-            "options": [
-                {
-                    "value": "1",
-                    "label": "Type #1"
-                },
-                {
-                    "value": "2",
-                    "label": "Type #2"
-                },
-                {
-                    "value": "3",
-                    "label": "Type #3"
-                },
+            "default": "4",
+            "options": [                
                 {
                     "value": "4",
                     "label": "Type #4"
-                },
-                {
-                    "value": "5",
-                    "label": "Type #5 (Vertical menu)"
-                }
+                },                
             ]
         },
         {
@@ -785,19 +764,7 @@
                 {
                 "value": "1",
                 "label": "Style #1"
-                },
-                {
-                "value": "2",
-                "label": "Style #2"
-                },
-                {
-                "value": "3",
-                "label": "Style #3"
-                },
-                {
-                "value": "4",
-                "label": "Style #4"
-                }
+                }            
             ]
         },
         {
@@ -828,40 +795,6 @@
             "id": "show_menu_hover_underline",
             "label": "Show underline on item hover",
             "default": false
-        },
-        {
-            "type": "header",
-            "content": "Vertical menu"
-        },
-        {
-            "type": "paragraph",
-            "content": "Only for 'Header type' #5"
-        },
-        {
-            "type": "link_list",
-            "id": "vertical_menu",
-            "label": "Select vertical menu"
-        },
-        {
-            "type": "checkbox",
-            "id": "fixed_vertical_menu",
-            "label": "Fixed vertical menu on home page",
-            "info": "If the option is enabled, you can add 'Space for vertical menu' block in the 'Builder' section",
-            "default": false
-        },
-        {
-            "type": "header",
-            "content": "Content"
-        },
-        {
-            "type": "paragraph",
-            "content": "Only for 'Header type' #5"
-        },
-        {
-            "type": "page",
-            "id": "additional_line_info_page_content",
-            "label": "Top line content",
-            "info": "Default page: 'Include Header Info Line #4'"
         },
         {
             "type": "header",

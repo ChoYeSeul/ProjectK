@@ -1,4 +1,3 @@
-{% include 'breadcrumbs' %}
 {%- if settings.product_format_pjpg -%}
     {%- assign image_format = 'pjpg' -%}
 {%- else -%}
@@ -85,7 +84,7 @@
                         </div>
                         {%- if settings.cart_show_free_shipping -%}
                             <div class="pt-20">
-                                {% render 'free-shipping' %}
+                                {% render 'blancsom-free-shipping' %}
                             </div>
                         {%- endif -%}
                         <div class="d-flex pt-25">

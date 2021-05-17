@@ -12,6 +12,25 @@
   <script>window.performance.mark('theme:DOM:load');</script>
   {% capture get_content_for_header %}{{ content_for_header }}{% endcapture %}
   {% include 'head' %}
+  {%- if settings.app_language == 'weglot' -%}
+    {% capture weglot_includes %}
+      {% include 'weglot_hreftags' %}
+      {% include 'weglot_switcher' %}
+    {% endcapture %}
+  {%- endif -%}
+  {%- if weglot_includes contains "Liquid error" -%}
+    {%- assign weglot_includes = '' -%}
+  {%- endif -%}
+  {%- if is_design_mode -%}
+    {{ content_for_header }}
+    {{ weglot_includes }}
+  {%- else -%}
+    {% capture get_content_for_header %}
+      {{ content_for_header }}
+      {{ weglot_includes }}
+    {% endcapture %}
+  {%- endif -%}
+  {{ 'blancsom.scss.css' | asset_url | stylesheet_tag }}
 </head>
 <body{% render 'layout-get-body-attributes' %}>
 {%- if settings.layout_enable_preloader -%}

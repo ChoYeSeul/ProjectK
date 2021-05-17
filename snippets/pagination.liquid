@@ -1,6 +1,6 @@
 {%- assign pagination_type = pagination_type | default: settings.layout_pagination_type -%}
 {%- assign pagination_margin = pagination_margin | default: 'mt-35' -%}
-<div class="pagination">
+<div class="pagination mypagination">
   {%- if pagination_type == 'button_load_more' -%}
     <div class="d-flex justify-content-center {{ pagination_margin }}">
       {%- if paginate.next.is_link -%}
@@ -8,7 +8,7 @@
           <span>{{ 'layout.paginate.load_more' | t }}</span>
         </a>
       {%- else -%}
-        <div class="btn" disabled="disabled">
+      <div class="btn no-product" disabled="disabled">
           <span>{{ 'layout.paginate.no_more_products' | t }}</span>
         </div>
       {%- endif -%}
@@ -20,7 +20,7 @@
           <span>{{ 'layout.paginate.infinite_scroll' | t }}</span>
         </a>
       {%- else -%}
-        <div class="btn" disabled="disabled">
+      <div class="btn no-product" disabled="disabled">
           <span>{{ 'layout.paginate.no_more_products' | t }}</span>
         </div>
       {%- endif -%}
@@ -29,13 +29,15 @@
     <div class="d-flex align-items-center{% if pagination_type == 'centered_classic' %} justify-content-center{% endif %} {{ pagination_margin }}">
       {%- if paginate.previous.is_link -%}
         <span class="pagination__prev px-7">
-          <a href="{{ paginate.previous.url | remove: '-ajax' | remove: 'ajax' }}" class="btn">{{ 'layout.paginate.previous' | t }}</a>
+          <a href="javascript:void(0);" onclick="window.location.href='{{ paginate.previous.url }}'" class="text-underline-hover">{{ 'layout.paginate.previous' | t }}</a>
+          <!-- <a href="{{ paginate.previous.url }}" class="text-underline-hover">{{ 'layout.paginate.previous' | t }}</a> -->
         </span>
       {%- endif -%}
       {%- for part in paginate.parts -%}
         {%- if part.is_link -%}
           <span class="pagination__page px-7">
-            <a href="{{ part.url | remove: '-ajax' | remove: 'ajax' }}">{{ part.title }}</a>
+            <a href="javascript:void(0);" onclick="window.location.href='{{ part.url }}'">{{ part.title }}</a>
+            <!-- <a href="{{ part.url }}">{{ part.title }}</a> -->
           </span>
         {%- else -%}
           <span class="pagination__page{% if part.title == paginate.current_page %} current{% endif %} px-7">
@@ -45,7 +47,8 @@
       {%- endfor -%}
       {%- if paginate.next.is_link -%}
         <span class="pagination__next px-7">
-          <a href="{{ paginate.next.url | remove: '-ajax' | remove: 'ajax' }}" class="btn">{{ 'layout.paginate.next' | t }}</a>
+          <a href="javascript:void(0);" onclick="window.location.href='{{ paginate.next.url }}'" class="text-underline-hover">{{ 'layout.paginate.next' | t }}</a>
+          <!-- <a href="{{ paginate.next.url }}" class="text-underline-hover">{{ 'layout.paginate.next' | t }}</a> -->
         </span>
       {%- endif -%}
     </div>

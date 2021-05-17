@@ -7,7 +7,7 @@
     {%- endif -%}
 {%- endfor -%}
 <div class="container">
-  {%- paginate search.results by 12 -%}
+  {%- paginate search.results by 36 -%}
     <h1 class="h3 mt-30 mb-40 text-center">
       {%- if search.performed -%}
         {%- if results_count == 0 -%}
@@ -38,12 +38,12 @@
       </div>
     </form>
 </div>
-<div class="container pb-60">
+<div class="container-fluid pb-60">
     {%- if search.performed -%}
-      <div class="row mt-30">
+      <div class="row mt-30 blancsom-search">
         {%- for item in search.results -%}
             {%- if item.object_type == 'product' -%}
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 blancsom-xxl-col">
                     {%- assign product = item -%}
                     {% include 'product-collection' %}
                 </div>
