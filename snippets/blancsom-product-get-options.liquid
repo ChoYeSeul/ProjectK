@@ -17,7 +17,7 @@
         <div class="blancsom-collection-list-options">
             {% if option1_array.size == 0 and option2_array.size == 0 %}
                 <div class="product-options__section">
-                    {% if is_product_inquiry %}Inquiry Required{% else %}Out of Stock{% endif %}
+                    <!-- {% if is_product_inquiry %}Inquiry Required{% else %}Out of Stock{% endif %} -->
                 </div>
             {% else %}
                 {% if option1_array.size > 0 %}
@@ -41,10 +41,3 @@
             {%- for option in product.options_with_values -%}
                 <div class="product-options__section d-flex flex-wrap" data-style="text" data-property="{% render 'product-get-options-strip-symbols' with value: option.name %}">
                     {%- for value in option.values -%}
-                        <div class="blancsom-option d-flex flex-center">{{ value }}</div>
-                    {%- endfor -%}
-                </div>
-            {%- endfor -%}
-        </div>
-    {% endif %}
-{%- endunless -%}

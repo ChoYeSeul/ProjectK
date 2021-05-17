@@ -1,4 +1,6 @@
 {%- comment -%} Blancsom Theme - Inquiry Item Check returns a boolean variable 'is_product_inquiry' {%- endcomment -%}
+{%- assign is_product_inquiry = false -%}
+{%- comment -%} 
 {%- unless product.available -%}
     {% for collection in product.collections %}
         {%- if collection.handle == 'inquiry-noindex' -%}
@@ -7,3 +9,10 @@
         {%- endif -%}
     {% endfor %}
 {%- endunless -%}
+{%- endcomment -%}
+{% for collection in product.collections %}
+    {%- if collection.handle == 'inquiry-noindex' -%}
+        {%- assign is_product_inquiry = true -%}
+        {% break %}
+    {%- endif -%}
+{% endfor %}
