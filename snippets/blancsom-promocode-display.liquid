@@ -1,0 +1,9 @@
+{%- comment -%} Blancsom Theme - Inquiry Item Check returns a boolean variable 'is_product_inquiry' {%- endcomment -%}
+{% if settings.promocode_display_enable %}
+  {% for collection in product.collections %}
+    {%- if collection.handle == settings.promocode_display_collection -%}
+        <div class="promocode-display mt-5 mt-lg-10 text-center text-lg-left">{{ settings.promocode_display_text }}</div>
+        {% break %}
+    {%- endif -%}
+  {% endfor %}
+{% endif %}
