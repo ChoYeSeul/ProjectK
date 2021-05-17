@@ -1,20 +1,20 @@
 {%- comment -%} Blancsom Theme - Sourcing type check for shipping message to customer. It returns a string variable 'shipping_info' {%- endcomment -%}
 {%- assign ops_sourcing = product.metafields.ops_item_info.ops_sourcing -%}
-{% if ops_sourcing.supplier_code == '5fb28e878e0ba04f2c5b6192' and ops_sourcing.sourcing_type_code == '20'  and ops_sourcing.storage_id == '1' %}
+{% if ops_sourcing.supplier_code == settings.sourcing_cbt_supplier and ops_sourcing.sourcing_type_code == settings.sourcing_cbt_sourcing_type  and ops_sourcing.storage_id == settings.sourcing_cbt_storage %}
+    {%- assign shipping_info = 'From Overseas' -%}
+{%- elsif ops_sourcing.supplier_code == settings.sourcing_brand_supplier and ops_sourcing.sourcing_type_code == settings.sourcing_brand_sourcing_type  and ops_sourcing.storage_id == settings.sourcing_brand_storage -%}
     {%- assign shipping_info = 'Brand Dropship' -%}
-{%- elsif ops_sourcing.supplier_code == 'mxnitaly' and ops_sourcing.sourcing_type_code == '39'  and ops_sourcing.storage_id == '3' -%}
-    {%- assign shipping_info = 'From Italy' -%}
 {% endif %}
 
-{%- if shipping_info == 'From Italy' -%}
+{%- if shipping_info == 'From Overseas' -%}
     <div class="shipping-info">
-        <h6> <i class="mr-1">{% render 'icon-theme-113' %}</i> SHIPPING FROM ITALY</h6>
-        <p>This product will be directly shipped from Italy. It may take an average 7 days or more to receive the item. The international shipping cost will be charged.</p>
+        <h6> <i class="mr-3">{% render 'icon-theme-113' %}</i>{{settings.sourcing_cbt_title}}</h6>
+        <p>{{settings.sourcing_cbt_text}}</p>
     </div>
 {%- endif -%}
 {%- if shipping_info == 'Brand Dropship' -%}
     <div class="shipping-info">
-        <h6> <i class="mr-1">{% render 'icon-theme-113' %}</i> FROM BRAND MANUFACTURER</h6>
-        <p>This product will be directly shipped from Brand manufacturer. It may take 10-15 business days to receive the item.</p>
+        <h6> <i class="mr-3">{% render 'icon-theme-113' %}</i>{{settings.sourcing_brand_title}}</h6>
+        <p>{{settings.sourcing_brand_text}}</p>
     </div>
 {%- endif -%}
