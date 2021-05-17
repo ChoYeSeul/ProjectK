@@ -13,8 +13,12 @@
     </div>
 {%- endif -%}
 {%- if shipping_info == 'Brand Dropship' -%}
-    <div class="shipping-info">
-        <h6> <i class="mr-3">{% render 'icon-theme-113' %}</i>{{settings.sourcing_brand_title}}</h6>
-        <p>{{settings.sourcing_brand_text}}</p>
-    </div>
+{%- elsif settings.use_sourcing_check_add1 %}
+{%- if ops_sourcing.supplier_code == settings.sourcing_brand_supplier_add1 and ops_sourcing.sourcing_type_code == settings.sourcing_brand_sourcing_type_add1  and ops_sourcing.storage_id == settings.sourcing_brand_storage_add1 -%}
+    {%- assign shipping_info = 'Brand Dropship' -%}
+{% endif %}
+{%- elsif settings.use_sourcing_check_add2 %}
+{%- if ops_sourcing.supplier_code == settings.sourcing_brand_supplier_add2 and ops_sourcing.sourcing_type_code == settings.sourcing_brand_sourcing_type_add2  and ops_sourcing.storage_id == settings.sourcing_brand_storage_add2 -%}
+    {%- assign shipping_info = 'Brand Dropship' -%}
+{% endif %}
 {%- endif -%}
