@@ -1,6 +1,6 @@
 {% include 'global-variables' %} 
 <div class="container mb-60">
-    <h1 class="h3 mt-30 page-title">{{ page.title }}</h1>
+    <h1 class="h3 mt-30">{{ page.title }}</h1>
     <div class="rte">
         {% include 'parse-for-icons' content: page.content %}
     </div>
@@ -17,7 +17,7 @@
         {%- endfor -%}
     ];
     var designers = fromshopify.concat(testlist);
-    var sortAZ = function sortAZbyName(a, b) {
+    function sortAZbyName(a, b) {
         var A = a.name.toUpperCase();
         var B = b.name.toUpperCase();
         if (A < B) return -1;
@@ -34,7 +34,7 @@
         }
         return list;
     }, {});
-    var designerSet = function designerSet(key) {
+    function designerSet(key) {
         if (!listObj[key]) return;
         listObj[key].sort(sortAZbyName);
         var content = listObj[key].reduce(function (result, designer) {
@@ -48,7 +48,7 @@
     }, '');
     var designersList = document.querySelector('#designersList');
     designersList.innerHTML = HTML_Content;
-    var showOne = function showOne(selectedKey) {
+    function showOne(selectedKey) {
         Object.keys(listObj).forEach(function (key) {
             if (selectedKey === key) {
             document.querySelector("#card-".concat(key)).classList.remove('d-none');
@@ -59,7 +59,7 @@
             }
         });
     };
-    var showAll = function showAll() {
+    function showAll() {
         Object.keys(listObj).forEach(function (key) {
             document.querySelector("#card-".concat(key)).classList.remove('d-none');
             document.querySelector("#card-".concat(key)).classList.remove('selected');

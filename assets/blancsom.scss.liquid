@@ -8,8 +8,11 @@ $font-sans-logo: bicyclette, sans-serif;
 $font-serif: adobe-garamond-pro, serif;
 
 $color-theme-default: #141414;
+$color-theme3-default: #858585;
 $color-blancsom-base: #416362; // previous: #416341
-$color-background-lite: lighten($color-blancsom-base, 65); // previous: #f6f8f6
+$color-background-lite: #f6f8f6;
+$spacing: 0.12em;
+//$color-background-lite: lighten($color-blancsom-base, 65); // previous: #f6f8f6
 $color-background-dark: darken($color-blancsom-base, 15); // previous: #233523
 $color-background-lite-darken: desaturate(darken($color-background-lite, 9), 6);
 $color-theme3-default: desaturate(
@@ -82,16 +85,14 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
     }
   }
 }
+.blancsom-theme {
   // Breadcrumbs
   .breadcrumbs {
-    margin-bottom: 1rem;
-    ul {
-      li {
-        text-transform: uppercase;
-        letter-spacing: $spacing;
-        font-size: 0.7rem;
-      }
+    li {
+      text-transform: uppercase;
+      letter-spacing: $spacing;
     }
+  }
   }
 
   .label--sale {

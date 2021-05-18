@@ -484,20 +484,17 @@
         </footer>
         {{ back_to_top }}
     {%- when '7' -%}
-        <footer id="footer" class="footer footer--style-{{ section.settings.style }}{% if template != 'index' %} {{ footer_other_page_margins }}{% endif %}{% if section.settings.enable_fixed %} pt-1{% endif %} text-center text-lg-left js-footer"{{ fixed_attr }}>
+        <footer id="footer" class="footer footer--style-blancsom{{ section.settings.style }}{% if template != 'index' %} {{ footer_other_page_margins }}{% endif %}{% if section.settings.enable_fixed %} pt-1{% endif %} text-center text-lg-left js-footer"{{ fixed_attr }}>
             <div class="footer__border-top d-none d-lg-block"></div>
             <div class="footer__content pt-lg-55 pb-lg-50">
                 <div class="container">
                     <div class="row">
                         <div class="footer__border-top w-100 mb-45 d-lg-none"></div>
-                        <div class="col-12 col-lg">
-                            {{ subscription }}
-                        </div>
-                        <div class="col-12 col-lg">
-                            {{ custom_html }}
-                        </div>
-                        <div class="col-12 col-lg">
+                        <div class="col-12 col-lg-8">
                             {{ menus }}
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            {{ subscription }}
                         </div>
                     </div>
                 </div>
