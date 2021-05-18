@@ -286,6 +286,21 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
       }
     }
   }
+  .pagination {
+    .btn.no-product {
+      background: none;
+      border: none;
+      span {
+        font-family: $font-serif;
+        color: $color-theme-default;
+        // text-decoration: underline;
+        // text-transform: lowercase;
+        // &::first-letter {
+        //   text-transform: uppercase;
+        // }
+      }
+    }
+  }
   .collection-products {
     @media (min-width: 1920px) {
       .blancsom-xxl-col {
