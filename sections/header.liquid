@@ -699,6 +699,9 @@
     Loader.requireh({type: "script", name: "sticky_header"});
     {%- endif -%}
     Loader.requireh({type: "script", name: "header"});
+    {%- if section.settings.type == '5' and settings.account_show_header_button and shop.customer_accounts_enabled -%}
+    Loader.require({type: "script", name: "trigger"});
+    {%- endif -%}
 </script>
 
 <script type="application/ld+json">
@@ -748,11 +751,11 @@
             "id": "type",
             "label": "Header type",
             "default": "4",
-            "options": [                
+            "options": [
                 {
                     "value": "4",
                     "label": "Type #4"
-                },                
+                }
             ]
         },
         {
@@ -762,17 +765,10 @@
             "default": "1",
             "options": [
                 {
-                "value": "1",
-                "label": "Style #1"
-                }            
+                    "value": "1",
+                    "label": "Style #1"
+                }
             ]
-        },
-        {
-            "type": "checkbox",
-            "id": "logo_mobile_centered",
-            "label": "Centered logo on mobile",
-            "info": "Check your icons on mobile to make sure they don't overlap with the centered logo as centering doesn't check the position of the icons",
-            "default": false
         },
         {
             "type": "header",
@@ -1309,12 +1305,6 @@
             "limit": 1,
             "settings": [
 {
-"type": "checkbox",
-"id": "show_on_mobile",
-"label": "Show block on mobile",
-"default": false
-},
-{
 "type": "select",
 "id": "style",
 "label": "Colorize style",
@@ -1396,16 +1386,6 @@
             "limit": 1,
             "settings": [
 {
-"type": "range",
-"id": "delay",
-"min": 0,
-"max": 10,
-"step": 1,
-"unit": "sec",
-"label": "Delayed appearance",
-"default": 0
-},
-{
 "type": "select",
 "id": "style",
 "label": "Colorize style",
@@ -1418,10 +1398,6 @@
 {
 "value": "2",
 "label": "Style #2"
-},
-{
-"value": "3",
-"label": "Style #3"
 }
 ]
 },
@@ -1430,6 +1406,25 @@
                     "id": "content",
                     "label": "Text or HTML content",
                     "default": "FINAL CLEARANCE: Take 20% Off ‘Sale Must-Haves'"
+                }
+            ]
+        },
+        {
+            "type": "bottom_tape",
+            "name": "Bottom tape",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "for_page",
+                    "label": "For page",
+                    "info": "coma is separator, 'all' - add to all pages except index, example: 'all, index, autumn-winter-2018'"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image",
+                    "info": "Image stretches in height"
                 }
             ]
         },
@@ -1526,14 +1521,6 @@
 "label": "3 items in 2 rows"
 },
 {
-"value": "4",
-"label": "4 items in the row"
-},
-{
-"value": "4*2",
-"label": "4 items in 2 rows"
-},
-{
 "value": "8-4",
 "label": "2/3 & 1/3 columns"
 }
@@ -1587,14 +1574,6 @@
 {
 "value": "3*2",
 "label": "3 items in 2 rows"
-},
-{
-"value": "4",
-"label": "4 items in the row"
-},
-{
-"value": "4*2",
-"label": "4 items in 2 rows"
 },
 {
 "value": "8/12-4/12",
@@ -1936,18 +1915,6 @@
 "label": "Text v7"
 },
 {
-"value": "text-8",
-"label": "Text v8"
-},
-{
-"value": "text-9",
-"label": "Text v9"
-},
-{
-"value": "text-10",
-"label": "Text v10"
-},
-{
 "value": "type-1",
 "label": "Type #1 v1 (Text over the image)"
 },
@@ -2000,22 +1967,6 @@
 "label": "Type #1 v13"
 },
 {
-"value": "type-1-14",
-"label": "Type #1 v14"
-},
-{
-"value": "type-1-15",
-"label": "Type #1 v15"
-},
-{
-"value": "type-1-16",
-"label": "Type #1 v16"
-},
-{
-"value": "type-1-17",
-"label": "Type #1 v17"
-},
-{
 "value": "type-1-background",
 "label": "Type #1 with Background v1"
 },
@@ -2038,10 +1989,6 @@
 {
 "value": "type-1-curtain-2",
 "label": "Type #1 with Curtain v2"
-},
-{
-"value": "type-1-curtain-3",
-"label": "Type #1 with Curtain v3"
 },
 {
 "value": "type-2",
@@ -2078,22 +2025,6 @@
 {
 "value": "type-2-9",
 "label": "Type #2 v9"
-},
-{
-"value": "type-2-10",
-"label": "Type #2 v10"
-},
-{
-"value": "type-2-11",
-"label": "Type #2 v11"
-},
-{
-"value": "type-2-12",
-"label": "Type #2 v12"
-},
-{
-"value": "type-2-13",
-"label": "Type #2 v13"
 },
 {
 "value": "type-3",
