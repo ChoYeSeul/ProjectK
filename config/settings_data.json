@@ -282,7 +282,7 @@
     "account_popup_sign_up_info_page_content": "",
     "account_popup_show_subscription": true,
     "account_page_sing_up_page_content": "",
-    "services_show_header_button": true,
+    "services_show_header_button": false,
     "services_popup_enable": true,
     "services_popup_page_content": "",
     "javascript_loader_jquery_first": true,

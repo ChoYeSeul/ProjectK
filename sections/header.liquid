@@ -411,7 +411,9 @@
                        data-tippy-distance="6"
                     {%- endif -%}
                 >
-                    <span class="mr-lg-7">{{ 'layout.header.search' | t }}</span>
+                {%- if section.settings.type == '1' or section.settings.type == '4' -%}
+                <span class="mr-lg-7">{{ 'layout.header.search' | t }}</span>
+            {%- endif -%}
                 </a>
             {%- endif -%}
         {%- endcapture -%}

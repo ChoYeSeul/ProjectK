@@ -391,17 +391,10 @@ $mobile-logo-width-half: "{{settings.logo_mobile_width | divided_by: 2}}px";
       }
     }
   }
-  .header__logo.d-lg-none {
-    position: absolute;
-    left: calc(50% - #{$mobile-logo-width-half});
-    top: 18px;
-  }
-  .header__btn-account {
-    i.btn-account svg {
-      min-width: unset;
-      min-height: unset;
-      height: 18px;
-      margin-top: 5px;
+  .header__btn-cart {
+    margin-top: -5px;
+    i {
+      margin-top: 1px;
     }
   }
   // Designers List
