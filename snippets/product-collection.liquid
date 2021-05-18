@@ -41,6 +41,8 @@
 {%- if settings.wishlist_type == 'disable' -%}
     {%- assign show_button_add_to_wishlist = false -%}
 {%- endif -%}
+{%- comment -%} Blancsom Theme - Inquiry Item Check returns a variable 'is_product_inquiy' {%- endcomment -%}
+{% include 'blancsom-inquiry-check' %}
 {%- if settings.reviews_type == 'disable' -%}
     {%- assign show_reviews = false -%}
 {%- endif -%}

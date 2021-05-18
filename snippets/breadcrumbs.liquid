@@ -1,7 +1,7 @@
 {%- unless template == 'index' -%}
     {%- if settings.layout_show_breadcrumbs -%}
         <div class="breadcrumbs pt-15">
-            <div class="container">
+            <div class="container-fluid">
                 <ul class="list-unstyled d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                     <li><a href="/" >{{ 'layout.breadcrumbs.home' | t }}</a></li>
                     {%- if template contains 'page' -%}

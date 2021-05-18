@@ -246,7 +246,7 @@
                 {%- if metafields.tab2.title and metafields.tab2.content -%}
                     <div{% if active_tab %} class="active"{% endif %} data-js-tabs-tab>
                         <span data-js-tabs-btn-mobile>{{ metafields.tab2.title }} <i>{% render 'icon-theme-188' %}</i></span>
-                        <div class="tabs__content rte overflow-hidden" data-js-tabs-content{% if active_tab %} style="display: block;"{% assign active_tab = null %}{% endif %}>
+                        <div class="tabs__content description rte overflow-hidden" data-js-tabs-content{% if active_tab %} style="display: block;"{% assign active_tab = null %}{% endif %}>
                             {% include 'parse-for-icons' content: metafields.tab2.content %}
                         </div>
                     </div>
