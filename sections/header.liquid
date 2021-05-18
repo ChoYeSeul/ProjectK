@@ -176,7 +176,7 @@
                     <div id="ssw-topauth" class="ssw-topauth">
                         {%- if customer -%}
                             <div class="ssw-tprofile ssw-dropdown">
-                                <a class="ssw-dropdown-toggle header__btn-account d-flex{% if section.settings.type == '5' %} d-lg-none{% endif %} align-items-center position-relative ml-25 ml-lg-15" data-toggle="ssw-dropdown" href="javascript:void(0);">
+                                <a class="ssw-dropdown-toggle header__btn-account d-lg-inline{% if section.settings.type == '5' %} d-lg-none{% endif %} text-underline-hover position-relative ml-25 ml-lg-15" data-toggle="ssw-dropdown" href="javascript:void(0);">
                                     <i>{% render 'icon-theme-201' %}</i>
                                 </a>
                                 <ul class="ssw-dropdown-menu" role="menu" aria-labelledby="dLabel">
@@ -200,8 +200,8 @@
                             data-tippy-distance="6"
                         {%- endif -%}
                     >
-                    <span class="d-none d-md-inline">{% if customer %}ACCOUNT{% else %}LOGIN{% endif %}</span>
-                    <span class="d-md-none"><i class="btn-account">{% render 'icon-theme-202' %}</i></span>
+                    <span class="d-none d-md-inline">ACCOUNT</span>
+                <span class="d-md-none"><i class="btn-account">{% render 'icon-theme-202' %}</i></span>
                     </a>
                 {%- endif -%}
             {%- endif -%}
@@ -411,9 +411,7 @@
                        data-tippy-distance="6"
                     {%- endif -%}
                 >
-                {%- if section.settings.type == '1' or section.settings.type == '4' -%}
                 <span class="mr-lg-7">{{ 'layout.header.search' | t }}</span>
-            {%- endif -%}
                 </a>
             {%- endif -%}
         {%- endcapture -%}
