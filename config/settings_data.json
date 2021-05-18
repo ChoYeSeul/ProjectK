@@ -216,7 +216,7 @@
     "cart_icon": "",
     "cart_show_vendor": false,
     "cart_show_notes": true,
-    "cart_show_free_shipping": false,
+    "cart_show_free_shipping": true,
     "cart_free_shipping_value": "20000",
     "shipping_calculator": "Enabled",
     "shipping_calculator_default_country": "United States",
