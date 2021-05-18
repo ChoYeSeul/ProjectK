@@ -5576,7 +5576,8 @@ h1.btn-link, h1.btn-link:visited, h1.btn-link:active, h1.btn-link:link, .h1.btn-
 }
 
 .header__line-info--style-1 {
-  background-color: var(--header-info-line-style-1-bg);
+  /*background-color: var(--header-info-line-style-1-bg);*/
+  background-color:#f6f9f9;
   border-bottom: var(--header-info-line-style-1-bd);
 }
 
