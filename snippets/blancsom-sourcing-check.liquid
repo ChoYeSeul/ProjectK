@@ -1,24 +1,21 @@
 {%- comment -%} Blancsom Theme - Sourcing type check for shipping message to customer. It returns a string variable 'shipping_info' {%- endcomment -%}
 {%- assign ops_sourcing = product.metafields.ops_item_info.ops_sourcing -%}
-{% if ops_sourcing.supplier_code == settings.sourcing_cbt_supplier and ops_sourcing.sourcing_type_code == settings.sourcing_cbt_sourcing_type  and ops_sourcing.storage_id == settings.sourcing_cbt_storage %}
-    {%- assign shipping_info = 'From Overseas' -%}
-{%- elsif ops_sourcing.supplier_code == settings.sourcing_brand_supplier and ops_sourcing.sourcing_type_code == settings.sourcing_brand_sourcing_type  and ops_sourcing.storage_id == settings.sourcing_brand_storage -%}
+{% if ops_sourcing.supplier_code == '5f96e0d8342da3513f59e914' and ops_sourcing.sourcing_type_code == '15'  and ops_sourcing.storage_id == '1' %}
     {%- assign shipping_info = 'Brand Dropship' -%}
+{%- elsif ops_sourcing.supplier_code == '' and ops_sourcing.sourcing_type_code == ''  and ops_sourcing.storage_id == '' -%}
+    {%- assign shipping_info = 'From Italy' -%}
 {% endif %}
+{%- assign shipping_info = 'Brand Dropship' -%}
 
-{%- if shipping_info == 'From Overseas' -%}
+{%- if shipping_info == 'From Italy' -%}
     <div class="shipping-info">
-        <h6> <i class="mr-3">{% render 'icon-theme-113' %}</i>{{settings.sourcing_cbt_title}}</h6>
-        <p>{{settings.sourcing_cbt_text}}</p>
+        <h6> <i class="mr-1">{% render 'icon-theme-142' %}</i> SHIPPING FROM ITALY</h6>
+        <p>This product will be directly shipped from Italy. It may take an average 7 days or more to receive the item. The international shipping cost will be charged.</p>
     </div>
 {%- endif -%}
 {%- if shipping_info == 'Brand Dropship' -%}
-{%- elsif settings.use_sourcing_check_add1 %}
-{%- if ops_sourcing.supplier_code == settings.sourcing_brand_supplier_add1 and ops_sourcing.sourcing_type_code == settings.sourcing_brand_sourcing_type_add1  and ops_sourcing.storage_id == settings.sourcing_brand_storage_add1 -%}
-    {%- assign shipping_info = 'Brand Dropship' -%}
-{% endif %}
-{%- elsif settings.use_sourcing_check_add2 %}
-{%- if ops_sourcing.supplier_code == settings.sourcing_brand_supplier_add2 and ops_sourcing.sourcing_type_code == settings.sourcing_brand_sourcing_type_add2  and ops_sourcing.storage_id == settings.sourcing_brand_storage_add2 -%}
-    {%- assign shipping_info = 'Brand Dropship' -%}
-{% endif %}
+    <div class="shipping-info">
+        <h6> <i class="mr-1">{% render 'icon-theme-142' %}</i> FROM BRAND MANUFACTURER</h6>
+        <p>This product will be directly shipped from Brand manufacturer. It may take 10-15 business days to receive the item.</p>
+    </div>
 {%- endif -%}
