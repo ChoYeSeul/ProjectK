@@ -1,8 +1,10 @@
 {% include 'global-variables' %}
 <div class="collections js-collections pb-10">
+    {%- comment -%}
     <div data-js-collection-replace="breadcrumbs">
         {% include 'breadcrumbs' %}
     </div>
+    {%- endcomment -%}
     {%- if settings.collection_enable_fullwidth_head_section -%}
         {% section 'collection-fullwidth-head' %}
     {%- endif -%}
