@@ -1987,7 +1987,6 @@ select:hover:-moz-placeholder {
 
 .header--style-1 .header__line--colorize-2 {
   background-color: var(--header-style-1-line-2-bg);
-  border-bottom: var(--header-style-1-line-2-bd);
 }
 
 .header--style-1 .header__line-additional_button--register:hover,

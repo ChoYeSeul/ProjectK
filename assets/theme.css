@@ -2506,9 +2506,7 @@ a:hover.btn-link, a:visited.btn-link, a:active.btn-link, a:link.btn-link {
 }
 
 .fixed-sidebar {
-  top: 45%;
-  margin-top: -80px;
-  z-index: 2;
+  display: none;
 }
 
 .notification {
