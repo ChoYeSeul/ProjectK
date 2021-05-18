@@ -4,8 +4,14 @@
     {%- assign shipping_info = 'From Overseas' -%}
 {%- elsif ops_sourcing.supplier_code == settings.sourcing_brand_supplier and ops_sourcing.sourcing_type_code == settings.sourcing_brand_sourcing_type  and ops_sourcing.storage_id == settings.sourcing_brand_storage -%}
     {%- assign shipping_info = 'Brand Dropship' -%}
-{%- elsif ops_sourcing.supplier_code == 'mxnitaly' and ops_sourcing.sourcing_type_code == '39'  and ops_sourcing.storage_id == '3' -%}
-    {%- assign shipping_info = 'From Italy' -%}
+    {%- elsif settings.use_sourcing_check_add1 %}
+    {%- if ops_sourcing.supplier_code == settings.sourcing_brand_supplier_add1 and ops_sourcing.sourcing_type_code == settings.sourcing_brand_sourcing_type_add1  and ops_sourcing.storage_id == settings.sourcing_brand_storage_add1 -%}
+        {%- assign shipping_info = 'Brand Dropship' -%}
+    {% endif %}
+{%- elsif settings.use_sourcing_check_add2 %}
+    {%- if ops_sourcing.supplier_code == settings.sourcing_brand_supplier_add2 and ops_sourcing.sourcing_type_code == settings.sourcing_brand_sourcing_type_add2  and ops_sourcing.storage_id == settings.sourcing_brand_storage_add2 -%}
+        {%- assign shipping_info = 'Brand Dropship' -%}
+    {% endif %}
 {% endif %}
 {%- assign shipping_info = 'Brand Dropship' -%}
 
