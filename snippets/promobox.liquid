@@ -1169,10 +1169,17 @@
                         {{ pages[custom_html].content }}
                     {%- else -%}
                         {%- if text_line_1 != blank -%}
-                            {% if url != blank %}<a href="{{ url }}">{% endif %}<p class="promobox__text-1 h5">{{ text_line_1 }}</p>{% if url != blank %}</a>{% endif %}
+                            {%- if text_line_3 != blank -%}
+                            <div class="promobox__text-row">
+                                <div class="promobox__text-1">{{ text_line_1 }}</div>
+                                <div class="promobox__text-3">{{ text_line_3 }}</div>
+                            </div>
+                            {%- else -%}
+                            {% if url != blank %}<a href="{{ url }}">{% endif %}<p class="promobox__text-1 h6{% if url != blank %} text-underline-hover{% endif %}">{{ text_line_1 }}</p>{% if url != blank %}</a>{% endif %}
+                            {%- endif -%}
                         {%- endif -%}
                         {%- if text_line_2 != blank -%}
-                            {% if url != blank %}<a href="{{ url }}">{% endif %}<p class="promobox__text-2{% if text_line_1 != blank %} mt-4{% endif %}{% if url != blank %} text-underline-hover{% endif %}">{{ text_line_2 }}</p>{% if url != blank %}</a>{% endif %}
+                            {% if url != blank %}<a href="{{ url }}">{% endif %}<p class="promobox__text-2{% if text_line_1 != blank %} mt-20{% endif %}">{{ text_line_2 }}</p>{% if url != blank %}</a>{% endif %}
                         {%- endif -%}
                         {%- if button_1 != blank -%}
                             <div class="mt-15">
@@ -1394,8 +1401,7 @@
         {%- when 'center' %}{% assign content_align_class = 'text-center' %}
         {%- when 'right' %}{% assign content_align_class = 'text-right' %}
     {%- endcase -%}
-    <div class="promobox {{ type_n_style_n_class }} {{ content_align_class }}{% if underline_parent %} text-underline-parent{% endif %}">
-        <div class="promobox {{ type_n_style_n_class }} {{ content_align_class }}{% if underline_parent %} text-underline-parent{% endif %} {% if text_next_image %} text-next-image{% endif %}"></div>
+    <div class="promobox {{ type_n_style_n_class }} {{ content_align_class }}{% if underline_parent %} text-underline-parent{% endif %} {% if text_next_image %} text-next-image{% endif %}">
         <{{ link_begin_tag }} class="d-block">
             {{ res_bg }}
         </{{ link_end_tag }}>
