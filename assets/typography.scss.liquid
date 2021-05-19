@@ -2,6 +2,7 @@
 @import url("https://use.typekit.net/iyi3byt.css");
 // Base Font Family replaced: settings.font_base.family => "soleil, sans-serif"
 {%- assign font_base_family = "soleil, sans-serif" -%}
+
 //variables
 /* VARIABLES */
 //body
@@ -117,7 +118,7 @@
 //product
 {%- assign product_price_weight = settings.font_base.weight -%}
 
-{%- assign product_page_title_family = font_base.family -%}
+{%- assign product_page_title_family = font_base_family -%}
 {%- assign product_page_title_font_size = settings.font_size_h3 -%}
 {%- assign product_page_title_line_height = h3_line_height -%}
 {%- assign product_page_title_letter_spacing = h3_letter_spacing -%}
@@ -126,7 +127,7 @@
 {%- assign product_page_reviews_caption_transform = product_page_fields_label_transform -%}
 {%- assign product_page_options_label_transform = product_page_fields_label_transform -%}
 
-{%- assign product_collection_title_family = font_base.family -%}
+{%- assign product_collection_title_family = font_base_family -%}
 {%- assign product_collection_title_font_size = settings.font_size_h6 -%}
 {%- assign product_collection_title_line_height = h6_line_height -%}
 {%- assign product_collection_title_letter_spacing = h6_letter_spacing -%}
@@ -383,8 +384,8 @@
 
 /* END: CUSTOM CHANGES */
 
-//base
-$base-family: {{ font_base.family }}, {{ settings.font_base.fallback_families }};
+//base 
+$base-family: {{font_base_family}}, {{ settings.font_base.fallback_families }};
 $base-style: {{ settings.font_base.style }};
 
 //alternative
