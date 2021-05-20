@@ -1,7 +1,7 @@
 {
   "current": {
-    "purchase_code": "",
-    "presentation_enable": true,
+    "purchase_code": "61d3adc4-56dc-415f-b285-bbda30369f76",
+    "presentation_enable": false,
     "logo_types": "svg",
     "logo_svg_file": "blancsom-logo",
     "logo_image": "",
@@ -18,22 +18,14 @@
     "logo_footer_mobile_svg_file": "",
     "logo_footer_mobile_image": "",
     "logo_footer_mobile_width": 64,
-    "favicon": "shopify:\/\/shop_images\/favicon_377d9995-ccc1-47eb-a17b-22e33b463cab.png",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "layout_container": "fullwidth",
     "layout_show_breadcrumbs": true,
     "layout_pagination_type": "centered_classic",
     "layout_enable_rtl": false,
     "layout_images_lazyload": true,
     "layout_settings_file": "default",
-    "layout_age_confirmation": false,
-    "layout_age_confirmation_image": "",
-    "layout_age_confirmation_image_width": 600,
-    "layout_age_confirmation_checkbox": true,
-    "color_theme_primary": "",
-    "color_theme_body": "",
-    "color_theme_c": "",
-    "color_theme_head_c": "",
-    "color_theme_link_c": "",
+    "color_skin": "default",
     "color_theme": "",
     "color_theme2": "",
     "color_theme3": "",
@@ -45,7 +37,14 @@
     "color_theme9": "",
     "color_theme10": "",
     "color_theme11": "",
-    "color_theme12": "",
+    "color_theme_primary": "",
+    "color_theme_body": "",
+    "color_theme_c": "",
+    "color_theme_paragraph_c": "",
+    "color_theme_head_c": "",
+    "color_theme_link_c": "",
+    "color_theme_link_act_c": "",
+    "typography_skin": "default",
     "font_base": "basic_commercial_n4",
     "font_base_apply_to_all": true,
     "font_base_type": "none",
@@ -79,14 +78,16 @@
     "collection_builder_mode": "",
     "product_format_pjpg": true,
     "product_show_review_loading": false,
+    "product_show_compare_at_price": false,
+    "product_button_addtocart_size": "default",
     "product_cursor": "",
     "product_show_custom_options": true,
     "product_enable_variants_section": true,
     "product_hide_options_without_availability_variants": true,
     "product_variant_auto_select": "enable",
     "product_auto_selected_options": "",
-    "product_options_listing_visibility": "all",
     "product_variant_change_on_hover": false,
+    "product_options_listing_visibility": "all",
     "product_options_type_circle_color": "",
     "product_options_type_circle_image": "",
     "product_options_type_square_color": "",
@@ -98,7 +99,6 @@
     "product_collection_image_border_radius": 0,
     "product_replace_images_hover": true,
     "product_collection_show_label_in_stock": false,
-    "product_collection_show_label_pre_order": true,
     "product_collection_show_label_out_stock": false,
     "product_collection_show_label_sale": false,
     "product_collection_show_label_new": false,
@@ -125,25 +125,20 @@
     "product_collection_show_type": true,
     "product_collection_show_vendor": true,
     "product_collection_show_description": true,
-    "product_collection_list_show_quantity": false,
-    "product_info_layout": "1",
-    "product_info_show_mobile_thumbnails": true,
+    "product_info_layout": "3",
+    "product_info_show_arrows": true,
     "product_info_show_btn_fullscreen": true,
     "product_info_show_btn_video": true,
     "product_info_video_autoplay": true,
     "product_info_enable_zoom": true,
-    "product_info_zoom_scale_coef": 2,
     "product_info_gallery_height_percent": 133,
-    "product_info_gallery_grouped": "disable",
     "product_info_show_label_in_stock": false,
-    "product_info_show_label_pre_order": true,
     "product_info_show_label_out_stock": false,
     "product_info_show_label_sale": false,
     "product_info_show_label_new": false,
     "product_info_show_label_hot": false,
     "product_info_show_collections": false,
     "product_info_show_title": true,
-    "product_info_description_place": "tabs",
     "product_info_show_price": true,
     "product_info_show_sale_details": false,
     "product_info_show_taxes": false,
@@ -157,23 +152,23 @@
     "product_info_hide_empty_reviews": true,
     "product_info_show_countdown": true,
     "product_info_show_options": true,
-    "product_info_show_notes": true,
+    "product_info_show_quantity": false,
+    "product_info_show_notes": false,
     "product_info_show_size_guide": true,
     "product_info_size_guide_page_content": "size-guide",
     "product_info_show_delivery_return": true,
     "product_info_delivery_return_page_content": "delivery-return",
-    "product_info_show_quantity": false,
     "product_info_button_layout": "1",
     "product_info_show_button_add_to_cart": true,
-    "product_button_addtocart_size": "default",
     "product_info_show_button_add_to_wishlist": false,
-    "product_info_show_button_add_to_compare": true,
+    "product_info_show_button_add_to_compare": false,
     "product_info_show_payments": false,
-    "product_info_show_social_share_buttons": true,
+    "product_info_payments_type": "dark",
+    "product_info_show_social_share_buttons": false,
     "product_info_social_share_buttons_type": "1",
     "product_info_page_enable_sticky_gallery": true,
     "product_info_page_show_button_dynamic_checkout": false,
-    "product_info_page_show_dynamic_checkout_confirmation": true,
+    "product_info_page_show_dynamic_checkout_confirmation": false,
     "product_info_page_styled_dynamic_checkout": true,
     "product_info_page_show_related_products": true,
     "product_info_page_show_usage_info_sidebar": true,
@@ -186,15 +181,16 @@
     "product_footbar_show_options": true,
     "product_footbar_show_quantity": true,
     "product_footbar_show_button_add_to_cart": true,
-    "product_info_show_stock_countdown": true,
-    "product_info_show_stock_countdown_range": true,
+    "product_info_quick_show_full_details": false,
+    "product_info_show_stock_countdown": false,
+    "product_info_show_stock_countdown_range": false,
     "product_stock_countdown_min": 10,
-    "product_info_show_text_countdown": true,
+    "product_info_show_text_countdown": false,
     "product_text_countdown_reset_time": 2,
     "product_text_countdown_delivery_time": 3,
     "product_text_countdown_delivery_format": "Day DD\/MM\/YYYY",
     "product_text_countdown_delivery_excludes": "Saturday, Sunday",
-    "product_info_show_visitors": true,
+    "product_info_show_visitors": false,
     "product_visitors_min": 10,
     "product_visitors_max": 25,
     "product_visitors_stroke": 4,
@@ -220,6 +216,8 @@
     "cart_free_shipping_value": "20000",
     "shipping_calculator": "Enabled",
     "shipping_calculator_default_country": "United States",
+    "wishlist_enable": false,
+    "compare_enable": false,
     "compare_show_description": true,
     "compare_show_collection": true,
     "compare_show_availability": true,
@@ -229,136 +227,8 @@
     "compare_show_barcode": true,
     "compare_show_options": true,
     "compare_description_max_size": 100,
-    "social_share_image": "shopify:\/\/shop_images\/Frame_7.1_2.png",
-    "social_facebook": "https:\/\/www.facebook.com\/mpthemes\/",
-    "social_twitter": "https:\/\/twitter.com\/MariPet9",
-    "social_instagram": "https:\/\/www.instagram.com\/mpthemes2019\/",
-    "social_pinterest": "https:\/\/dribbble.com\/mpithemes",
-    "social_youtube": "https:\/\/www.youtube.com\/channel\/UCVJfUsqMVr-Wcjel4M6-qrg",
-    "social_behance": "https:\/\/behance.net\/mpthemes01c0",
-    "social_skype": "https:\/\/dribbble.com\/mpithemes",
-    "social_share_enable_facebook": true,
-    "social_share_enable_twitter": true,
-    "social_share_enable_pinterest": true,
-    "social_share_enable_linkedin": true,
-    "social_share_enable_buffer": true,
-    "social_share_enable_reddit": true,
-    "subscription_method": "shopify",
-    "subscription_mailchimp_form_action": "\/\/myshopify.us18.list-manage.com\/subscribe\/post?u=8a50b61e56896303a04d0243e&amp;id=3c3d06b907",
-    "subscription_popup_enable": true,
-    "subscription_popup_layout": "4",
-    "subscription_popup_show_icon": true,
-    "subscription_popup_text_line_01": "ULTIMATE SALE",
-    "subscription_popup_text_line_02": "20%Off",
-    "subscription_popup_text_line_03": "All Clothing. Limited time offer!",
-    "subscription_popup_text_line_04": "",
-    "subscription_popup_show_form": false,
-    "subscription_popup_text_input_placeholder": "Enter Please Your Email Address",
-    "subscription_popup_text_submit_button_text": "SUBSCRIBE!",
-    "subscription_popup_text_button": "SHOP NOW!",
-    "subscription_popup_text_dont_show_again": "",
-    "subscription_popup_text_close": "NO, THANK YOU",
-    "subscription_popup_image": "shopify:\/\/shop_images\/subscription-03.jpg",
-    "subscription_popup_image_width": 600,
-    "subscription_popup_image_format_pjpg": true,
-    "subscription_popup_insert_image": "",
-    "subscription_popup_insert_image_width": 200,
-    "subscription_popup_insert_image_format_pjpg": false,
-    "subscription_popup_link": "shopify:\/\/collections\/womens",
-    "subscription_popup_show_once": "true",
-    "subscription_popup_delay": 8,
-    "subscription_popup_cookies_life": "1",
-    "subscription_confirmation_popup_enable": true,
-    "subscription_confirmation_popup_success_message": "Thanks for subscribing!",
-    "subscription_confirmation_popup_success_button": "Continue shopping",
-    "blog_show_sidebar": "hide",
-    "blog_sidebar_position": "right",
-    "blog_enable_sticky": true,
-    "article_show_sidebar": "hide",
-    "article_sidebar_position": "right",
-    "article_enable_sticky": true,
-    "account_show_header_button": true,
-    "account_popup_enable": false,
-    "account_popup_sign_up_info_page_content": "",
-    "account_popup_show_subscription": true,
-    "account_page_sing_up_page_content": "",
-    "services_show_header_button": false,
-    "services_popup_enable": true,
-    "services_popup_page_content": "",
-    "javascript_loader_jquery_first": true,
-    "app_language": "links_list",
-    "app_language_link_list": "languages",
-    "button_border_radius": 0,
-    "input_border_radius": 0,
-    "promobox_image_border_radius": 0,
-    "promobox_format_pjpg": true,
-    "promocode_display_enable": false,
-    "promocode_display_collection": "promotion",
-    "promocode_display_text": "You get 20% off with \"THANKSGIVING20\" code.",
-    "sourcing_cbt_supplier": "6033bdfb2211d261162ebc24",
-    "sourcing_cbt_sourcing_type": "16",
-    "sourcing_cbt_storage": "1",
-    "sourcing_cbt_title": "SHIPPING FROM ITALY",
-    "sourcing_cbt_text": "This product will be directly shipped from Italy. It may take an average 7 days or more to receive the item. The international shipping cost will be charged.",
-    "sourcing_brand_supplier": "5fec8e8ba1f25674fb0aeae4",
-    "sourcing_brand_sourcing_type": "20",
-    "sourcing_brand_storage": "1",
-    "use_sourcing_check_add1": true,
-    "sourcing_brand_supplier_add1": "6033bdb06b29294cf50bbcd4",
-    "sourcing_brand_sourcing_type_add1": "20",
-    "sourcing_brand_storage_add1": "4",
-    "notification_cookies_enable": false,
-    "notification_cookies_button_information_link": "",
-    "notification_cookies_delay": 0,
-    "notification_cookies_show_once": true,
-    "notification_cookies_cookies_life": "31",
-    "notification_products_enable": false,
-    "notification_products_collection": "featured",
-    "notification_products_range_min": 2,
-    "notification_products_range_max": 20,
-    "notification_products_delay": 8,
-    "notification_products_interval_min": 10,
-    "notification_products_interval_max": 18,
-    "notification_products_time_life": 14,
-    "layout_enable_preloader": false,
-    "layout_preloader_image": "",
-    "layout_preloader_image_size": 100,
-    "layout_preloader_opacity": 0.8,
-    "promobox_animation_duration": 0.5,
-    "tooltips_enable": false,
-    "tooltips_animation_type": "scale",
-    "header_animation_sticky_opacity": 0.9,
-    "header_tape_animation_duration": 0,
-    "product_hover_animation_type": "fade",
-    "buttons_animation_icon_enable": false,
-    "dev_enable_custom_css": false,
-    "dev_enable_custom_js": false,
-    "checkout_header_image": "",
-    "checkout_logo_image": "shopify:\/\/shop_images\/blancsom-logo_2ddb7735-b27f-4001-aed9-dd0fe8ee7438.png",
-    "checkout_logo_position": "left",
-    "checkout_logo_size": "small",
-    "checkout_body_background_image": "",
-    "checkout_body_background_color": "#fff",
-    "checkout_input_background_color_mode": "white",
-    "checkout_sidebar_background_image": "",
-    "checkout_sidebar_background_color": "#fafafa",
-    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
-    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
-    "checkout_accent_color": "#197bbd",
-    "checkout_button_color": "#197bbd",
-    "checkout_error_color": "#e32c2b",
-    "color_skin": "default",
-    "color_theme_paragraph_c": "",
-    "color_theme_link_act_c": "",
-    "typography_skin": "default",
-    "dev_enable_content_for_header": true,
-    "product_info_show_arrows": true,
-    "product_info_quick_show_full_details": true,
-    "product_info_payments_type": "dark",
-    "wishlist_enable": false,
-    "compare_enable": false,
     "payment_footer_sequence": "1,2,3,4,5,6,7,8,9",
-    "payment_product_sequence": "10,11,12,4,5,6",
+    "payment_product_sequence": "10,11,4,5,6",
     "payment_icon_1_show": true,
     "payment_icon_1_code": "",
     "payment_icon_1_image": "",
@@ -419,12 +289,125 @@
     "payment_icon_12_image": "",
     "payment_icon_12_url": "",
     "payment_icon_12_tooltip": "",
-    "social_share_facebook": "#",
-    "social_share_twitter": "#",
-    "social_share_pinterest": "#",
-    "social_share_linkedin": "#",
-    "social_share_buffer": "#",
-    "social_share_reddit": "#",
+    "social_share_image": "",
+    "social_facebook": "https:\/\/www.facebook.com\/blancsom",
+    "social_twitter": "",
+    "social_instagram": "https:\/\/www.instagram.com\/blancsom",
+    "social_pinterest": "",
+    "social_youtube": "",
+    "social_behance": "",
+    "social_skype": "",
+    "social_share_enable_facebook": true,
+    "social_share_enable_twitter": true,
+    "social_share_enable_pinterest": true,
+    "social_share_enable_linkedin": true,
+    "social_share_enable_buffer": true,
+    "social_share_enable_reddit": true,
+    "subscription_method": "shopify",
+    "subscription_mailchimp_form_action": "\/\/myshopify.us18.list-manage.com\/subscribe\/post?u=8a50b61e56896303a04d0243e&amp;id=3c3d06b907",
+    "subscription_popup_enable": false,
+    "subscription_popup_layout": "1",
+    "subscription_popup_show_icon": true,
+    "subscription_popup_text_line_01": "NEWSLETTER SUBSCRIPTION",
+    "subscription_popup_text_line_02": "Sign up for Shella updates to receive information about new arrivals, future events and special.",
+    "subscription_popup_text_line_03": "Get 10% off by signing up to our newsletter.",
+    "subscription_popup_text_line_04": "I don’t want to see this website.",
+    "subscription_popup_show_form": true,
+    "subscription_popup_text_input_placeholder": "Enter Please Your Email Address",
+    "subscription_popup_text_submit_button_text": "SUBSCRIBE!",
+    "subscription_popup_text_button": "SHOP NOW!",
+    "subscription_popup_text_dont_show_again": "Don't show this popup again",
+    "subscription_popup_text_close": "NO, THANK YOU",
+    "subscription_popup_image": "",
+    "subscription_popup_image_width": 600,
+    "subscription_popup_image_format_pjpg": true,
+    "subscription_popup_insert_image": "",
+    "subscription_popup_insert_image_width": 200,
+    "subscription_popup_insert_image_format_pjpg": false,
+    "subscription_popup_link": "",
+    "subscription_popup_show_once": "false",
+    "subscription_popup_delay": 3,
+    "subscription_popup_cookies_life": "1",
+    "subscription_confirmation_popup_enable": true,
+    "subscription_confirmation_popup_success_message": "Thanks for subscribing!",
+    "subscription_confirmation_popup_success_button": "Continue shopping",
+    "blog_show_sidebar": "hide",
+    "blog_sidebar_position": "right",
+    "blog_enable_sticky": true,
+    "article_show_sidebar": "hide",
+    "article_sidebar_position": "right",
+    "article_enable_sticky": true,
+    "account_show_header_button": true,
+    "account_popup_enable": false,
+    "account_popup_sign_up_info_page_content": "",
+    "account_popup_show_subscription": true,
+    "account_page_sing_up_page_content": "",
+    "services_show_header_button": false,
+    "services_popup_enable": true,
+    "services_popup_page_content": "",
+    "javascript_loader_jquery_first": false,
+    "app_language": "none",
+    "app_language_link_list": "",
+    "button_border_radius": 0,
+    "input_border_radius": 0,
+    "promobox_image_border_radius": 0,
+    "promobox_format_pjpg": true,
+    "promocode_display_enable": false,
+    "promocode_display_collection": "promotion",
+    "promocode_display_text": "You get 20% off with \"THANKSGIVING20\" code.",
+    "sourcing_cbt_supplier": "6033bdfb2211d261162ebc24",
+    "sourcing_cbt_sourcing_type": "16",
+    "sourcing_cbt_storage": "1",
+    "sourcing_cbt_title": "SHIPPING FROM ITALY",
+    "sourcing_cbt_text": "This product will be directly shipped from Italy. It may take an average 7 days or more to receive the item. The international shipping cost will be charged.",
+    "sourcing_brand_supplier": "5fec8e8ba1f25674fb0aeae4",
+    "sourcing_brand_sourcing_type": "20",
+    "sourcing_brand_storage": "1",
+    "use_sourcing_check_add1": true,
+    "sourcing_brand_supplier_add1": "6033bdb06b29294cf50bbcd4",
+    "sourcing_brand_sourcing_type_add1": "20",
+    "sourcing_brand_storage_add1": "4",
+    "notification_cookies_enable": false,
+    "notification_cookies_button_information_link": "",
+    "notification_cookies_delay": 0,
+    "notification_cookies_show_once": true,
+    "notification_cookies_cookies_life": "31",
+    "notification_products_enable": false,
+    "notification_products_collection": "",
+    "notification_products_range_min": 2,
+    "notification_products_range_max": 20,
+    "notification_products_delay": 8,
+    "notification_products_interval_min": 10,
+    "notification_products_interval_max": 18,
+    "notification_products_time_life": 14,
+    "layout_enable_preloader": false,
+    "layout_preloader_image": "",
+    "layout_preloader_image_size": 100,
+    "layout_preloader_opacity": 0.8,
+    "promobox_animation_duration": 0.5,
+    "tooltips_enable": false,
+    "tooltips_animation_type": "scale",
+    "header_animation_sticky_opacity": 1,
+    "header_tape_animation_duration": 0,
+    "product_hover_animation_type": "fade",
+    "buttons_animation_icon_enable": false,
+    "dev_enable_custom_css": false,
+    "dev_enable_custom_js": false,
+    "dev_enable_content_for_header": true,
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/blancsom-logo_2ddb7735-b27f-4001-aed9-dd0fe8ee7438.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "small",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
     "subscription_confirmation_popup_button_type": "1",
     "product_info_show_free_shipping": true,
     "show_free_shipping": true,
@@ -437,10 +420,9 @@
       "header": {
         "type": "header",
         "blocks": {
-          "f3a6a15b-e1eb-47b7-b0f8-0e66570d6711": {
+          "3c3168d6-b52b-4dfb-b9c5-7aec6de11e6d": {
             "type": "info_line",
             "settings": {
-              "show_on_mobile": false,
               "style": "1",
               "page_content": "",
               "show_social_media": true,
@@ -470,12 +452,14 @@
               "width_limit": 630
             }
           },
-          "1527385504306": {
+          "9599cd86-0cf4-4b09-9ad4-92e320f662af": {
             "type": "megamenu_promobox",
             "settings": {
               "title": "Women",
+              "url": "\/collections\/women\/women",
+              "image": "shopify:\/\/shop_images\/150507680_430410498271509_7700652562984644967_n.jpg",
               "image_size": 1450,
-              "color_image_mask": "",
+              "color_image_mask": "rgba(0,0,0,0)",
               "image_mask_opacity": 0.5,
               "text_line_1": "Text line #1",
               "text_line_2": "Text line #2",
@@ -496,12 +480,14 @@
               "customization_class": ""
             }
           },
-          "1527418910812": {
+          "ca0cf78d-8d1f-4e06-8f0b-997e17194360": {
             "type": "megamenu_promobox",
             "settings": {
               "title": "Men",
+              "url": "\/collections\/men\/men",
+              "image": "shopify:\/\/shop_images\/147483117_142793037663694_9002647738905122205_n.jpg",
               "image_size": 1450,
-              "color_image_mask": "",
+              "color_image_mask": "rgba(0,0,0,0)",
               "image_mask_opacity": 0.5,
               "text_line_1": "Text line #1",
               "text_line_2": "Text line #2",
@@ -522,12 +508,14 @@
               "customization_class": ""
             }
           },
-          "1527420420060": {
+          "2652eb2d-bf88-459e-8f6b-51a3756ffba6": {
             "type": "megamenu_promobox",
             "settings": {
               "title": "Life",
+              "url": "\/collections\/life\/life",
+              "image": "shopify:\/\/shop_images\/128959733_707418406626139_6433105739133132997_n.jpg",
               "image_size": 1450,
-              "color_image_mask": "",
+              "color_image_mask": "rgba(0,0,0,0)",
               "image_mask_opacity": 0.5,
               "text_line_1": "Text line #1",
               "text_line_2": "Text line #2",
@@ -548,12 +536,14 @@
               "customization_class": ""
             }
           },
-          "1527420550360": {
+          "f599ff7f-c895-4888-8adf-865b87336ec0": {
             "type": "megamenu_promobox",
             "settings": {
               "title": "Outdoor",
+              "url": "\/collections\/outdoor\/outdoor",
+              "image": "shopify:\/\/shop_images\/147454818_3383656011745082_1899181140827718558_n_3d1bcf82-9fac-4bee-9fa7-8234508034e5.jpg",
               "image_size": 1450,
-              "color_image_mask": "",
+              "color_image_mask": "rgba(0,0,0,0)",
               "image_mask_opacity": 0.5,
               "text_line_1": "Text line #1",
               "text_line_2": "Text line #2",
@@ -581,7 +571,7 @@
               "grid": 2,
               "second_level_column": false,
               "second_level_column_size": 20,
-              "wrap": false,
+              "wrap": true,
               "wrapper_grid": 12,
               "column_left_type": "none",
               "column_left_size": 0,
@@ -627,12 +617,12 @@
           }
         },
         "block_order": [
-          "f3a6a15b-e1eb-47b7-b0f8-0e66570d6711",
+          "3c3168d6-b52b-4dfb-b9c5-7aec6de11e6d",
           "1527372910910",
-          "1527385504306",
-          "1527418910812",
-          "1527420420060",
-          "1527420550360",
+          "9599cd86-0cf4-4b09-9ad4-92e320f662af",
+          "ca0cf78d-8d1f-4e06-8f0b-997e17194360",
+          "2652eb2d-bf88-459e-8f6b-51a3756ffba6",
+          "f599ff7f-c895-4888-8adf-865b87336ec0",
           "1527373213741",
           "1527373220764",
           "1527373227613"
@@ -640,13 +630,9 @@
         "settings": {
           "type": "4",
           "style": "1",
-          "logo_mobile_centered": false,
-          "menu": "",
+          "menu": "gnb-1",
           "show_menu_arrows": true,
           "show_menu_hover_underline": true,
-          "vertical_menu": "",
-          "fixed_vertical_menu": false,
-          "additional_line_info_page_content": "",
           "sticky": "desktop_and_mobile",
           "desktop_sticky_type": "slim"
         }
@@ -654,22 +640,22 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "1586284527889": {
+          "1586284525260": {
             "type": "menu",
             "settings": {
               "title": "About us",
               "show_title_on_desktop": true,
-              "menu": "",
+              "menu": "about-us",
               "size": 0,
               "rows_limit": 0
             }
           },
-          "1586284525260": {
+          "1586284527889": {
             "type": "menu",
             "settings": {
               "title": "Help",
               "show_title_on_desktop": true,
-              "menu": "",
+              "menu": "help",
               "size": 0,
               "rows_limit": 0
             }
@@ -681,16 +667,6 @@
               "paragraph": "Sign up for Blancsom update to receive information about new arrivals, future events and specials.",
               "placeholder": "EMAIL",
               "button_text": "SUBSCRIBE"
-            }
-          },
-          "1586284530934": {
-            "type": "menu",
-            "settings": {
-              "title": "",
-              "show_title_on_desktop": true,
-              "menu": "",
-              "size": 0,
-              "rows_limit": 0
             }
           },
           "1586284588048": {
@@ -720,10 +696,9 @@
           }
         },
         "block_order": [
-          "1586284527889",
           "1586284525260",
+          "1586284527889",
           "1586284608625",
-          "1586284530934",
           "1586284588048",
           "footer-0",
           "1586284627913"
@@ -734,388 +709,6 @@
           "show_logo": true,
           "show_button_back_to_top": true,
           "enable_fixed": false
-        }
-      },
-      "1586279708879": {
-        "type": "home-builder",
-        "blocks": {
-          "1586279874234": {
-            "type": "promobox",
-            "settings": {
-              "url": "https:\/\/blancsom.com\/collections\/vendors?q=MAISON%20KITSUNE",
-              "image_size": 1450,
-              "image_mobile_size": 550,
-              "image_position_x": 50,
-              "color_image_mask": "",
-              "image_mask_opacity": 0.5,
-              "text_line_1": "MAISON KITSUNE",
-              "text_line_2": "The Maison Kitsuné man and woman resonate with this perfect balance between comfort and simplicity, laid-back cool and au courant sophistication.",
-              "text_line_3": "New In",
-              "style": "1",
-              "button_1": "",
-              "color_button_type_1": "default",
-              "button_2": "",
-              "color_button_type_2": "default",
-              "list_1": "",
-              "custom_html": "",
-              "video_external_url": "",
-              "video_mp4_url": "",
-              "video_autoplay": true,
-              "video_controls": false,
-              "type": "type-2",
-              "content_position": "center",
-              "content_align": "left",
-              "add_container": false,
-              "content_width": 100,
-              "text_width": 0,
-              "height": "80",
-              "min_height": 0,
-              "size_of_column": "auto",
-              "visible": "desktop_mobile",
-              "parallax": "disable",
-              "animation_to": "none",
-              "animation_from": "none",
-              "animation_opacity": "none",
-              "animation_text": "none",
-              "customization_class": "main-banner"
-            }
-          },
-          "30e4ef7d-1d65-4277-b781-8763c76e1216": {
-            "type": "promobox",
-            "settings": {
-              "url": "https:\/\/blancsom.com\/collections\/vendors?q=Paloma%20Wool",
-              "image_size": 1450,
-              "image_mobile_size": 550,
-              "image_position_x": 50,
-              "color_image_mask": "",
-              "image_mask_opacity": 0.5,
-              "text_line_1": "PALOMA WOOL",
-              "text_line_2": "In its entirety and in its essence, a work of art. Clothes run in perfect parallel with the photography projects and the vibe of simple.",
-              "text_line_3": "New In",
-              "style": "1",
-              "button_1": "",
-              "color_button_type_1": "default",
-              "button_2": "",
-              "color_button_type_2": "default",
-              "list_1": "",
-              "custom_html": "",
-              "video_external_url": "",
-              "video_mp4_url": "",
-              "video_autoplay": true,
-              "video_controls": false,
-              "type": "type-2",
-              "content_position": "center",
-              "content_align": "left",
-              "add_container": false,
-              "content_width": 100,
-              "text_width": 0,
-              "height": "80",
-              "min_height": 0,
-              "size_of_column": "auto",
-              "visible": "desktop_mobile",
-              "parallax": "disable",
-              "animation_to": "none",
-              "animation_from": "none",
-              "animation_opacity": "none",
-              "animation_text": "none",
-              "customization_class": "main-banner"
-            }
-          }
-        },
-        "block_order": [
-          "1586279874234",
-          "30e4ef7d-1d65-4277-b781-8763c76e1216"
-        ],
-        "settings": {
-          "title": "",
-          "container": "fullwidth",
-          "size_of_columns": "2",
-          "margins_for_columns": "none",
-          "align_of_columns": "top_center",
-          "disable_column_paddings": false,
-          "precedence": "",
-          "customization_class": "main-banner-row"
-        }
-      },
-      "1586280453180": {
-        "type": "home-builder",
-        "blocks": {
-          "1586280489479": {
-            "type": "promobox",
-            "settings": {
-              "url": "https:\/\/blancsom.com\/collections\/vendors?q=Studio%20Nicholson",
-              "image_size": 1450,
-              "image_mobile_size": 550,
-              "image_position_x": 50,
-              "color_image_mask": "",
-              "image_mask_opacity": 0.5,
-              "text_line_1": "Studio Nicholson",
-              "text_line_2": "Carefully engineered to provide structure and elegance, forming the basis for the ultimate modular wardrobe.",
-              "text_line_3": "Introducing",
-              "style": "1",
-              "button_1": "",
-              "color_button_type_1": "default",
-              "button_2": "",
-              "color_button_type_2": "default",
-              "list_1": "",
-              "custom_html": "",
-              "video_external_url": "",
-              "video_mp4_url": "",
-              "video_autoplay": true,
-              "video_controls": false,
-              "type": "type-2",
-              "content_position": "center",
-              "content_align": "left",
-              "add_container": false,
-              "content_width": 100,
-              "text_width": 0,
-              "height": "100",
-              "min_height": 0,
-              "size_of_column": "auto",
-              "visible": "desktop_mobile",
-              "parallax": "disable",
-              "animation_to": "none",
-              "animation_from": "none",
-              "animation_opacity": "none",
-              "animation_text": "none",
-              "customization_class": ""
-            }
-          },
-          "1586280492143": {
-            "type": "promobox",
-            "settings": {
-              "url": "https:\/\/blancsom.com\/collections\/vendors?q=Self%20Portrait",
-              "image_size": 1450,
-              "image_mobile_size": 550,
-              "image_position_x": 50,
-              "color_image_mask": "",
-              "image_mask_opacity": 0.5,
-              "text_line_1": "SELF PORTRAIT",
-              "text_line_2": "From London, with a creative vision to make beautiful design accessible to all women.",
-              "text_line_3": "Introducing",
-              "style": "1",
-              "button_1": "",
-              "color_button_type_1": "default",
-              "button_2": "",
-              "color_button_type_2": "default",
-              "list_1": "",
-              "custom_html": "",
-              "video_external_url": "",
-              "video_mp4_url": "",
-              "video_autoplay": true,
-              "video_controls": false,
-              "type": "type-2",
-              "content_position": "center",
-              "content_align": "left",
-              "add_container": false,
-              "content_width": 100,
-              "text_width": 0,
-              "height": "100",
-              "min_height": 0,
-              "size_of_column": "auto",
-              "visible": "desktop_mobile",
-              "parallax": "disable",
-              "animation_to": "none",
-              "animation_from": "none",
-              "animation_opacity": "none",
-              "animation_text": "none",
-              "customization_class": ""
-            }
-          },
-          "1586280494368": {
-            "type": "promobox",
-            "settings": {
-              "url": "https:\/\/blancsom.com\/collections\/vendors?q=Marshall",
-              "image_size": 1450,
-              "image_mobile_size": 550,
-              "image_position_x": 50,
-              "color_image_mask": "",
-              "image_mask_opacity": 0.5,
-              "text_line_1": "Marshall",
-              "text_line_2": "Over 50 years of sound and design expertise has been distilled into each.",
-              "text_line_3": "Introducing",
-              "style": "1",
-              "button_1": "",
-              "color_button_type_1": "default",
-              "button_2": "",
-              "color_button_type_2": "default",
-              "list_1": "",
-              "custom_html": "",
-              "video_external_url": "",
-              "video_mp4_url": "",
-              "video_autoplay": true,
-              "video_controls": false,
-              "type": "type-2",
-              "content_position": "center",
-              "content_align": "left",
-              "add_container": false,
-              "content_width": 100,
-              "text_width": 0,
-              "height": "100",
-              "min_height": 0,
-              "size_of_column": "auto",
-              "visible": "desktop_mobile",
-              "parallax": "disable",
-              "animation_to": "none",
-              "animation_from": "none",
-              "animation_opacity": "none",
-              "animation_text": "none",
-              "customization_class": ""
-            }
-          }
-        },
-        "block_order": [
-          "1586280489479",
-          "1586280492143",
-          "1586280494368"
-        ],
-        "settings": {
-          "title": "",
-          "container": "fullwidth",
-          "size_of_columns": "3",
-          "margins_for_columns": "none",
-          "align_of_columns": "top_left",
-          "disable_column_paddings": false,
-          "precedence": "",
-          "customization_class": "main-banner-row"
-        }
-      },
-      "1586280477165": {
-        "type": "spacer",
-        "settings": {
-          "margin_top": 60,
-          "margin_bottom": 0,
-          "margin_top_mobile": 0,
-          "margin_bottom_mobile": 0,
-          "container": "boxed",
-          "show_separator": false,
-          "title": ""
-        }
-      },
-      "1586282646707": {
-        "type": "spacer",
-        "settings": {
-          "margin_top": 60,
-          "margin_bottom": 0,
-          "margin_top_mobile": 0,
-          "margin_bottom_mobile": 0,
-          "container": "boxed",
-          "show_separator": false,
-          "title": ""
-        }
-      },
-      "1586282860739": {
-        "type": "home-builder",
-        "blocks": {
-          "1586282889393": {
-            "type": "promobox",
-            "settings": {
-              "url": "https:\/\/blancsom.com\/collections\/vendors?q=STANLEY",
-              "image": "shopify:\/\/shop_images\/178919970_4308127942587276_8788768368506352445_n.jpg",
-              "image_size": 1450,
-              "image_mobile_size": 550,
-              "image_position_x": 50,
-              "color_image_mask": "",
-              "image_mask_opacity": 0.5,
-              "text_line_1": "Built for Life",
-              "text_line_2": "Level up your outdoor-friendly lifestyle and adventure with Stanley",
-              "text_line_3": "Stanley",
-              "style": "1",
-              "button_1": "",
-              "color_button_type_1": "default",
-              "button_2": "",
-              "color_button_type_2": "default",
-              "list_1": "",
-              "custom_html": "",
-              "video_external_url": "",
-              "video_mp4_url": "",
-              "video_autoplay": true,
-              "video_controls": false,
-              "type": "type-2-3",
-              "content_position": "center",
-              "content_align": "left",
-              "add_container": false,
-              "content_width": 100,
-              "text_width": 0,
-              "height": "100",
-              "min_height": 0,
-              "size_of_column": "auto",
-              "visible": "desktop_mobile",
-              "parallax": "disable",
-              "animation_to": "none",
-              "animation_from": "none",
-              "animation_opacity": "none",
-              "animation_text": "none",
-              "customization_class": ""
-            }
-          },
-          "1586282892935": {
-            "type": "promobox",
-            "settings": {
-              "url": "https:\/\/blancsom.com\/collections\/vendors?q=WEDGWOOD",
-              "image_size": 1450,
-              "image_mobile_size": 550,
-              "image_position_x": 50,
-              "color_image_mask": "",
-              "image_mask_opacity": 0.5,
-              "text_line_1": "The Bridgerton style",
-              "text_line_2": "Modern technology combines with the ancient skills of throwing, modelling and decorating.",
-              "text_line_3": "Wedgwood",
-              "style": "1",
-              "button_1": "",
-              "color_button_type_1": "default",
-              "button_2": "",
-              "color_button_type_2": "default",
-              "list_1": "",
-              "custom_html": "",
-              "video_external_url": "",
-              "video_mp4_url": "",
-              "video_autoplay": true,
-              "video_controls": false,
-              "type": "type-2-3",
-              "content_position": "center",
-              "content_align": "left",
-              "add_container": false,
-              "content_width": 100,
-              "text_width": 0,
-              "height": "100",
-              "min_height": 0,
-              "size_of_column": "auto",
-              "visible": "desktop_mobile",
-              "parallax": "disable",
-              "animation_to": "none",
-              "animation_from": "none",
-              "animation_opacity": "none",
-              "animation_text": "none",
-              "customization_class": ""
-            }
-          }
-        },
-        "block_order": [
-          "1586282889393",
-          "1586282892935"
-        ],
-        "settings": {
-          "title": "",
-          "container": "fullwidth",
-          "size_of_columns": "2",
-          "margins_for_columns": "none",
-          "align_of_columns": "top_center",
-          "disable_column_paddings": false,
-          "precedence": "",
-          "customization_class": "main-banner-row"
-        }
-      },
-      "1586283266986": {
-        "type": "spacer",
-        "settings": {
-          "margin_top": 100,
-          "margin_bottom": 0,
-          "margin_top_mobile": 0,
-          "margin_bottom_mobile": 0,
-          "container": "boxed",
-          "show_separator": false,
-          "title": ""
         }
       },
       "collection-sidebar": {
@@ -1132,75 +725,19 @@
           "1530696164711": {
             "type": "collections",
             "settings": {
-              "title": "COLLECTION",
+              "title": "Categories",
               "default_state": "open",
-              "show_border": true,
+              "show_border": false,
               "menu": "collection",
-              "collection_tags_select": "radio"
-            }
-          },
-          "1530696190431": {
-            "type": "filters",
-            "settings": {
-              "title": "COLOR",
-              "default_state": "open",
-              "show_border": true,
-              "type": "colors",
-              "items": "Red|Coral|Copper|Orange|Yellow|Green|Emerald|Olive|Khaki|Aqua|Black|Silver|Blue|Grey|White|Light blue|Purple|Lilac|Violet|Pink|Plum|SandyBrown|LightPink|LightGreen",
-              "show_all_from_collection": false,
-              "direction": "rows",
-              "max_column_size": 0,
-              "columns": "2",
-              "for_collections": ""
-            }
-          },
-          "1530696245149": {
-            "type": "filters",
-            "settings": {
-              "title": "SIZE",
-              "default_state": "open",
-              "show_border": true,
-              "type": "tags",
-              "items": "30|32|34|36|38|40|42|44|XXS|XS|S|M|L|XL|XXL|XXXL",
-              "show_all_from_collection": false,
-              "direction": "columns",
-              "max_column_size": 8,
-              "columns": "3",
-              "for_collections": "womens|mens"
-            }
-          },
-          "1573803477486": {
-            "type": "filters",
-            "settings": {
-              "title": "SIZE",
-              "default_state": "open",
-              "show_border": true,
-              "type": "tags",
-              "items": "Small|Waistbag|Backpack",
-              "show_all_from_collection": false,
-              "direction": "columns",
-              "max_column_size": 0,
-              "columns": "1",
-              "for_collections": "women-accessories"
-            }
-          },
-          "1530696365086": {
-            "type": "filter_by_price",
-            "settings": {
-              "title": "PRICE",
-              "default_state": "open",
-              "show_border": true,
-              "min_value": "0",
-              "max_value": "900",
-              "step": "10"
+              "collection_tags_select": "checkbox"
             }
           },
           "1530696372892": {
             "type": "filters",
             "settings": {
-              "title": "BRANDS",
+              "title": "Designers",
               "default_state": "open",
-              "show_border": true,
+              "show_border": false,
               "type": "vendors",
               "items": "",
               "show_all_from_collection": true,
@@ -1209,93 +746,12 @@
               "columns": "1",
               "for_collections": ""
             }
-          },
-          "1539796529134": {
-            "type": "parameters",
-            "settings": {
-              "title": "PARAMETERS",
-              "default_state": "open",
-              "show_border": true,
-              "show_only_available": true,
-              "show_tag_filters_logic": true
-            }
-          },
-          "1539796544868": {
-            "type": "filter_by_title",
-            "settings": {
-              "title": "SEARCH",
-              "default_state": "open",
-              "show_border": true,
-              "placeholder": "Enter part of the title",
-              "show_button": false,
-              "button_text": "SEARCH"
-            }
-          },
-          "1530696458853": {
-            "type": "products",
-            "settings": {
-              "title": "FEATURED PRODUCTS",
-              "default_state": "fixed",
-              "show_border": true,
-              "collection": "featured",
-              "max_count": 3,
-              "product_type": "short"
-            }
-          },
-          "1586288838422": {
-            "type": "custom_html",
-            "settings": {
-              "title": "CUSTOM BLOCK",
-              "default_state": "fixed",
-              "show_border": false,
-              "page_content": ""
-            }
-          },
-          "1586289049193": {
-            "type": "promobox",
-            "settings": {
-              "title": "PROMOBOX",
-              "default_state": "without_title",
-              "show_border": false,
-              "url": "shopify:\/\/products\/copy-of-cotton-blend-field-jacket",
-              "image": "shopify:\/\/shop_images\/08_dbfb557e-a691-4822-9ece-255c7fa4a984.png",
-              "image_size": 900,
-              "color_image_mask": "",
-              "image_mask_opacity": 0.5,
-              "text_line_1": "NEW IN",
-              "text_line_2": "Spring\/Summer 2020 Collection",
-              "text_line_3": "Text line #3",
-              "style": "1",
-              "button_1": "Button #1 text",
-              "color_button_type_1": "default-transparent",
-              "button_2": "Button #2 text",
-              "color_button_type_2": "default-transparent",
-              "list_1": "",
-              "custom_html": "",
-              "video_external_url": "",
-              "video_mp4_url": "",
-              "video_autoplay": true,
-              "video_controls": false,
-              "type": "type-3",
-              "animation_to": "none",
-              "animation_from": "none",
-              "animation_opacity": "none"
-            }
           }
         },
         "block_order": [
           "1530696013571",
           "1530696164711",
-          "1530696190431",
-          "1530696245149",
-          "1573803477486",
-          "1530696365086",
-          "1530696372892",
-          "1539796529134",
-          "1539796544868",
-          "1530696458853",
-          "1586288838422",
-          "1586289049193"
+          "1530696372892"
         ],
         "settings": {
           "hide_blocks_without_filters": false
@@ -1303,175 +759,36 @@
       },
       "collection-head": {
         "type": "collection-head",
-        "blocks": {
-          "1586289313748": {
-            "type": "promobox",
-            "settings": {
-              "for_collection": "womens",
-              "url": "\/collections\/womens",
-              "image": "shopify:\/\/shop_images\/36_ac9a2d18-646d-426b-8347-0673264b3e56.jpg",
-              "image_size": 900,
-              "image_mobile_size": 900,
-              "image_position_x": 50,
-              "color_image_mask": "",
-              "image_mask_opacity": 0.5,
-              "text_line_1": "",
-              "text_line_2": "FINAL CLEARANCE",
-              "text_line_3": "Take 20% off ‘Sale Must-Haves'",
-              "style": "2",
-              "button_1": "",
-              "color_button_type_1": "default-transparent",
-              "button_2": "",
-              "color_button_type_2": "default-transparent",
-              "list_1": "",
-              "custom_html": "",
-              "video_external_url": "",
-              "video_mp4_url": "",
-              "video_autoplay": true,
-              "video_controls": false,
-              "type": "type-1-3",
-              "content_position": "center",
-              "content_align": "center",
-              "add_container": false,
-              "content_width": 100,
-              "text_width": 0,
-              "height": "auto",
-              "min_height": 0,
-              "size_of_column": "12",
-              "visible": "desktop_mobile",
-              "parallax": "disable",
-              "animation_to": "none",
-              "animation_from": "none",
-              "animation_opacity": "none",
-              "animation_text": "none",
-              "customization_class": ""
-            }
-          },
-          "1586289329527": {
-            "type": "promobox",
-            "settings": {
-              "for_collection": "mens",
-              "url": "\/collections\/mens",
-              "image": "shopify:\/\/shop_images\/1.jpg",
-              "image_size": 900,
-              "image_mobile_size": 900,
-              "image_position_x": 50,
-              "color_image_mask": "",
-              "image_mask_opacity": 0.5,
-              "text_line_1": "NEW-SEASON ACCESSORIES",
-              "text_line_2": "Spring\/Summer 2019 Collection",
-              "text_line_3": "Text line #3",
-              "style": "3",
-              "button_1": "Button #1 text",
-              "color_button_type_1": "default-transparent",
-              "button_2": "Button #2 text",
-              "color_button_type_2": "default-transparent",
-              "list_1": "",
-              "custom_html": "",
-              "video_external_url": "",
-              "video_mp4_url": "",
-              "video_autoplay": true,
-              "video_controls": false,
-              "type": "type-3",
-              "content_position": "center",
-              "content_align": "center",
-              "add_container": false,
-              "content_width": 100,
-              "text_width": 0,
-              "height": "auto",
-              "min_height": 0,
-              "size_of_column": "8",
-              "visible": "desktop",
-              "parallax": "disable",
-              "animation_to": "none",
-              "animation_from": "none",
-              "animation_opacity": "none",
-              "animation_text": "none",
-              "customization_class": ""
-            }
-          },
-          "1586289339594": {
-            "type": "promobox",
-            "settings": {
-              "for_collection": "mens",
-              "url": "\/collections\/mens",
-              "image": "shopify:\/\/shop_images\/2.jpg",
-              "image_size": 900,
-              "image_mobile_size": 900,
-              "image_position_x": 50,
-              "color_image_mask": "",
-              "image_mask_opacity": 0.5,
-              "text_line_1": "SPECIAL OFFERS",
-              "text_line_2": "Get up to 20% off",
-              "text_line_3": "Text line #3",
-              "style": "3",
-              "button_1": "Button #1 text",
-              "color_button_type_1": "default-transparent",
-              "button_2": "Button #2 text",
-              "color_button_type_2": "default-transparent",
-              "list_1": "",
-              "custom_html": "",
-              "video_external_url": "",
-              "video_mp4_url": "",
-              "video_autoplay": true,
-              "video_controls": false,
-              "type": "type-3",
-              "content_position": "center",
-              "content_align": "center",
-              "add_container": false,
-              "content_width": 100,
-              "text_width": 0,
-              "height": "auto",
-              "min_height": 0,
-              "size_of_column": "4",
-              "visible": "desktop",
-              "parallax": "disable",
-              "animation_to": "none",
-              "animation_from": "none",
-              "animation_opacity": "none",
-              "animation_text": "none",
-              "customization_class": ""
-            }
-          }
-        },
-        "block_order": [
-          "1586289313748",
-          "1586289329527",
-          "1586289339594"
-        ],
         "settings": {
-          "default_desktop_title": "title",
-          "default_mobile_title": "title",
+          "default_desktop_title": "title_with_description",
+          "default_mobile_title": "title_with_description",
           "margins_for_columns": "none"
         }
       },
       "collection-body": {
         "type": "collection-body",
         "settings": {
-          "sort_by_visibility": "desktop",
-          "info_visibility": "desktop",
-          "view_length_visibility": "desktop",
+          "show_sort_by": true,
+          "show_info": false,
+          "show_view_length": false,
           "enable_view_length_6": true,
           "enable_view_length_12": true,
           "enable_view_length_18": true,
           "enable_view_length_24": true,
           "enable_view_length_48": true,
           "default_view_length": "36",
-          "view_grid_visibility": "desktop_n_mobile",
           "show_view_grid": false,
           "show_view_grid_1": true,
           "show_view_grid_2": true,
           "show_view_grid_3": true,
           "show_view_grid_4": true,
-          "show_view_grid_6": true,
           "show_view_grid_list": true,
-          "view_grid_list_design": "2",
-          "enable_grid_tooltip": true,
           "default_view_grid_xl": "4",
           "default_view_grid_lg": "3",
           "default_view_grid_md": "3",
           "default_view_grid_sm": "2",
-          "default_view_grid_xs": "2"
+          "default_view_grid_xs": "2",
+          "enable_grid_tooltip": true
         }
       },
       "carousel-products": {
@@ -1481,7 +798,7 @@
             "type": "collection",
             "settings": {
               "title": "",
-              "collection": "trending-now-hp"
+              "collection": ""
             }
           }
         },
@@ -1490,7 +807,7 @@
         ],
         "settings": {
           "show_title": true,
-          "container": "boxed",
+          "container": "fullwidth",
           "size_of_columns": "4",
           "max_count": 6,
           "autoplay": true,
@@ -1506,15 +823,15 @@
           "1586291669434": {
             "type": "tab_custom_html",
             "settings": {
-              "title": "ADDITIONAL",
-              "page_content": ""
+              "title": "Size Guide",
+              "page_content": "size-guide"
             }
           },
           "1586291704115": {
             "type": "tab_custom_html",
             "settings": {
-              "title": "CUSTOM TAB",
-              "page_content": ""
+              "title": "Delivery & Return",
+              "page_content": "delivery-return"
             }
           }
         },
@@ -1524,10 +841,8 @@
         ],
         "settings": {
           "show_tabs": true,
-          "scrolling_to_opened_tab": true,
-          "tabs_type": "tabs",
           "show_tab_description": true,
-          "show_tab_reviews": true
+          "show_tab_reviews": false
         }
       },
       "carousel-related-products": {
@@ -1546,47 +861,13 @@
       },
       "product-fixed-sizebar": {
         "type": "product-fixed-sizebar",
-        "blocks": {
-          "1586291806417": {
-            "type": "text_line",
-            "settings": {
-              "icon": "",
-              "text": "",
-              "min_value": "200",
-              "max_value": "500"
-            }
-          },
-          "1586291808135": {
-            "type": "text_line",
-            "settings": {
-              "icon": "",
-              "text": "",
-              "min_value": "30",
-              "max_value": "100"
-            }
-          },
-          "1586291810188": {
-            "type": "text_line",
-            "settings": {
-              "icon": "",
-              "text": "",
-              "min_value": "100",
-              "max_value": "200"
-            }
-          }
-        },
-        "block_order": [
-          "1586291806417",
-          "1586291808135",
-          "1586291810188"
-        ],
         "settings": {}
       },
       "list-collections": {
         "type": "list-collections",
         "settings": {
           "size_of_columns": "4",
-          "type": "list-collections-1",
+          "type": "list-collections-2",
           "masonry_enable": false,
           "height": "auto",
           "image_size": 900,
@@ -1623,24 +904,24 @@
           "1541433718854": {
             "type": "slide",
             "settings": {
-              "for_article": "news\/how-to-layer-sweaters-for-extra-warmth-style",
-              "image": "shopify:\/\/shop_images\/14_b85a6858-0d1c-4b30-a815-fd0789f52507.png",
+              "for_article": "",
+              "image": "",
               "title": "Collection 2019"
             }
           },
           "1541433806550": {
             "type": "slide",
             "settings": {
-              "for_article": "news\/how-to-layer-sweaters-for-extra-warmth-style",
-              "image": "shopify:\/\/shop_images\/15_d34fed5e-ffa4-45af-a194-8245f2f4e570.png",
+              "for_article": "",
+              "image": "",
               "title": "Sale 70% Off"
             }
           },
           "1541434047934": {
             "type": "slide",
             "settings": {
-              "for_article": "news\/how-to-layer-sweaters-for-extra-warmth-style",
-              "image": "shopify:\/\/shop_images\/16_3904b2f3-b4f5-45a3-bb4c-590c5e83ae97.png",
+              "for_article": "",
+              "image": "",
               "title": "Title for image"
             }
           }
@@ -1655,8 +936,6 @@
           "show_image": true,
           "show_content": true,
           "show_tags": true,
-          "show_social_share_buttons": false,
-          "social_share_buttons_type": "1",
           "show_navigation": true,
           "show_comments": true,
           "autoplay": true,
@@ -1716,7 +995,7 @@
             "settings": {
               "page_name": "",
               "grid": 4,
-              "image": "shopify:\/\/shop_images\/05_71b806d5-702b-4498-ae48-14c229dcaaa9.png",
+              "image": "",
               "image_size": 500,
               "text_line_01": "FASHION",
               "text_line_02": "Lorem ipsum dolor sit amet"
@@ -1727,7 +1006,7 @@
             "settings": {
               "page_name": "",
               "grid": 4,
-              "image": "shopify:\/\/shop_images\/03_78c56899-2985-487c-bd85-d6e3469b2a22.png",
+              "image": "",
               "image_size": 500,
               "text_line_01": "TEXT LINE #1",
               "text_line_02": "Text line #2"
@@ -1738,7 +1017,7 @@
             "settings": {
               "page_name": "",
               "grid": 4,
-              "image": "shopify:\/\/shop_images\/11_0ab758d9-cc13-462a-a3fe-37ef80a6f112.png",
+              "image": "",
               "image_size": 500,
               "text_line_01": "VINTAGE",
               "text_line_02": "Lorem ipsum dolor sit amet"
@@ -1749,7 +1028,7 @@
             "settings": {
               "page_name": "",
               "grid": 4,
-              "image": "shopify:\/\/shop_images\/06_9aa1c1fb-c063-4057-81c5-4b298dba8f99.png",
+              "image": "",
               "image_size": 500,
               "text_line_01": "SUMMER",
               "text_line_02": "Lorem ipsum dolor sit amet"
@@ -1760,7 +1039,7 @@
             "settings": {
               "page_name": "",
               "grid": 4,
-              "image": "shopify:\/\/shop_images\/01_9bd594a9-6a4b-457f-9553-62a1584d5291.png",
+              "image": "",
               "image_size": 500,
               "text_line_01": "BEACHWEAR",
               "text_line_02": "Lorem ipsum dolor sit amet"
@@ -1771,7 +1050,7 @@
             "settings": {
               "page_name": "",
               "grid": 4,
-              "image": "shopify:\/\/shop_images\/15_b04f22c2-f16c-4ac3-aec6-f48d86fb3efa.png",
+              "image": "",
               "image_size": 500,
               "text_line_01": "SUNGLASSES",
               "text_line_02": "Lorem ipsum dolor sit amet"
@@ -1782,7 +1061,7 @@
             "settings": {
               "page_name": "",
               "grid": 4,
-              "image": "shopify:\/\/shop_images\/02_148a0f31-c440-4e1d-a837-784c8e55bafe.png",
+              "image": "",
               "image_size": 500,
               "text_line_01": "WINTER",
               "text_line_02": "Lorem ipsum dolor sit amet"
@@ -1793,7 +1072,7 @@
             "settings": {
               "page_name": "",
               "grid": 4,
-              "image": "shopify:\/\/shop_images\/09_4efe625d-9d5b-4f1e-a111-53c058b6204c.png",
+              "image": "",
               "image_size": 500,
               "text_line_01": "SHORTS",
               "text_line_02": "Lorem ipsum dolor sit amet"
@@ -1804,7 +1083,7 @@
             "settings": {
               "page_name": "",
               "grid": 4,
-              "image": "shopify:\/\/shop_images\/07_7c8cdcee-f0b4-4bd6-8f99-0e1b55d144da.png",
+              "image": "",
               "image_size": 500,
               "text_line_01": "ACCESSORIES",
               "text_line_02": "Lorem ipsum dolor sit amet"
@@ -1847,13 +1126,15 @@
             "type": "image",
             "settings": {
               "page_name": "",
-              "image": "shopify:\/\/shop_images\/1937547927_2_3_1.jpg"
+              "name": "Image #1",
+              "image": ""
             }
           },
           "1542384329087": {
             "type": "product",
             "settings": {
-              "product": "copy-of-floppy-hat",
+              "for_name": "Image #1",
+              "product": "",
               "horizontal_position": 60,
               "vertical_position": 42
             }
@@ -1861,7 +1142,8 @@
           "1542384456250": {
             "type": "product",
             "settings": {
-              "product": "copy-of-cotton-off-the-shoulder-tee",
+              "for_name": "Image #1",
+              "product": "",
               "horizontal_position": 28,
               "vertical_position": 80
             }
@@ -1870,13 +1152,15 @@
             "type": "image",
             "settings": {
               "page_name": "",
-              "image": "shopify:\/\/shop_images\/2605987800_1_1_1.jpg"
+              "name": "Image #2",
+              "image": ""
             }
           },
           "1542385389127": {
             "type": "product",
             "settings": {
-              "product": "meizu-usb-type-c-metal-data-cable",
+              "for_name": "Image #2",
+              "product": "",
               "horizontal_position": 57,
               "vertical_position": 23
             }
@@ -1884,7 +1168,8 @@
           "1542385469823": {
             "type": "product",
             "settings": {
-              "product": "copy-of-cotton-off-the-shoulder-tee",
+              "for_name": "Image #2",
+              "product": "",
               "horizontal_position": 64,
               "vertical_position": 91
             }
@@ -1893,13 +1178,15 @@
             "type": "image",
             "settings": {
               "page_name": "",
-              "image": "shopify:\/\/shop_images\/0047628527_1_1_1.jpg"
+              "name": "Image #3",
+              "image": ""
             }
           },
           "1542385552624": {
             "type": "product",
             "settings": {
-              "product": "copy-of-flared-trousers",
+              "for_name": "Image #3",
+              "product": "",
               "horizontal_position": 48,
               "vertical_position": 42
             }
@@ -1907,7 +1194,8 @@
           "1542385639752": {
             "type": "product",
             "settings": {
-              "product": "beats-pro",
+              "for_name": "Image #3",
+              "product": "",
               "horizontal_position": 66,
               "vertical_position": 66
             }
@@ -1916,13 +1204,15 @@
             "type": "image",
             "settings": {
               "page_name": "",
-              "image": "shopify:\/\/shop_images\/0051019141_2_3_1_8223d91e-cd86-42d2-b066-6740d13c97da.jpg"
+              "name": "Image #4",
+              "image": ""
             }
           },
           "1542385895396": {
             "type": "product",
             "settings": {
-              "product": "copy-of-drawstring-sweater",
+              "for_name": "Image #4",
+              "product": "",
               "horizontal_position": 54,
               "vertical_position": 47
             }
@@ -1930,7 +1220,8 @@
           "1542385994777": {
             "type": "product",
             "settings": {
-              "product": "skinny-mid-rise-trousers",
+              "for_name": "Image #4",
+              "product": "",
               "horizontal_position": 34,
               "vertical_position": 71
             }
@@ -1939,13 +1230,15 @@
             "type": "image",
             "settings": {
               "page_name": "",
-              "image": "shopify:\/\/shop_images\/1938617800_2_3_1.jpg"
+              "name": "Image #5",
+              "image": ""
             }
           },
           "1542386146183": {
             "type": "product",
             "settings": {
-              "product": "copy-of-mini-tweed-backpack",
+              "for_name": "Image #5",
+              "product": "",
               "horizontal_position": 55,
               "vertical_position": 53
             }
@@ -1954,13 +1247,15 @@
             "type": "image",
             "settings": {
               "page_name": "",
-              "image": "shopify:\/\/shop_images\/0047628627_2_3_1.jpg"
+              "name": "Image #6",
+              "image": ""
             }
           },
           "1542386264335": {
             "type": "product",
             "settings": {
-              "product": "beats-pro",
+              "for_name": "Image #6",
+              "product": "",
               "horizontal_position": 40,
               "vertical_position": 65
             }
@@ -1992,24 +1287,24 @@
           "image_size": 600
         }
       },
-      "1621226241285bd761": {
+      "1604949624967ab534": {
         "type": "home-builder",
         "blocks": {
-          "f23ad098-033d-4a48-a120-9f7fcf300fb3": {
+          "b0eae6b9-5077-4a85-8a41-2e2dfe6ab7fc": {
             "type": "promobox",
             "settings": {
-              "url": "https:\/\/blancsom.com\/collections\/new\/products\/m_superstar-laminated-gmf00101-f000312-60246",
-              "image": "shopify:\/\/shop_images\/lp3nOXNA.jpg",
+              "url": "https:\/\/blancsom.com\/collections\/vendors?q=Marni",
+              "image": "shopify:\/\/shop_images\/Marni_1.jpg",
               "image_size": 1450,
               "image_mobile_size": 550,
               "image_position_x": 50,
-              "color_image_mask": "",
+              "color_image_mask": "rgba(0,0,0,0)",
               "image_mask_opacity": 0.5,
-              "text_line_1": "GOLDEN GOOSE DELUXE BRAND",
-              "text_line_2": "",
-              "text_line_3": "Featured",
+              "text_line_1": "MARNI",
+              "text_line_2": "Marni is recognized all over the world for its luxury ready-to-wear and accessories collections Made in Italy.",
+              "text_line_3": "New In",
               "style": "1",
-              "button_1": "Shop",
+              "button_1": "",
               "color_button_type_1": "default",
               "button_2": "",
               "color_button_type_2": "default",
@@ -2019,14 +1314,125 @@
               "video_mp4_url": "",
               "video_autoplay": true,
               "video_controls": false,
-              "type": "type-2-2",
+              "type": "type-2",
               "content_position": "center",
               "content_align": "left",
-              "add_container": false,
               "content_width": 100,
-              "text_width": 0,
-              "height": "70",
+              "height": "auto",
               "min_height": 0,
+              "img_position": 50,
+              "size_of_column": "auto",
+              "visible": "desktop_mobile",
+              "parallax": "disable",
+              "animation_to": "none",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "animation_text": "none",
+              "customization_class": "main-banner"
+            }
+          },
+          "3171a562-51dc-4b99-a20e-bdd5f1fe859f": {
+            "type": "promobox",
+            "settings": {
+              "url": "\/collections\/vendors?q=Golden%20Goose%20Deluxe%20Brand",
+              "image": "shopify:\/\/shop_images\/GoldenGoose_1.jpg",
+              "image_size": 1450,
+              "image_mobile_size": 550,
+              "image_position_x": 50,
+              "color_image_mask": "rgba(0,0,0,0)",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "Golden Goose",
+              "text_line_2": "Unique details, exclusive treatments and top quality materials. A dream that head off from Venice and went far as the skate parks of Los Angeles.",
+              "text_line_3": "New In",
+              "style": "1",
+              "button_1": "",
+              "color_button_type_1": "default",
+              "button_2": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "video_external_url": "",
+              "video_mp4_url": "",
+              "video_autoplay": true,
+              "video_controls": false,
+              "type": "type-2",
+              "content_position": "center",
+              "content_align": "left",
+              "content_width": 100,
+              "height": "100",
+              "min_height": 0,
+              "img_position": 50,
+              "size_of_column": "auto",
+              "visible": "desktop_mobile",
+              "parallax": "disable",
+              "animation_to": "none",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "animation_text": "none",
+              "customization_class": "main-banner"
+            }
+          }
+        },
+        "block_order": [
+          "b0eae6b9-5077-4a85-8a41-2e2dfe6ab7fc",
+          "3171a562-51dc-4b99-a20e-bdd5f1fe859f"
+        ],
+        "settings": {
+          "title": "",
+          "container": "fullwidth",
+          "size_of_columns": "2",
+          "margins_for_columns": "none",
+          "align_of_columns": "top_center",
+          "disable_column_paddings": false,
+          "precedence": "",
+          "customization_class": "main-banner-row"
+        }
+      },
+      "160494985898f9c44b": {
+        "type": "spacer",
+        "settings": {
+          "margin_top": 60,
+          "margin_bottom": 0,
+          "margin_top_mobile": 0,
+          "margin_bottom_mobile": 0,
+          "container": "boxed",
+          "show_separator": false
+        }
+      },
+      "1604953458bb7e9f63": {
+        "type": "home-builder",
+        "blocks": {
+          "31dd4c2a-b8d5-49e5-8c64-64911a1b7da5": {
+            "type": "promobox",
+            "settings": {
+              "url": "https:\/\/blancsom.com\/collections\/vendors?q=Studio%20Nicholson",
+              "image": "shopify:\/\/shop_images\/StudioNicholson_1.jpg",
+              "image_size": 1450,
+              "image_mobile_size": 550,
+              "image_position_x": 50,
+              "color_image_mask": "rgba(0,0,0,0)",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "Studio Nicholson",
+              "text_line_2": "Carefully engineered to provide structure and elegance, forming the basis for the ultimate modular wardrobe.",
+              "text_line_3": "Introducing",
+              "style": "1",
+              "button_1": "",
+              "color_button_type_1": "default",
+              "button_2": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "video_external_url": "",
+              "video_mp4_url": "",
+              "video_autoplay": true,
+              "video_controls": false,
+              "type": "type-2",
+              "content_position": "center",
+              "content_align": "left",
+              "content_width": 100,
+              "height": "100",
+              "min_height": 0,
+              "img_position": 50,
               "size_of_column": "auto",
               "visible": "desktop_mobile",
               "parallax": "disable",
@@ -2037,21 +1443,21 @@
               "customization_class": ""
             }
           },
-          "1c94b8d7-a5f4-44ec-ac36-ad16ad6094b7": {
+          "71ab137e-3d36-4684-8b1f-096b39b38c5d": {
             "type": "promobox",
             "settings": {
-              "url": "https:\/\/blancsom.com\/products\/acton-ii-bluetooth-speaker_black",
-              "image": "shopify:\/\/shop_images\/20210430_143346.jpg",
+              "url": "https:\/\/blancsom.com\/collections\/vendors?q=Self%20Portrait",
+              "image": "shopify:\/\/shop_images\/SELFPORTRAIT_1.jpg",
               "image_size": 1450,
               "image_mobile_size": 550,
               "image_position_x": 50,
-              "color_image_mask": "",
+              "color_image_mask": "rgba(0,0,0,0)",
               "image_mask_opacity": 0.5,
-              "text_line_1": "MARSHALL",
-              "text_line_2": "",
-              "text_line_3": "Featured",
+              "text_line_1": "SELF PORTRAIT",
+              "text_line_2": "From London, with a creative vision to make beautiful design accessible to all women.",
+              "text_line_3": "Introducing",
               "style": "1",
-              "button_1": "Shop",
+              "button_1": "",
               "color_button_type_1": "default",
               "button_2": "",
               "color_button_type_2": "default",
@@ -2061,14 +1467,54 @@
               "video_mp4_url": "",
               "video_autoplay": true,
               "video_controls": false,
-              "type": "type-2-2",
+              "type": "type-2",
               "content_position": "center",
               "content_align": "left",
-              "add_container": false,
               "content_width": 100,
-              "text_width": 0,
-              "height": "70",
+              "height": "100",
               "min_height": 0,
+              "img_position": 50,
+              "size_of_column": "auto",
+              "visible": "desktop_mobile",
+              "parallax": "disable",
+              "animation_to": "none",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "animation_text": "none",
+              "customization_class": ""
+            }
+          },
+          "a7288550-5603-4574-b758-aa3199f5ff04": {
+            "type": "promobox",
+            "settings": {
+              "url": "https:\/\/blancsom.com\/collections\/vendors?q=Marshall",
+              "image": "shopify:\/\/shop_images\/Marshall_1.jpg",
+              "image_size": 1450,
+              "image_mobile_size": 550,
+              "image_position_x": 50,
+              "color_image_mask": "rgba(0,0,0,0)",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "Marshall",
+              "text_line_2": "Over 50 years of sound and design expertise has been distilled into each.",
+              "text_line_3": "Introducing",
+              "style": "1",
+              "button_1": "",
+              "color_button_type_1": "default",
+              "button_2": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "video_external_url": "",
+              "video_mp4_url": "",
+              "video_autoplay": true,
+              "video_controls": false,
+              "type": "type-2",
+              "content_position": "center",
+              "content_align": "left",
+              "content_width": 100,
+              "height": "100",
+              "min_height": 0,
+              "img_position": 50,
               "size_of_column": "auto",
               "visible": "desktop_mobile",
               "parallax": "disable",
@@ -2081,8 +1527,121 @@
           }
         },
         "block_order": [
-          "f23ad098-033d-4a48-a120-9f7fcf300fb3",
-          "1c94b8d7-a5f4-44ec-ac36-ad16ad6094b7"
+          "31dd4c2a-b8d5-49e5-8c64-64911a1b7da5",
+          "71ab137e-3d36-4684-8b1f-096b39b38c5d",
+          "a7288550-5603-4574-b758-aa3199f5ff04"
+        ],
+        "settings": {
+          "title": "",
+          "container": "fullwidth",
+          "size_of_columns": "3",
+          "margins_for_columns": "none",
+          "align_of_columns": "top_left",
+          "disable_column_paddings": false,
+          "precedence": "",
+          "customization_class": "main-banner-row"
+        }
+      },
+      "16049534733e547a13": {
+        "type": "spacer",
+        "settings": {
+          "margin_top": 60,
+          "margin_bottom": 0,
+          "margin_top_mobile": 0,
+          "margin_bottom_mobile": 0,
+          "container": "boxed",
+          "show_separator": false
+        }
+      },
+      "16049549643e8dc587": {
+        "type": "home-builder",
+        "blocks": {
+          "5f6850ed-c239-4aac-bb66-1547638ea4f7": {
+            "type": "promobox",
+            "settings": {
+              "url": "https:\/\/blancsom.com\/collections\/vendors?q=MM6%20MAISON%20MARGIELA",
+              "image": "shopify:\/\/shop_images\/MM6_Maison_Margiela_1.jpg",
+              "image_size": 1450,
+              "image_mobile_size": 550,
+              "image_position_x": 50,
+              "color_image_mask": "rgba(0,0,0,0)",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "MM6 Maison Margiela",
+              "text_line_2": "",
+              "text_line_3": "Featured",
+              "style": "1",
+              "button_1": "Shop",
+              "color_button_type_1": "default",
+              "button_2": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "video_external_url": "",
+              "video_mp4_url": "",
+              "video_autoplay": true,
+              "video_controls": false,
+              "type": "type-2-2",
+              "content_position": "center",
+              "content_align": "left",
+              "content_width": 100,
+              "height": "70",
+              "min_height": 0,
+              "img_position": 84,
+              "size_of_column": "auto",
+              "visible": "desktop_mobile",
+              "parallax": "disable",
+              "animation_to": "none",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "animation_text": "none",
+              "customization_class": ""
+            }
+          },
+          "68d5faf8-3d43-447b-abb8-9edd3010ebe0": {
+            "type": "promobox",
+            "settings": {
+              "url": "https:\/\/blancsom.com\/collections\/vendors?q=Helinox",
+              "image": "shopify:\/\/shop_images\/helinox_1.jpg",
+              "image_size": 1450,
+              "image_mobile_size": 550,
+              "image_position_x": 50,
+              "color_image_mask": "rgba(0,0,0,0)",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "Helinox",
+              "text_line_2": "",
+              "text_line_3": "Featured",
+              "style": "1",
+              "button_1": "Shop",
+              "color_button_type_1": "default",
+              "button_2": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "video_external_url": "",
+              "video_mp4_url": "",
+              "video_autoplay": true,
+              "video_controls": false,
+              "type": "type-2-2",
+              "content_position": "center",
+              "content_align": "left",
+              "content_width": 100,
+              "height": "70",
+              "min_height": 0,
+              "img_position": 50,
+              "size_of_column": "auto",
+              "visible": "desktop_mobile",
+              "parallax": "disable",
+              "animation_to": "none",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "animation_text": "none",
+              "customization_class": ""
+            }
+          }
+        },
+        "block_order": [
+          "5f6850ed-c239-4aac-bb66-1547638ea4f7",
+          "68d5faf8-3d43-447b-abb8-9edd3010ebe0"
         ],
         "settings": {
           "title": "",
@@ -2095,7 +1654,119 @@
           "customization_class": "main-banner-row"
         }
       },
-      "162122645308c6989a": {
+      "160495987168bca0fc": {
+        "type": "spacer",
+        "settings": {
+          "margin_top": 100,
+          "margin_bottom": 0,
+          "margin_top_mobile": 0,
+          "margin_bottom_mobile": 0,
+          "container": "boxed",
+          "show_separator": false
+        }
+      },
+      "1614632678c1b2f5f5": {
+        "type": "home-builder",
+        "blocks": {
+          "389a7d73-bc3d-4cac-9510-b2339061b781": {
+            "type": "promobox",
+            "settings": {
+              "url": "https:\/\/blancsom.com\/collections\/vendors?q=Fornasetti",
+              "image": "shopify:\/\/shop_images\/fornasetti_1.jpg",
+              "image_size": 1450,
+              "image_mobile_size": 550,
+              "image_position_x": 50,
+              "color_image_mask": "",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "Art of Living",
+              "text_line_2": "Fornasetti object is not simply something to possess, it is something to live and be inspired by.",
+              "text_line_3": "Fornasetti",
+              "style": "1",
+              "button_1": "",
+              "color_button_type_1": "default",
+              "button_2": "Button #2 text",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "video_external_url": "",
+              "video_mp4_url": "",
+              "video_autoplay": true,
+              "video_controls": false,
+              "type": "type-2-3",
+              "content_position": "center",
+              "content_align": "left",
+              "content_width": 100,
+              "height": "100",
+              "min_height": 0,
+              "img_position": 50,
+              "size_of_column": "auto",
+              "visible": "desktop_mobile",
+              "parallax": "disable",
+              "animation_to": "none",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "animation_text": "none",
+              "customization_class": ""
+            }
+          },
+          "30ec0730-8277-48f0-a825-c0fa259f35f9": {
+            "type": "promobox",
+            "settings": {
+              "url": "https:\/\/blancsom.com\/collections\/vendors?q=WEDGWOOD",
+              "image": "shopify:\/\/shop_images\/wedgwood_1.jpg",
+              "image_size": 1450,
+              "image_mobile_size": 550,
+              "image_position_x": 50,
+              "color_image_mask": "",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "The Bridgerton style",
+              "text_line_2": "Modern technology combines with the ancient skills of throwing, modelling and decorating.",
+              "text_line_3": "Wedgwood",
+              "style": "1",
+              "button_1": "",
+              "color_button_type_1": "default",
+              "button_2": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "video_external_url": "",
+              "video_mp4_url": "",
+              "video_autoplay": true,
+              "video_controls": false,
+              "type": "type-2-3",
+              "content_position": "center",
+              "content_align": "left",
+              "content_width": 100,
+              "height": "100",
+              "min_height": 0,
+              "img_position": 50,
+              "size_of_column": "auto",
+              "visible": "desktop_mobile",
+              "parallax": "disable",
+              "animation_to": "none",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "animation_text": "none",
+              "customization_class": ""
+            }
+          }
+        },
+        "block_order": [
+          "389a7d73-bc3d-4cac-9510-b2339061b781",
+          "30ec0730-8277-48f0-a825-c0fa259f35f9"
+        ],
+        "settings": {
+          "title": "",
+          "container": "fullwidth",
+          "size_of_columns": "2",
+          "margins_for_columns": "none",
+          "align_of_columns": "top_center",
+          "disable_column_paddings": false,
+          "precedence": "",
+          "customization_class": "main-banner-row"
+        }
+      },
+      "1614636022c8627397": {
         "type": "spacer",
         "settings": {
           "margin_top": 60,
@@ -2103,21 +1774,21 @@
           "margin_top_mobile": 0,
           "margin_bottom_mobile": 0,
           "container": "boxed",
-          "show_separator": false,
-          "title": ""
+          "show_separator": false
         }
       },
-      "1621226465a182c927": {
+      "16146384823ce5f5ae": {
         "type": "home-builder",
         "blocks": {
-          "43288d46-bbf3-4521-b677-a9fb2efa27e6": {
+          "f25beb3c-1a15-45fd-8455-9ab32edef56f": {
             "type": "promobox",
             "settings": {
               "url": "https:\/\/blancsom.com\/collections\/vendors?q=Issey%20Miyake%20HOMME%20PLISSE",
+              "image": "shopify:\/\/shop_images\/Issey_Miyake_2.jpg",
               "image_size": 1450,
               "image_mobile_size": 550,
               "image_position_x": 50,
-              "color_image_mask": "",
+              "color_image_mask": "rgba(0,0,0,0)",
               "image_mask_opacity": 0.5,
               "text_line_1": "Issey Miyake HOMME PLISSE",
               "text_line_2": "",
@@ -2136,11 +1807,10 @@
               "type": "type-2-2",
               "content_position": "center",
               "content_align": "left",
-              "add_container": false,
               "content_width": 100,
-              "text_width": 0,
               "height": "70",
               "min_height": 0,
+              "img_position": 72,
               "size_of_column": "auto",
               "visible": "desktop_mobile",
               "parallax": "disable",
@@ -2151,17 +1821,17 @@
               "customization_class": ""
             }
           },
-          "394c95ad-12c7-4a16-8f53-13563ed3cf15": {
+          "c34f1e8e-21a6-48d8-a89d-7aa82aeb79a9": {
             "type": "promobox",
             "settings": {
-              "url": "https:\/\/blancsom.com\/collections\/womens-clothing\/products\/upper-east-side-sweatpants-white-navy",
-              "image": "shopify:\/\/shop_images\/180588660_581076579460265_2740740255705939598_n.jpg",
+              "url": "https:\/\/blancsom.com\/collections\/vendors?q=A.P.C.",
+              "image": "shopify:\/\/shop_images\/a_p_c_1.jpg",
               "image_size": 1450,
               "image_mobile_size": 550,
               "image_position_x": 50,
-              "color_image_mask": "",
+              "color_image_mask": "rgba(0,0,0,0)",
               "image_mask_opacity": 0.5,
-              "text_line_1": "SPORTY & RICH",
+              "text_line_1": "A.P.C.",
               "text_line_2": "",
               "text_line_3": "Featured",
               "style": "1",
@@ -2178,11 +1848,10 @@
               "type": "type-2-2",
               "content_position": "center",
               "content_align": "left",
-              "add_container": false,
               "content_width": 100,
-              "text_width": 0,
               "height": "70",
               "min_height": 0,
+              "img_position": 50,
               "size_of_column": "auto",
               "visible": "desktop_mobile",
               "parallax": "disable",
@@ -2195,8 +1864,8 @@
           }
         },
         "block_order": [
-          "43288d46-bbf3-4521-b677-a9fb2efa27e6",
-          "394c95ad-12c7-4a16-8f53-13563ed3cf15"
+          "f25beb3c-1a15-45fd-8455-9ab32edef56f",
+          "c34f1e8e-21a6-48d8-a89d-7aa82aeb79a9"
         ],
         "settings": {
           "title": "",
@@ -2211,15 +1880,15 @@
       }
     },
     "content_for_index": [
-      "1586279708879",
-      "1586280477165",
-      "1586280453180",
-      "1586282646707",
-      "1586282860739",
-      "1586283266986",
-      "1621226241285bd761",
-      "162122645308c6989a",
-      "1621226465a182c927"
+      "1604949624967ab534",
+      "160494985898f9c44b",
+      "1604953458bb7e9f63",
+      "16049534733e547a13",
+      "1614632678c1b2f5f5",
+      "160495987168bca0fc",
+      "16049549643e8dc587",
+      "1614636022c8627397",
+      "16146384823ce5f5ae"
     ]
   }
 }
