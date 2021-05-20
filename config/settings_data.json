@@ -714,7 +714,9 @@
           },
           "1586284627913": {
             "type": "payments",
-            "settings": {}
+            "settings": {
+              "type": "auto"
+            }
           }
         },
         "block_order": [
@@ -741,7 +743,6 @@
             "type": "promobox",
             "settings": {
               "url": "https:\/\/blancsom.com\/collections\/vendors?q=MAISON%20KITSUNE",
-              "image": "shopify:\/\/shop_images\/0416_Marni_833x833_cced9e03-125e-421a-ae34-5783bf1b0bad.jpg",
               "image_size": 1450,
               "image_mobile_size": 550,
               "image_position_x": 50,
@@ -783,7 +784,6 @@
             "type": "promobox",
             "settings": {
               "url": "https:\/\/blancsom.com\/collections\/vendors?q=Paloma%20Wool",
-              "image": "shopify:\/\/shop_images\/175873194_543303623320164_1465804442532726734_n.jpg",
               "image_size": 1450,
               "image_mobile_size": 550,
               "image_position_x": 50,
